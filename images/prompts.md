@@ -1,6 +1,6 @@
 # Picture prompts
 
-Model: GPT Image 2.5 (Sunburst), text to image, quality high, 2K. Background removed after generation.
+Model: GPT Image 2.5 (Sunburst), text to image, quality high, 2K. Background to be removed after download.
 
 ## finger.png
 
