@@ -34,10 +34,19 @@ Also on TikTok and Instagram: @fingertipfacts
 
 ## Profile picture
 
-- `brand/fingertipfacts_profile_1080.png` — use on TikTok, Instagram and YouTube (all crop it to a circle).
-- `brand/fingertipfacts_profile_800.png` — smaller copy (YouTube's recommended 800×800).
-- `brand/logo_v1_raw.png` — the full original picture.
-- Made with GPT Image 2.5 (Sunburst), high quality, OpenArt history ID `X6WXmI7xCUg9P2bJplpZ`.
+**Chosen: thumb scrolling a phone**
+- `brand/fingertipfacts_profile_thumb_1080.png`: use on TikTok, Instagram and YouTube (all crop it to a circle).
+- `brand/fingertipfacts_profile_thumb_800.png`: smaller copy (YouTube's recommended 800×800).
+- `brand/logo_thumb_raw.png`: full original (OpenArt history ID `NZvWQlA6aoOeKa1PwSMs`).
+
+Earlier option, pointing finger: `brand/fingertipfacts_profile_1080.png` (OpenArt `X6WXmI7xCUg9P2bJplpZ`).
+
+## YouTube banner
+
+- `brand/fingertipfacts_youtube_banner.png`: 2560×1440. Drawing, name and tagline all sit inside YouTube's
+  safe strip (1546×423 in the centre), so nothing is cut off on phones; TVs and desktops show more of the dot grid.
+- `brand/banner_raw.png`: the drawing without text (OpenArt history ID `znw69WIFgfmqnquZu0OP`).
+- All made with GPT Image 2.5 (Sunburst), high quality. The text is added afterwards in Inter ExtraBold.
 
 ## Brand ideas
 
