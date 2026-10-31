@@ -1,0 +1,208 @@
+1
+00:00:00,000 --> 00:00:01,605
+A tiny splinter in your finger
+
+2
+00:00:01,625 --> 00:00:03,443
+sets off your immune system.
+
+3
+00:00:03,529 --> 00:00:04,589
+Your skin is a wall
+
+4
+00:00:04,609 --> 00:00:06,148
+that keeps germs out.
+
+5
+00:00:06,235 --> 00:00:07,120
+The splinter just
+
+6
+00:00:07,140 --> 00:00:08,211
+punched a hole in it,
+
+7
+00:00:08,231 --> 00:00:10,525
+and bacteria ride in on the wood.
+
+8
+00:00:10,728 --> 00:00:12,124
+Damaged cells release
+
+9
+00:00:12,144 --> 00:00:13,543
+chemical signals.
+
+10
+00:00:13,746 --> 00:00:15,758
+Nearby blood vessels widen,
+
+11
+00:00:15,778 --> 00:00:17,769
+so more blood flows in.
+
+12
+00:00:17,856 --> 00:00:19,926
+That's why the spot turns red,
+
+13
+00:00:19,946 --> 00:00:21,612
+warm and swollen.
+
+14
+00:00:21,699 --> 00:00:23,118
+White blood cells squeeze
+
+15
+00:00:23,138 --> 00:00:24,152
+out of the vessels and
+
+16
+00:00:24,172 --> 00:00:25,548
+follow the signals.
+
+17
+00:00:25,751 --> 00:00:27,983
+Neutrophils usually arrive first
+
+18
+00:00:28,003 --> 00:00:30,238
+and swallow bacteria whole.
+
+19
+00:00:30,441 --> 00:00:31,536
+Bigger cells called
+
+20
+00:00:31,556 --> 00:00:33,533
+macrophages eat germs
+
+21
+00:00:33,553 --> 00:00:35,057
+and clean up the mess.
+
+22
+00:00:35,329 --> 00:00:36,926
+Often, that's enough.
+
+23
+00:00:37,070 --> 00:00:38,687
+But a dendritic cell also
+
+24
+00:00:38,707 --> 00:00:40,266
+grabs pieces of the germ and
+
+25
+00:00:40,286 --> 00:00:42,205
+carries them to a lymph node,
+
+26
+00:00:42,225 --> 00:00:44,658
+a small bean-shaped station.
+
+27
+00:00:45,023 --> 00:00:46,164
+There, the pieces are
+
+28
+00:00:46,184 --> 00:00:47,512
+checked against a huge
+
+29
+00:00:47,532 --> 00:00:49,430
+crowd of immune cells.
+
+30
+00:00:49,703 --> 00:00:50,925
+Only a few B cells
+
+31
+00:00:50,945 --> 00:00:52,785
+fit this exact germ.
+
+32
+00:00:52,988 --> 00:00:53,839
+When one fits,
+
+33
+00:00:53,859 --> 00:00:56,535
+it copies itself again and again.
+
+34
+00:00:56,808 --> 00:00:58,846
+The copies make antibodies,
+
+35
+00:00:58,991 --> 00:01:00,619
+Y-shaped proteins that
+
+36
+00:01:00,639 --> 00:01:02,468
+stick to this one germ.
+
+37
+00:01:02,741 --> 00:01:04,172
+Antibodies travel through the
+
+38
+00:01:04,192 --> 00:01:06,578
+blood and coat the bacteria.
+
+39
+00:01:06,850 --> 00:01:08,363
+A coated germ is easier for
+
+40
+00:01:08,383 --> 00:01:10,026
+the eating cells to find.
+
+41
+00:01:10,229 --> 00:01:10,952
+The first time,
+
+42
+00:01:10,972 --> 00:01:12,313
+this takes days.
+
+43
+00:01:12,400 --> 00:01:13,564
+But some B cells stay
+
+44
+00:01:13,584 --> 00:01:15,413
+behind as memory cells.
+
+45
+00:01:15,686 --> 00:01:17,036
+If the same germ comes back,
+
+46
+00:01:17,056 --> 00:01:17,779
+the response is
+
+47
+00:01:17,799 --> 00:01:19,337
+faster and stronger.
+
+48
+00:01:19,540 --> 00:01:20,298
+That's the idea
+
+49
+00:01:20,318 --> 00:01:21,528
+behind vaccines.
+
+50
+00:01:21,548 --> 00:01:22,318
+Back at your finger,
+
+51
+00:01:22,338 --> 00:01:23,212
+the fight is over,
+
+52
+00:01:23,232 --> 00:01:25,328
+and the wall is whole again.
+

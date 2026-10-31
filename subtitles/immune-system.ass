@@ -1,0 +1,65 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Inter,54,&H001F1D1D,&H001F1D1D,&H00FFFFFF,&H00FFFFFF,-1,0,0,0,100,100,0.5,0,1,7,0,2,80,80,372,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:01.60,Sub,,0,0,0,,{\blur4\fad(120,120)}A tiny splinter in your finger
+Dialogue: 0,0:00:01.62,0:00:03.44,Sub,,0,0,0,,{\blur4\fad(120,120)}sets off your immune system.
+Dialogue: 0,0:00:03.53,0:00:04.59,Sub,,0,0,0,,{\blur4\fad(120,120)}Your skin is a wall
+Dialogue: 0,0:00:04.61,0:00:06.15,Sub,,0,0,0,,{\blur4\fad(120,120)}that keeps germs out.
+Dialogue: 0,0:00:06.24,0:00:07.12,Sub,,0,0,0,,{\blur4\fad(120,120)}The splinter just
+Dialogue: 0,0:00:07.14,0:00:08.21,Sub,,0,0,0,,{\blur4\fad(120,120)}punched a hole in it,
+Dialogue: 0,0:00:08.23,0:00:10.52,Sub,,0,0,0,,{\blur4\fad(120,120)}and bacteria ride in on the wood.
+Dialogue: 0,0:00:10.73,0:00:12.12,Sub,,0,0,0,,{\blur4\fad(120,120)}Damaged cells release
+Dialogue: 0,0:00:12.14,0:00:13.54,Sub,,0,0,0,,{\blur4\fad(120,120)}chemical signals.
+Dialogue: 0,0:00:13.75,0:00:15.76,Sub,,0,0,0,,{\blur4\fad(120,120)}Nearby blood vessels widen,
+Dialogue: 0,0:00:15.78,0:00:17.77,Sub,,0,0,0,,{\blur4\fad(120,120)}so more blood flows in.
+Dialogue: 0,0:00:17.86,0:00:19.93,Sub,,0,0,0,,{\blur4\fad(120,120)}That's why the spot turns red,
+Dialogue: 0,0:00:19.95,0:00:21.61,Sub,,0,0,0,,{\blur4\fad(120,120)}warm and swollen.
+Dialogue: 0,0:00:21.70,0:00:23.12,Sub,,0,0,0,,{\blur4\fad(120,120)}White blood cells squeeze
+Dialogue: 0,0:00:23.14,0:00:24.15,Sub,,0,0,0,,{\blur4\fad(120,120)}out of the vessels and
+Dialogue: 0,0:00:24.17,0:00:25.55,Sub,,0,0,0,,{\blur4\fad(120,120)}follow the signals.
+Dialogue: 0,0:00:25.75,0:00:27.98,Sub,,0,0,0,,{\blur4\fad(120,120)}Neutrophils usually arrive first
+Dialogue: 0,0:00:28.00,0:00:30.24,Sub,,0,0,0,,{\blur4\fad(120,120)}and swallow bacteria whole.
+Dialogue: 0,0:00:30.44,0:00:31.54,Sub,,0,0,0,,{\blur4\fad(120,120)}Bigger cells called
+Dialogue: 0,0:00:31.56,0:00:33.53,Sub,,0,0,0,,{\blur4\fad(120,120)}macrophages eat germs
+Dialogue: 0,0:00:33.55,0:00:35.06,Sub,,0,0,0,,{\blur4\fad(120,120)}and clean up the mess.
+Dialogue: 0,0:00:35.33,0:00:36.93,Sub,,0,0,0,,{\blur4\fad(120,120)}Often, that's enough.
+Dialogue: 0,0:00:37.07,0:00:38.69,Sub,,0,0,0,,{\blur4\fad(120,120)}But a dendritic cell also
+Dialogue: 0,0:00:38.71,0:00:40.27,Sub,,0,0,0,,{\blur4\fad(120,120)}grabs pieces of the germ and
+Dialogue: 0,0:00:40.29,0:00:42.20,Sub,,0,0,0,,{\blur4\fad(120,120)}carries them to a lymph node,
+Dialogue: 0,0:00:42.22,0:00:44.66,Sub,,0,0,0,,{\blur4\fad(120,120)}a small bean-shaped station.
+Dialogue: 0,0:00:45.02,0:00:46.16,Sub,,0,0,0,,{\blur4\fad(120,120)}There, the pieces are
+Dialogue: 0,0:00:46.18,0:00:47.51,Sub,,0,0,0,,{\blur4\fad(120,120)}checked against a huge
+Dialogue: 0,0:00:47.53,0:00:49.43,Sub,,0,0,0,,{\blur4\fad(120,120)}crowd of immune cells.
+Dialogue: 0,0:00:49.70,0:00:50.92,Sub,,0,0,0,,{\blur4\fad(120,120)}Only a few B cells
+Dialogue: 0,0:00:50.94,0:00:52.78,Sub,,0,0,0,,{\blur4\fad(120,120)}fit this exact germ.
+Dialogue: 0,0:00:52.99,0:00:53.84,Sub,,0,0,0,,{\blur4\fad(120,120)}When one fits,
+Dialogue: 0,0:00:53.86,0:00:56.54,Sub,,0,0,0,,{\blur4\fad(120,120)}it copies itself again and again.
+Dialogue: 0,0:00:56.81,0:00:58.85,Sub,,0,0,0,,{\blur4\fad(120,120)}The copies make antibodies,
+Dialogue: 0,0:00:58.99,0:01:00.62,Sub,,0,0,0,,{\blur4\fad(120,120)}Y-shaped proteins that
+Dialogue: 0,0:01:00.64,0:01:02.47,Sub,,0,0,0,,{\blur4\fad(120,120)}stick to this one germ.
+Dialogue: 0,0:01:02.74,0:01:04.17,Sub,,0,0,0,,{\blur4\fad(120,120)}Antibodies travel through the
+Dialogue: 0,0:01:04.19,0:01:06.58,Sub,,0,0,0,,{\blur4\fad(120,120)}blood and coat the bacteria.
+Dialogue: 0,0:01:06.85,0:01:08.36,Sub,,0,0,0,,{\blur4\fad(120,120)}A coated germ is easier for
+Dialogue: 0,0:01:08.38,0:01:10.03,Sub,,0,0,0,,{\blur4\fad(120,120)}the eating cells to find.
+Dialogue: 0,0:01:10.23,0:01:10.95,Sub,,0,0,0,,{\blur4\fad(120,120)}The first time,
+Dialogue: 0,0:01:10.97,0:01:12.31,Sub,,0,0,0,,{\blur4\fad(120,120)}this takes days.
+Dialogue: 0,0:01:12.40,0:01:13.56,Sub,,0,0,0,,{\blur4\fad(120,120)}But some B cells stay
+Dialogue: 0,0:01:13.58,0:01:15.41,Sub,,0,0,0,,{\blur4\fad(120,120)}behind as memory cells.
+Dialogue: 0,0:01:15.69,0:01:17.04,Sub,,0,0,0,,{\blur4\fad(120,120)}If the same germ comes back,
+Dialogue: 0,0:01:17.06,0:01:17.78,Sub,,0,0,0,,{\blur4\fad(120,120)}the response is
+Dialogue: 0,0:01:17.80,0:01:19.34,Sub,,0,0,0,,{\blur4\fad(120,120)}faster and stronger.
+Dialogue: 0,0:01:19.54,0:01:20.30,Sub,,0,0,0,,{\blur4\fad(120,120)}That's the idea
+Dialogue: 0,0:01:20.32,0:01:21.53,Sub,,0,0,0,,{\blur4\fad(120,120)}behind vaccines.
+Dialogue: 0,0:01:21.55,0:01:22.32,Sub,,0,0,0,,{\blur4\fad(120,120)}Back at your finger,
+Dialogue: 0,0:01:22.34,0:01:23.21,Sub,,0,0,0,,{\blur4\fad(120,120)}the fight is over,
+Dialogue: 0,0:01:23.23,0:01:25.33,Sub,,0,0,0,,{\blur4\fad(120,120)}and the wall is whole again.

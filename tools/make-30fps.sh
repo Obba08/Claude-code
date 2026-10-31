@@ -18,3 +18,12 @@ volume=-16dB,afade=t=in:d=1.5,afade=t=out:st=$FADE_AT:d=2.7[m];\
 ffmpeg -v error -y -i /tmp/v30.mp4 -i /tmp/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 160k -shortest \
   -movflags +faststart out/video_30fps.mp4
 ls -la out/video_30fps.mp4
+
+# Subtitled copy: captions come from the word timings (tools/make_subtitles.py).
+python3 tools/make_subtitles.py
+VF="subtitles=out/subtitles.ass:fontsdir=public/fonts/ttf,fps=30"
+ffmpeg -v error -y -i out/video.mp4 -an -vf "$VF" -c:v libx264 -preset slow -b:v 3800k -pass 1 -passlogfile /tmp/ps -f mp4 /dev/null
+ffmpeg -v error -y -i out/video.mp4 -i out/video_30fps.mp4 -map 0:v -map 1:a -vf "$VF" -c:v libx264 -preset slow -b:v 3800k \
+  -maxrate 6000k -bufsize 8000k -pix_fmt yuv420p -pass 2 -passlogfile /tmp/ps -c:a copy -shortest -movflags +faststart \
+  out/video_30fps_subtitled.mp4
+ls -la out/video_30fps_subtitled.mp4
