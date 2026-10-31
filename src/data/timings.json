@@ -1,0 +1,1490 @@
+{
+ "audio": "audio/narration.mp3",
+ "voice": "Kenneth - American Storyteller (ElevenLabs 8z82LG47qQ2qjeeQB8lk)",
+ "model": "eleven_multilingual_v2",
+ "duration": 85.107,
+ "sentences": [
+  {
+   "n": 1,
+   "text": "A tiny splinter in your finger sets off your immune system.",
+   "start": 0.0,
+   "end": 3.193,
+   "firstWord": 0
+  },
+  {
+   "n": 2,
+   "text": "Your skin is a wall that keeps germs out.",
+   "start": 3.529,
+   "end": 5.898,
+   "firstWord": 11
+  },
+  {
+   "n": 3,
+   "text": "The splinter just punched a hole in it, and bacteria ride in on the wood.",
+   "start": 6.235,
+   "end": 10.275,
+   "firstWord": 20
+  },
+  {
+   "n": 4,
+   "text": "Damaged cells release chemical signals.",
+   "start": 10.728,
+   "end": 13.293,
+   "firstWord": 35
+  },
+  {
+   "n": 5,
+   "text": "Nearby blood vessels widen, so more blood flows in.",
+   "start": 13.746,
+   "end": 17.519,
+   "firstWord": 40
+  },
+  {
+   "n": 6,
+   "text": "That's why the spot turns red, warm and swollen.",
+   "start": 17.856,
+   "end": 21.362,
+   "firstWord": 49
+  },
+  {
+   "n": 7,
+   "text": "White blood cells squeeze out of the vessels and follow the signals.",
+   "start": 21.699,
+   "end": 25.298,
+   "firstWord": 58
+  },
+  {
+   "n": 8,
+   "text": "Neutrophils usually arrive first and swallow bacteria whole.",
+   "start": 25.751,
+   "end": 29.988,
+   "firstWord": 70
+  },
+  {
+   "n": 9,
+   "text": "Bigger cells called macrophages eat germs and clean up the mess.",
+   "start": 30.441,
+   "end": 34.807,
+   "firstWord": 78
+  },
+  {
+   "n": 10,
+   "text": "Often, that's enough.",
+   "start": 35.329,
+   "end": 36.676,
+   "firstWord": 89
+  },
+  {
+   "n": 11,
+   "text": "But a dendritic cell also grabs pieces of the germ and carries them to a lymph node, a small bean-shaped station.",
+   "start": 37.07,
+   "end": 44.408,
+   "firstWord": 92
+  },
+  {
+   "n": 12,
+   "text": "There, the pieces are checked against a huge crowd of immune cells.",
+   "start": 45.023,
+   "end": 49.18,
+   "firstWord": 113
+  },
+  {
+   "n": 13,
+   "text": "Only a few B cells fit this exact germ.",
+   "start": 49.703,
+   "end": 52.535,
+   "firstWord": 125
+  },
+  {
+   "n": 14,
+   "text": "When one fits, it copies itself again and again.",
+   "start": 52.988,
+   "end": 56.285,
+   "firstWord": 134
+  },
+  {
+   "n": 15,
+   "text": "The copies make antibodies, Y-shaped proteins that stick to this one germ.",
+   "start": 56.808,
+   "end": 62.218,
+   "firstWord": 143
+  },
+  {
+   "n": 16,
+   "text": "Antibodies travel through the blood and coat the bacteria.",
+   "start": 62.741,
+   "end": 66.328,
+   "firstWord": 155
+  },
+  {
+   "n": 17,
+   "text": "A coated germ is easier for the eating cells to find.",
+   "start": 66.85,
+   "end": 69.776,
+   "firstWord": 164
+  },
+  {
+   "n": 18,
+   "text": "The first time, this takes days.",
+   "start": 70.229,
+   "end": 72.063,
+   "firstWord": 175
+  },
+  {
+   "n": 19,
+   "text": "But some B cells stay behind as memory cells.",
+   "start": 72.4,
+   "end": 75.163,
+   "firstWord": 181
+  },
+  {
+   "n": 20,
+   "text": "If the same germ comes back, the response is faster and stronger.",
+   "start": 75.686,
+   "end": 79.087,
+   "firstWord": 190
+  },
+  {
+   "n": 21,
+   "text": "That's the idea behind vaccines.",
+   "start": 79.54,
+   "end": 81.397,
+   "firstWord": 202
+  },
+  {
+   "n": 22,
+   "text": "Back at your finger, the fight is over, and the wall is whole again.",
+   "start": 81.548,
+   "end": 85.078,
+   "firstWord": 207
+  }
+ ],
+ "words": [
+  {
+   "i": 0,
+   "text": "A",
+   "start": 0.0,
+   "end": 0.093
+  },
+  {
+   "i": 1,
+   "text": "tiny",
+   "start": 0.174,
+   "end": 0.476
+  },
+  {
+   "i": 2,
+   "text": "splinter",
+   "start": 0.522,
+   "end": 0.917
+  },
+  {
+   "i": 3,
+   "text": "in",
+   "start": 0.964,
+   "end": 1.022
+  },
+  {
+   "i": 4,
+   "text": "your",
+   "start": 1.068,
+   "end": 1.184
+  },
+  {
+   "i": 5,
+   "text": "finger",
+   "start": 1.242,
+   "end": 1.544
+  },
+  {
+   "i": 6,
+   "text": "sets",
+   "start": 1.625,
+   "end": 1.881
+  },
+  {
+   "i": 7,
+   "text": "off",
+   "start": 1.927,
+   "end": 2.067
+  },
+  {
+   "i": 8,
+   "text": "your",
+   "start": 2.113,
+   "end": 2.241
+  },
+  {
+   "i": 9,
+   "text": "immune",
+   "start": 2.276,
+   "end": 2.577
+  },
+  {
+   "i": 10,
+   "text": "system.",
+   "start": 2.612,
+   "end": 3.193
+  },
+  {
+   "i": 11,
+   "text": "Your",
+   "start": 3.529,
+   "end": 3.704
+  },
+  {
+   "i": 12,
+   "text": "skin",
+   "start": 3.75,
+   "end": 4.005
+  },
+  {
+   "i": 13,
+   "text": "is",
+   "start": 4.075,
+   "end": 4.156
+  },
+  {
+   "i": 14,
+   "text": "a",
+   "start": 4.214,
+   "end": 4.238
+  },
+  {
+   "i": 15,
+   "text": "wall",
+   "start": 4.307,
+   "end": 4.551
+  },
+  {
+   "i": 16,
+   "text": "that",
+   "start": 4.609,
+   "end": 4.725
+  },
+  {
+   "i": 17,
+   "text": "keeps",
+   "start": 4.772,
+   "end": 5.039
+  },
+  {
+   "i": 18,
+   "text": "germs",
+   "start": 5.097,
+   "end": 5.457
+  },
+  {
+   "i": 19,
+   "text": "out.",
+   "start": 5.515,
+   "end": 5.898
+  },
+  {
+   "i": 20,
+   "text": "The",
+   "start": 6.235,
+   "end": 6.351
+  },
+  {
+   "i": 21,
+   "text": "splinter",
+   "start": 6.397,
+   "end": 6.815
+  },
+  {
+   "i": 22,
+   "text": "just",
+   "start": 6.885,
+   "end": 7.082
+  },
+  {
+   "i": 23,
+   "text": "punched",
+   "start": 7.14,
+   "end": 7.454
+  },
+  {
+   "i": 24,
+   "text": "a",
+   "start": 7.488,
+   "end": 7.523
+  },
+  {
+   "i": 25,
+   "text": "hole",
+   "start": 7.593,
+   "end": 7.837
+  },
+  {
+   "i": 26,
+   "text": "in",
+   "start": 7.872,
+   "end": 7.941
+  },
+  {
+   "i": 27,
+   "text": "it,",
+   "start": 7.999,
+   "end": 8.197
+  },
+  {
+   "i": 28,
+   "text": "and",
+   "start": 8.231,
+   "end": 8.394
+  },
+  {
+   "i": 29,
+   "text": "bacteria",
+   "start": 8.452,
+   "end": 9.044
+  },
+  {
+   "i": 30,
+   "text": "ride",
+   "start": 9.114,
+   "end": 9.369
+  },
+  {
+   "i": 31,
+   "text": "in",
+   "start": 9.404,
+   "end": 9.485
+  },
+  {
+   "i": 32,
+   "text": "on",
+   "start": 9.555,
+   "end": 9.636
+  },
+  {
+   "i": 33,
+   "text": "the",
+   "start": 9.671,
+   "end": 9.741
+  },
+  {
+   "i": 34,
+   "text": "wood.",
+   "start": 9.787,
+   "end": 10.275
+  },
+  {
+   "i": 35,
+   "text": "Damaged",
+   "start": 10.728,
+   "end": 11.192
+  },
+  {
+   "i": 36,
+   "text": "cells",
+   "start": 11.238,
+   "end": 11.668
+  },
+  {
+   "i": 37,
+   "text": "release",
+   "start": 11.761,
+   "end": 12.109
+  },
+  {
+   "i": 38,
+   "text": "chemical",
+   "start": 12.144,
+   "end": 12.55
+  },
+  {
+   "i": 39,
+   "text": "signals.",
+   "start": 12.62,
+   "end": 13.293
+  },
+  {
+   "i": 40,
+   "text": "Nearby",
+   "start": 13.746,
+   "end": 14.164
+  },
+  {
+   "i": 41,
+   "text": "blood",
+   "start": 14.245,
+   "end": 14.477
+  },
+  {
+   "i": 42,
+   "text": "vessels",
+   "start": 14.524,
+   "end": 14.895
+  },
+  {
+   "i": 43,
+   "text": "widen,",
+   "start": 14.965,
+   "end": 15.604
+  },
+  {
+   "i": 44,
+   "text": "so",
+   "start": 15.778,
+   "end": 15.964
+  },
+  {
+   "i": 45,
+   "text": "more",
+   "start": 16.056,
+   "end": 16.3
+  },
+  {
+   "i": 46,
+   "text": "blood",
+   "start": 16.347,
+   "end": 16.637
+  },
+  {
+   "i": 47,
+   "text": "flows",
+   "start": 16.707,
+   "end": 17.055
+  },
+  {
+   "i": 48,
+   "text": "in.",
+   "start": 17.125,
+   "end": 17.519
+  },
+  {
+   "i": 49,
+   "text": "That's",
+   "start": 17.856,
+   "end": 18.123
+  },
+  {
+   "i": 50,
+   "text": "why",
+   "start": 18.158,
+   "end": 18.309
+  },
+  {
+   "i": 51,
+   "text": "the",
+   "start": 18.367,
+   "end": 18.436
+  },
+  {
+   "i": 52,
+   "text": "spot",
+   "start": 18.483,
+   "end": 18.796
+  },
+  {
+   "i": 53,
+   "text": "turns",
+   "start": 18.854,
+   "end": 19.191
+  },
+  {
+   "i": 54,
+   "text": "red,",
+   "start": 19.284,
+   "end": 19.772
+  },
+  {
+   "i": 55,
+   "text": "warm",
+   "start": 19.946,
+   "end": 20.41
+  },
+  {
+   "i": 56,
+   "text": "and",
+   "start": 20.491,
+   "end": 20.654
+  },
+  {
+   "i": 57,
+   "text": "swollen.",
+   "start": 20.735,
+   "end": 21.362
+  },
+  {
+   "i": 58,
+   "text": "White",
+   "start": 21.699,
+   "end": 21.989
+  },
+  {
+   "i": 59,
+   "text": "blood",
+   "start": 22.036,
+   "end": 22.279
+  },
+  {
+   "i": 60,
+   "text": "cells",
+   "start": 22.337,
+   "end": 22.686
+  },
+  {
+   "i": 61,
+   "text": "squeeze",
+   "start": 22.732,
+   "end": 23.104
+  },
+  {
+   "i": 62,
+   "text": "out",
+   "start": 23.138,
+   "end": 23.255
+  },
+  {
+   "i": 63,
+   "text": "of",
+   "start": 23.289,
+   "end": 23.336
+  },
+  {
+   "i": 64,
+   "text": "the",
+   "start": 23.371,
+   "end": 23.44
+  },
+  {
+   "i": 65,
+   "text": "vessels",
+   "start": 23.487,
+   "end": 23.905
+  },
+  {
+   "i": 66,
+   "text": "and",
+   "start": 23.963,
+   "end": 24.079
+  },
+  {
+   "i": 67,
+   "text": "follow",
+   "start": 24.172,
+   "end": 24.485
+  },
+  {
+   "i": 68,
+   "text": "the",
+   "start": 24.543,
+   "end": 24.613
+  },
+  {
+   "i": 69,
+   "text": "signals.",
+   "start": 24.671,
+   "end": 25.298
+  },
+  {
+   "i": 70,
+   "text": "Neutrophils",
+   "start": 25.751,
+   "end": 26.505
+  },
+  {
+   "i": 71,
+   "text": "usually",
+   "start": 26.598,
+   "end": 27.005
+  },
+  {
+   "i": 72,
+   "text": "arrive",
+   "start": 27.039,
+   "end": 27.353
+  },
+  {
+   "i": 73,
+   "text": "first",
+   "start": 27.411,
+   "end": 27.794
+  },
+  {
+   "i": 74,
+   "text": "and",
+   "start": 28.003,
+   "end": 28.224
+  },
+  {
+   "i": 75,
+   "text": "swallow",
+   "start": 28.293,
+   "end": 28.688
+  },
+  {
+   "i": 76,
+   "text": "bacteria",
+   "start": 28.758,
+   "end": 29.431
+  },
+  {
+   "i": 77,
+   "text": "whole.",
+   "start": 29.478,
+   "end": 29.988
+  },
+  {
+   "i": 78,
+   "text": "Bigger",
+   "start": 30.441,
+   "end": 30.708
+  },
+  {
+   "i": 79,
+   "text": "cells",
+   "start": 30.766,
+   "end": 31.057
+  },
+  {
+   "i": 80,
+   "text": "called",
+   "start": 31.115,
+   "end": 31.428
+  },
+  {
+   "i": 81,
+   "text": "macrophages",
+   "start": 31.556,
+   "end": 32.577
+  },
+  {
+   "i": 82,
+   "text": "eat",
+   "start": 32.694,
+   "end": 32.914
+  },
+  {
+   "i": 83,
+   "text": "germs",
+   "start": 32.995,
+   "end": 33.495
+  },
+  {
+   "i": 84,
+   "text": "and",
+   "start": 33.553,
+   "end": 33.669
+  },
+  {
+   "i": 85,
+   "text": "clean",
+   "start": 33.738,
+   "end": 33.994
+  },
+  {
+   "i": 86,
+   "text": "up",
+   "start": 34.052,
+   "end": 34.156
+  },
+  {
+   "i": 87,
+   "text": "the",
+   "start": 34.214,
+   "end": 34.284
+  },
+  {
+   "i": 88,
+   "text": "mess.",
+   "start": 34.342,
+   "end": 34.807
+  },
+  {
+   "i": 89,
+   "text": "Often,",
+   "start": 35.329,
+   "end": 35.817
+  },
+  {
+   "i": 90,
+   "text": "that's",
+   "start": 35.863,
+   "end": 36.107
+  },
+  {
+   "i": 91,
+   "text": "enough.",
+   "start": 36.153,
+   "end": 36.676
+  },
+  {
+   "i": 92,
+   "text": "But",
+   "start": 37.07,
+   "end": 37.233
+  },
+  {
+   "i": 93,
+   "text": "a",
+   "start": 37.268,
+   "end": 37.291
+  },
+  {
+   "i": 94,
+   "text": "dendritic",
+   "start": 37.349,
+   "end": 37.825
+  },
+  {
+   "i": 95,
+   "text": "cell",
+   "start": 37.883,
+   "end": 38.15
+  },
+  {
+   "i": 96,
+   "text": "also",
+   "start": 38.231,
+   "end": 38.626
+  },
+  {
+   "i": 97,
+   "text": "grabs",
+   "start": 38.707,
+   "end": 39.056
+  },
+  {
+   "i": 98,
+   "text": "pieces",
+   "start": 39.114,
+   "end": 39.497
+  },
+  {
+   "i": 99,
+   "text": "of",
+   "start": 39.543,
+   "end": 39.601
+  },
+  {
+   "i": 100,
+   "text": "the",
+   "start": 39.648,
+   "end": 39.718
+  },
+  {
+   "i": 101,
+   "text": "germ",
+   "start": 39.764,
+   "end": 40.077
+  },
+  {
+   "i": 102,
+   "text": "and",
+   "start": 40.124,
+   "end": 40.217
+  },
+  {
+   "i": 103,
+   "text": "carries",
+   "start": 40.286,
+   "end": 40.623
+  },
+  {
+   "i": 104,
+   "text": "them",
+   "start": 40.67,
+   "end": 40.809
+  },
+  {
+   "i": 105,
+   "text": "to",
+   "start": 40.867,
+   "end": 40.948
+  },
+  {
+   "i": 106,
+   "text": "a",
+   "start": 41.064,
+   "end": 41.088
+  },
+  {
+   "i": 107,
+   "text": "lymph",
+   "start": 41.169,
+   "end": 41.459
+  },
+  {
+   "i": 108,
+   "text": "node,",
+   "start": 41.529,
+   "end": 41.981
+  },
+  {
+   "i": 109,
+   "text": "a",
+   "start": 42.225,
+   "end": 42.295
+  },
+  {
+   "i": 110,
+   "text": "small",
+   "start": 42.388,
+   "end": 42.806
+  },
+  {
+   "i": 111,
+   "text": "bean-shaped",
+   "start": 42.922,
+   "end": 43.665
+  },
+  {
+   "i": 112,
+   "text": "station.",
+   "start": 43.723,
+   "end": 44.408
+  },
+  {
+   "i": 113,
+   "text": "There,",
+   "start": 45.023,
+   "end": 45.476
+  },
+  {
+   "i": 114,
+   "text": "the",
+   "start": 45.523,
+   "end": 45.627
+  },
+  {
+   "i": 115,
+   "text": "pieces",
+   "start": 45.685,
+   "end": 46.01
+  },
+  {
+   "i": 116,
+   "text": "are",
+   "start": 46.045,
+   "end": 46.149
+  },
+  {
+   "i": 117,
+   "text": "checked",
+   "start": 46.184,
+   "end": 46.498
+  },
+  {
+   "i": 118,
+   "text": "against",
+   "start": 46.521,
+   "end": 46.835
+  },
+  {
+   "i": 119,
+   "text": "a",
+   "start": 46.881,
+   "end": 46.916
+  },
+  {
+   "i": 120,
+   "text": "huge",
+   "start": 47.009,
+   "end": 47.473
+  },
+  {
+   "i": 121,
+   "text": "crowd",
+   "start": 47.532,
+   "end": 47.938
+  },
+  {
+   "i": 122,
+   "text": "of",
+   "start": 47.984,
+   "end": 48.042
+  },
+  {
+   "i": 123,
+   "text": "immune",
+   "start": 48.089,
+   "end": 48.518
+  },
+  {
+   "i": 124,
+   "text": "cells.",
+   "start": 48.553,
+   "end": 49.18
+  },
+  {
+   "i": 125,
+   "text": "Only",
+   "start": 49.703,
+   "end": 49.935
+  },
+  {
+   "i": 126,
+   "text": "a",
+   "start": 49.993,
+   "end": 50.016
+  },
+  {
+   "i": 127,
+   "text": "few",
+   "start": 50.086,
+   "end": 50.237
+  },
+  {
+   "i": 128,
+   "text": "B",
+   "start": 50.306,
+   "end": 50.376
+  },
+  {
+   "i": 129,
+   "text": "cells",
+   "start": 50.55,
+   "end": 50.875
+  },
+  {
+   "i": 130,
+   "text": "fit",
+   "start": 50.945,
+   "end": 51.131
+  },
+  {
+   "i": 131,
+   "text": "this",
+   "start": 51.189,
+   "end": 51.374
+  },
+  {
+   "i": 132,
+   "text": "exact",
+   "start": 51.456,
+   "end": 51.908
+  },
+  {
+   "i": 133,
+   "text": "germ.",
+   "start": 51.99,
+   "end": 52.535
+  },
+  {
+   "i": 134,
+   "text": "When",
+   "start": 52.988,
+   "end": 53.174
+  },
+  {
+   "i": 135,
+   "text": "one",
+   "start": 53.244,
+   "end": 53.418
+  },
+  {
+   "i": 136,
+   "text": "fits,",
+   "start": 53.464,
+   "end": 53.824
+  },
+  {
+   "i": 137,
+   "text": "it",
+   "start": 53.859,
+   "end": 53.952
+  },
+  {
+   "i": 138,
+   "text": "copies",
+   "start": 54.068,
+   "end": 54.532
+  },
+  {
+   "i": 139,
+   "text": "itself",
+   "start": 54.59,
+   "end": 54.95
+  },
+  {
+   "i": 140,
+   "text": "again",
+   "start": 55.02,
+   "end": 55.426
+  },
+  {
+   "i": 141,
+   "text": "and",
+   "start": 55.496,
+   "end": 55.658
+  },
+  {
+   "i": 142,
+   "text": "again.",
+   "start": 55.717,
+   "end": 56.285
+  },
+  {
+   "i": 143,
+   "text": "The",
+   "start": 56.808,
+   "end": 56.924
+  },
+  {
+   "i": 144,
+   "text": "copies",
+   "start": 56.97,
+   "end": 57.354
+  },
+  {
+   "i": 145,
+   "text": "make",
+   "start": 57.412,
+   "end": 57.586
+  },
+  {
+   "i": 146,
+   "text": "antibodies,",
+   "start": 57.632,
+   "end": 58.596
+  },
+  {
+   "i": 147,
+   "text": "Y-shaped",
+   "start": 58.991,
+   "end": 59.676
+  },
+  {
+   "i": 148,
+   "text": "proteins",
+   "start": 59.734,
+   "end": 60.361
+  },
+  {
+   "i": 149,
+   "text": "that",
+   "start": 60.419,
+   "end": 60.57
+  },
+  {
+   "i": 150,
+   "text": "stick",
+   "start": 60.639,
+   "end": 60.883
+  },
+  {
+   "i": 151,
+   "text": "to",
+   "start": 60.929,
+   "end": 60.987
+  },
+  {
+   "i": 152,
+   "text": "this",
+   "start": 61.057,
+   "end": 61.243
+  },
+  {
+   "i": 153,
+   "text": "one",
+   "start": 61.336,
+   "end": 61.614
+  },
+  {
+   "i": 154,
+   "text": "germ.",
+   "start": 61.672,
+   "end": 62.218
+  },
+  {
+   "i": 155,
+   "text": "Antibodies",
+   "start": 62.741,
+   "end": 63.402
+  },
+  {
+   "i": 156,
+   "text": "travel",
+   "start": 63.437,
+   "end": 63.739
+  },
+  {
+   "i": 157,
+   "text": "through",
+   "start": 63.797,
+   "end": 64.052
+  },
+  {
+   "i": 158,
+   "text": "the",
+   "start": 64.087,
+   "end": 64.157
+  },
+  {
+   "i": 159,
+   "text": "blood",
+   "start": 64.192,
+   "end": 64.552
+  },
+  {
+   "i": 160,
+   "text": "and",
+   "start": 64.726,
+   "end": 64.993
+  },
+  {
+   "i": 161,
+   "text": "coat",
+   "start": 65.074,
+   "end": 65.306
+  },
+  {
+   "i": 162,
+   "text": "the",
+   "start": 65.376,
+   "end": 65.446
+  },
+  {
+   "i": 163,
+   "text": "bacteria.",
+   "start": 65.492,
+   "end": 66.328
+  },
+  {
+   "i": 164,
+   "text": "A",
+   "start": 66.85,
+   "end": 66.932
+  },
+  {
+   "i": 165,
+   "text": "coated",
+   "start": 67.025,
+   "end": 67.361
+  },
+  {
+   "i": 166,
+   "text": "germ",
+   "start": 67.408,
+   "end": 67.663
+  },
+  {
+   "i": 167,
+   "text": "is",
+   "start": 67.698,
+   "end": 67.779
+  },
+  {
+   "i": 168,
+   "text": "easier",
+   "start": 67.849,
+   "end": 68.174
+  },
+  {
+   "i": 169,
+   "text": "for",
+   "start": 68.244,
+   "end": 68.337
+  },
+  {
+   "i": 170,
+   "text": "the",
+   "start": 68.383,
+   "end": 68.453
+  },
+  {
+   "i": 171,
+   "text": "eating",
+   "start": 68.522,
+   "end": 68.766
+  },
+  {
+   "i": 172,
+   "text": "cells",
+   "start": 68.824,
+   "end": 69.091
+  },
+  {
+   "i": 173,
+   "text": "to",
+   "start": 69.138,
+   "end": 69.184
+  },
+  {
+   "i": 174,
+   "text": "find.",
+   "start": 69.254,
+   "end": 69.776
+  },
+  {
+   "i": 175,
+   "text": "The",
+   "start": 70.229,
+   "end": 70.345
+  },
+  {
+   "i": 176,
+   "text": "first",
+   "start": 70.403,
+   "end": 70.612
+  },
+  {
+   "i": 177,
+   "text": "time,",
+   "start": 70.647,
+   "end": 70.937
+  },
+  {
+   "i": 178,
+   "text": "this",
+   "start": 70.972,
+   "end": 71.135
+  },
+  {
+   "i": 179,
+   "text": "takes",
+   "start": 71.193,
+   "end": 71.436
+  },
+  {
+   "i": 180,
+   "text": "days.",
+   "start": 71.483,
+   "end": 72.063
+  },
+  {
+   "i": 181,
+   "text": "But",
+   "start": 72.4,
+   "end": 72.574
+  },
+  {
+   "i": 182,
+   "text": "some",
+   "start": 72.621,
+   "end": 72.818
+  },
+  {
+   "i": 183,
+   "text": "B",
+   "start": 72.853,
+   "end": 72.911
+  },
+  {
+   "i": 184,
+   "text": "cells",
+   "start": 73.062,
+   "end": 73.329
+  },
+  {
+   "i": 185,
+   "text": "stay",
+   "start": 73.352,
+   "end": 73.526
+  },
+  {
+   "i": 186,
+   "text": "behind",
+   "start": 73.584,
+   "end": 73.979
+  },
+  {
+   "i": 187,
+   "text": "as",
+   "start": 74.049,
+   "end": 74.153
+  },
+  {
+   "i": 188,
+   "text": "memory",
+   "start": 74.234,
+   "end": 74.536
+  },
+  {
+   "i": 189,
+   "text": "cells.",
+   "start": 74.594,
+   "end": 75.163
+  },
+  {
+   "i": 190,
+   "text": "If",
+   "start": 75.686,
+   "end": 75.825
+  },
+  {
+   "i": 191,
+   "text": "the",
+   "start": 75.871,
+   "end": 75.941
+  },
+  {
+   "i": 192,
+   "text": "same",
+   "start": 75.987,
+   "end": 76.208
+  },
+  {
+   "i": 193,
+   "text": "germ",
+   "start": 76.243,
+   "end": 76.452
+  },
+  {
+   "i": 194,
+   "text": "comes",
+   "start": 76.51,
+   "end": 76.719
+  },
+  {
+   "i": 195,
+   "text": "back,",
+   "start": 76.777,
+   "end": 77.032
+  },
+  {
+   "i": 196,
+   "text": "the",
+   "start": 77.056,
+   "end": 77.125
+  },
+  {
+   "i": 197,
+   "text": "response",
+   "start": 77.183,
+   "end": 77.613
+  },
+  {
+   "i": 198,
+   "text": "is",
+   "start": 77.648,
+   "end": 77.729
+  },
+  {
+   "i": 199,
+   "text": "faster",
+   "start": 77.799,
+   "end": 78.217
+  },
+  {
+   "i": 200,
+   "text": "and",
+   "start": 78.286,
+   "end": 78.367
+  },
+  {
+   "i": 201,
+   "text": "stronger.",
+   "start": 78.437,
+   "end": 79.087
+  },
+  {
+   "i": 202,
+   "text": "That's",
+   "start": 79.54,
+   "end": 79.807
+  },
+  {
+   "i": 203,
+   "text": "the",
+   "start": 79.853,
+   "end": 79.923
+  },
+  {
+   "i": 204,
+   "text": "idea",
+   "start": 79.993,
+   "end": 80.26
+  },
+  {
+   "i": 205,
+   "text": "behind",
+   "start": 80.318,
+   "end": 80.585
+  },
+  {
+   "i": 206,
+   "text": "vaccines.",
+   "start": 80.643,
+   "end": 81.397
+  },
+  {
+   "i": 207,
+   "text": "Back",
+   "start": 81.548,
+   "end": 81.781
+  },
+  {
+   "i": 208,
+   "text": "at",
+   "start": 81.827,
+   "end": 81.873
+  },
+  {
+   "i": 209,
+   "text": "your",
+   "start": 81.908,
+   "end": 82.024
+  },
+  {
+   "i": 210,
+   "text": "finger,",
+   "start": 82.071,
+   "end": 82.315
+  },
+  {
+   "i": 211,
+   "text": "the",
+   "start": 82.338,
+   "end": 82.407
+  },
+  {
+   "i": 212,
+   "text": "fight",
+   "start": 82.442,
+   "end": 82.663
+  },
+  {
+   "i": 213,
+   "text": "is",
+   "start": 82.698,
+   "end": 82.767
+  },
+  {
+   "i": 214,
+   "text": "over,",
+   "start": 82.825,
+   "end": 83.162
+  },
+  {
+   "i": 215,
+   "text": "and",
+   "start": 83.232,
+   "end": 83.383
+  },
+  {
+   "i": 216,
+   "text": "the",
+   "start": 83.429,
+   "end": 83.499
+  },
+  {
+   "i": 217,
+   "text": "wall",
+   "start": 83.545,
+   "end": 83.801
+  },
+  {
+   "i": 218,
+   "text": "is",
+   "start": 83.859,
+   "end": 83.952
+  },
+  {
+   "i": 219,
+   "text": "whole",
+   "start": 83.998,
+   "end": 84.3
+  },
+  {
+   "i": 220,
+   "text": "again.",
+   "start": 84.335,
+   "end": 85.078
+  }
+ ]
+}

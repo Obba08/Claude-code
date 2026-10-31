@@ -1,0 +1,25 @@
+{
+  "name": "explainer-video",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Reusable Remotion template for calm, one-camera explainer videos",
+  "scripts": {
+    "studio": "remotion studio",
+    "stills": "node tools/render-stills.mjs",
+    "render": "remotion render Explainer out/video.mp4"
+  },
+  "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@remotion/bundler": "^4.0.539",
+    "@remotion/cli": "^4.0.539",
+    "@remotion/renderer": "^4.0.539",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "remotion": "^4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  }
+}
