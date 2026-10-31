@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
+import {applyFormat} from './format';
 import {AbsoluteFill, Audio, Img, continueRender, delayRender, staticFile, useCurrentFrame} from 'remotion';
 import type {Item, LabelItem, MagnifierItem, PictureItem, VideoSettings, Vec} from './types';
 import {
@@ -545,7 +546,8 @@ const useFont = (family: string, file: string) => {
   }, [family, file, handle]);
 };
 
-export const Scene: React.FC<{settings: VideoSettings}> = ({settings: s}) => {
+export const Scene: React.FC<{settings: VideoSettings; format?: string}> = ({settings, format}) => {
+  const s = useMemo(() => applyFormat(settings, format), [settings, format]);
   useFont(s.style.font, 'fonts/inter-latin-800-normal.woff2');
   const frame = useCurrentFrame();
   const t = frame / s.fps;

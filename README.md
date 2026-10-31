@@ -27,6 +27,13 @@ The first video made with it: *How the immune system works* (`script.md`).
 5. Check: `node tools/render-stills.mjs && python3 tools/contact_sheet.py`
 6. Render: `npx remotion render Explainer out/video.mp4`
 
+## Other frame shapes
+
+A settings file can list extra `formats` (this one has `square`, 1080×1080 at 30 fps). Each format becomes its own
+composition (`Explainer-square`) using the same world, pictures and timings. Only the frame, safe areas and camera zoom
+change (`zoomScale`, plus optional per-key overrides like `formats: {square: {zoom: 1.0}}`).
+Check it with `COMP=Explainer-square OUT=out/stills-square node tools/render-stills.mjs`, build it with `tools/make-square.sh`.
+
 ## Building blocks (item types)
 
 - `picture`: a cut-out image. Can move (`motion`), follow a path (`pathMotion`), be swallowed (`swallow`), and sit on a far layer (`depth` > 1 moves slower and blurs).

@@ -25,6 +25,18 @@ export interface CameraKey {
   zoom: number;
   /** How the move INTO this key is eased. Default 'inOut'. */
   ease?: Ease;
+  /** Per-format overrides, e.g. {square: {zoom: 2.6}}. */
+  formats?: Record<string, Partial<Pick<CameraKey, 'x' | 'y' | 'zoom'>>>;
+}
+
+/** Another frame shape for the same video (e.g. a square feed version). */
+export interface FormatDef {
+  width: number;
+  height: number;
+  fps?: number;
+  safe: {top: number; bottom: number};
+  /** Camera zoom multiplier for keys without their own override. */
+  zoomScale: number;
 }
 
 /** A keyframe for an item's own movement. Missing values keep the previous value. */
@@ -185,4 +197,6 @@ export interface VideoSettings {
   pictures: Record<string, PictureDef>;
   camera: CameraKey[];
   items: Item[];
+  /** Extra frame shapes, rendered as extra compositions. */
+  formats?: Record<string, FormatDef>;
 }

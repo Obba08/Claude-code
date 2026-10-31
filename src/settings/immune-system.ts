@@ -148,7 +148,7 @@ const followPath = (path: Vec[], start: number, end: number, z0: number, z1: num
 // ---------------------------------------------------------------- camera
 
 const camera: CameraKey[] = [
-  {at: 0, x: -125, y: -24, zoom: 0.85},
+  {at: 0, x: -125, y: -24, zoom: 0.85, formats: {square: {zoom: 1.0}}},
   {at: 2.9, x: -430, y: -8, zoom: 1.75}, // S1 slow push toward the splinter
   {at: 4.9, x: -514, y: 38, zoom: 7.0}, // S2 into the skin
   {at: 6.4, x: -515, y: 37, zoom: 7.3},
@@ -180,15 +180,15 @@ const camera: CameraKey[] = [
   {at: 66.1, x: -515, y: 32, zoom: 14, ease: 'out'}, // …landing in the skin
   {at: 67.5, x: -522, y: 32, zoom: 17}, // S17 hold close on the coated germ
   {at: 69.9, x: -523, y: 33, zoom: 18},
-  {at: 73.4, x: -483, y: 155, zoom: 4.0}, // S18 pull back while days pass
+  {at: 73.4, x: -483, y: 155, zoom: 4.0, formats: {square: {zoom: 2.55}}}, // S18 pull back while days pass
   {at: 75.6, x: -470, y: 214, zoom: 5.6}, // S19 drift toward the memory cells
   {at: 75.9, x: -470, y: 214, zoom: 5.65},
   {at: 77.5, x: -519, y: 26, zoom: 14}, // S20 quick smooth push to the new germ
   {at: 79.2, x: -519, y: 26, zoom: 14.6},
-  {at: 81.2, x: -483, y: 155, zoom: 4.0}, // S21 back out to see the memory cells
-  {at: 81.4, x: -483, y: 155, zoom: 3.97},
-  {at: 85.7, x: -125, y: -24, zoom: 0.85}, // S22 long pull back to the opening frame
-  {at: 86.2, x: -124, y: -24, zoom: 0.84, ease: 'linear'},
+  {at: 81.2, x: -483, y: 155, zoom: 4.0, formats: {square: {zoom: 2.55}}}, // S21 back out to see the memory cells
+  {at: 81.4, x: -483, y: 155, zoom: 3.97, formats: {square: {zoom: 2.53}}},
+  {at: 85.7, x: -125, y: -24, zoom: 0.85, formats: {square: {zoom: 1.0}}}, // S22 long pull back to the opening frame
+  {at: 86.2, x: -124, y: -24, zoom: 0.84, ease: 'linear', formats: {square: {zoom: 0.99}}},
 ];
 
 // ---------------------------------------------------------------- items
@@ -554,7 +554,7 @@ items.push({
 items.push(
   label({text: 'B CELL', anchor: [MAG_C[0], MAG_C[1] + MAG_R], offset: [0, 70], show: {in: T.bcells, out: s(14) - 0.1}}),
   label({text: 'ANTIBODY', anchor: A1_AT, offset: [0, -240], show: {in: T.yshaped, out: s(16) + 0.2}}),
-  label({text: 'MEMORY CELLS', anchor: [MAG_C[0], MAG_C[1] + MAG_R], offset: [0, 60], show: {in: T.memory, out: s(20) + 0.2}}),
+  label({text: 'MEMORY CELLS', anchor: [MAG_C[0] + 8, MAG_C[1] + MAG_R], offset: [0, 60], show: {in: T.memory, out: s(20) + 0.2}}),
   label({text: 'VACCINES', anchor: [MAG_C[0], MAG_C[1] + MAG_R], offset: [0, 55], show: {in: T.vaccines, out: T.back + 0.6}}),
 );
 
@@ -619,6 +619,10 @@ const settings: VideoSettings = {
   pictures,
   camera,
   items,
+  // Square feed version (Instagram): same journey, re-framed.
+  formats: {
+    square: {width: 1080, height: 1080, fps: 30, safe: {top: 0.05, bottom: 0.15}, zoomScale: 0.75},
+  },
 };
 
 export default settings;

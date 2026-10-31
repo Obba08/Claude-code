@@ -3,6 +3,14 @@
 # shown from its first word to just before the next caption, so it follows the voice exactly.
 import json
 import os
+import sys
+
+# Usage: python3 tools/make_subtitles.py [vertical|square]
+FMT = sys.argv[1] if len(sys.argv) > 1 else 'vertical'
+LAYOUT = {
+    'vertical': dict(w=1080, h=1920, size=54, margin_v=372, outline=7, out='out/subtitles'),
+    'square': dict(w=1080, h=1080, size=46, margin_v=62, outline=6, out='out/subtitles-square'),
+}[FMT]
 
 MAX_CHARS = 30  # per caption line
 t = json.load(open('src/data/timings.json'))
@@ -52,29 +60,29 @@ def ass_time(x):
     return f'{cs // 360000}:{cs // 6000 % 60:02}:{cs // 100 % 60:02}.{cs % 100:02}'
 
 os.makedirs('out', exist_ok=True)
-with open('out/subtitles.srt', 'w') as f:
+with open(LAYOUT['out'] + '.srt', 'w') as f:
     for i, (a, b, text) in enumerate(captions, 1):
         f.write(f'{i}\n{srt_time(a)} --> {srt_time(b)}\n{text}\n\n')
 
 # Dark ink text with a soft white halo (matches the labels), sitting just above the bottom 18% safe band.
 ass = """[Script Info]
 ScriptType: v4.00+
-PlayResX: 1080
-PlayResY: 1920
+PlayResX: {w}
+PlayResY: {h}
 WrapStyle: 2
 ScaledBorderAndShadow: yes
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Sub,Inter,54,&H001F1D1D,&H001F1D1D,&H00FFFFFF,&H00FFFFFF,-1,0,0,0,100,100,0.5,0,1,7,0,2,80,80,372,1
+Style: Sub,Inter,{size},&H001F1D1D,&H001F1D1D,&H00FFFFFF,&H00FFFFFF,-1,0,0,0,100,100,0.5,0,1,{outline},0,2,80,80,{margin_v},1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-"""
+""".format(**LAYOUT)
 for a, b, text in captions:
     # soft halo + a short fade so captions never pop
     ass += f'Dialogue: 0,{ass_time(a)},{ass_time(b)},Sub,,0,0,0,,{{\\blur4\\fad(120,120)}}{text}\n'
-open('out/subtitles.ass', 'w').write(ass)
+open(LAYOUT['out'] + '.ass', 'w').write(ass)
 print(len(captions), 'captions; longest:', max(len(c[2]) for c in captions), 'chars')
 for c in captions[:8]:
     print(f'{c[0]:6.2f}-{c[1]:6.2f}  {c[2]}')

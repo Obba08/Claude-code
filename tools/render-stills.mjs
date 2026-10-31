@@ -1,5 +1,5 @@
 // Renders a still every half second and at every sentence start, for checking.
-// Usage: node tools/render-stills.mjs [from-seconds] [to-seconds]
+// Usage: [COMP=Explainer-square OUT=out/stills-square] node tools/render-stills.mjs [from-seconds] [to-seconds]
 import {bundle} from '@remotion/bundler';
 import {openBrowser, renderStill, selectComposition} from '@remotion/renderer';
 import fs from 'node:fs';
@@ -11,12 +11,13 @@ const browserExecutable =
 const timings = JSON.parse(fs.readFileSync('src/data/timings.json', 'utf8'));
 const from = Number(process.argv[2] ?? 0);
 const to = Number(process.argv[3] ?? 1e9);
-const outDir = 'out/stills';
+const compId = process.env.COMP ?? 'Explainer';
+const outDir = process.env.OUT ?? 'out/stills';
 fs.mkdirSync(outDir, {recursive: true});
 
 const serveUrl = await bundle({entryPoint: path.resolve('src/index.ts')});
 const browser = await openBrowser('chrome', {browserExecutable});
-const composition = await selectComposition({serveUrl, id: 'Explainer', puppeteerInstance: browser});
+const composition = await selectComposition({serveUrl, id: compId, puppeteerInstance: browser});
 const fps = composition.fps;
 
 const times = new Set();
