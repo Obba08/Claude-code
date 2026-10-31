@@ -53,3 +53,47 @@ Earlier option, pointing finger: `brand/fingertipfacts_profile_1080.png` (OpenAr
 - **Logo:** a single fingertip in the same ink-and-graphite style, with a soft blue glow at the tip.
 - **Signature opening:** every video starts on a fingertip touching or pointing at the subject, then the camera zooms in.
 - **Look:** black and white scientific illustration, fine ink lines, soft graphite shading; one soft blue accent (#5E9BE0) for light and movement.
+
+## Posting kit: "How the immune system works"
+
+Which file to post:
+- TikTok, YouTube Shorts, Instagram Reels: `out/video_30fps_subtitled.mp4` (9:16, subtitles, music)
+- Instagram feed post / carousel: `out/video_square.mp4` (1:1)
+
+On-screen hook (first 1–2 s, add as text in the app or bake in): **"What happens after a splinter?"**
+Cover frame: the skin cross-section with the blue glow (around 0:20).
+
+### TikTok
+Caption:
+```
+What your body does in the seconds after a splinter 🔬 From the first white blood cells to the memory cells that remember the germ for next time. #immunesystem #biology #science #learnontiktok #howthebodyworks
+```
+
+### Instagram Reels
+Caption:
+```
+A splinter is all it takes to start your immune system.
+Watch it go from first responders to memory cells. 🔬
+
+Save this for the next time someone asks how vaccines work.
+
+#immunesystem #biology #sciencefacts #humanbody #learnsomethingnew
+```
+
+### YouTube Shorts
+Title (keep it under ~60 characters):
+```
+How Your Immune System Fights a Splinter #shorts
+```
+Description:
+```
+What happens inside your finger after a splinter: inflammation, white blood cells, antibodies and memory cells, explained in 90 seconds.
+
+#immunesystem #biology #science
+```
+Tags (YouTube settings): immune system, how the immune system works, white blood cells, antibodies, B cells, memory cells, inflammation, how vaccines work, biology explained, human body facts
+
+Pinned comment (all platforms):
+```
+Which part of your body should we zoom into next? 👇
+```
