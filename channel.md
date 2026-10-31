@@ -32,6 +32,13 @@ Subscribe for new explainers.
 Also on TikTok and Instagram: @fingertipfacts
 ```
 
+## Profile picture
+
+- `brand/fingertipfacts_profile_1080.png` — use on TikTok, Instagram and YouTube (all crop it to a circle).
+- `brand/fingertipfacts_profile_800.png` — smaller copy (YouTube's recommended 800×800).
+- `brand/logo_v1_raw.png` — the full original picture.
+- Made with GPT Image 2.5 (Sunburst), high quality, OpenArt history ID `X6WXmI7xCUg9P2bJplpZ`.
+
 ## Brand ideas
 
 - **Logo:** a single fingertip in the same ink-and-graphite style, with a soft blue glow at the tip.
