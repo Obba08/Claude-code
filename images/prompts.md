@@ -1,10 +1,20 @@
 # Picture prompts
 
-Model: GPT Image 2.5 (Sunburst), text to image, quality high, 2K. Background to be removed after download.
+Only the finger was redone (once). All other pictures passed on the first try.
+
+Model: GPT Image 2.5 (Sunburst), text to image, quality high, 2K. White background removed afterwards (clean transparent cut-outs).
 
 ## finger.png
 
 Aspect ratio: 16:9
+
+Used (attempt 2):
+
+```
+A single human index finger pointing to the left, seen from the side with the fingernail on top, slightly bent, natural adult proportions, smooth skin with only faint fine knuckle wrinkles on the top of the joints, no wounds, no sores, no bumps, the base of the finger ending in a soft pencil fade, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
+```
+
+Attempt 1 (rejected: knuckle creases looked like a sore, base looked like a tube):
 
 ```
 A single human index finger, seen from the side, from the fingertip to just past the middle knuckle, cut off cleanly at the base, clean healthy skin with no wound, fingernail visible, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
