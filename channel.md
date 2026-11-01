@@ -114,6 +114,12 @@ Every caption ends with the same line, because this is health content: *General 
 
 ### Main clip: "A hole in the heart, explained simply" (post this one first)
 
+**Music:** post the `_music` files (`summary_hole-in-the-heart_90s_music.mp4`, `summary_hole-in-the-heart_music.mp4`).
+They already have a soft music bed about 18 dB under the voice that dips while the narrator speaks
+(`tools/add_music.sh in.mp4 out.mp4`). Don't add music in the app on top of them. If you prefer an
+app sound instead, post the file without `_music` and turn the added sound down to about 10–15%
+(TikTok: Sounds → Volume → "Added sound"; Instagram: tap the music icon → Volume/Mix → lower "Music").
+
 **90-second version (recommended for TikTok / Reels):** `out/social/summary_hole-in-the-heart_90s.mp4` (1:34,
 `python3 tools/make_summary_clip.py 90s`). Same message, played 1.3x faster, with five sentences dropped
 whose point is already made elsewhere ("Together, they plug the gap", "Can it be prevented? Not always…",
