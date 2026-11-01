@@ -206,7 +206,7 @@ const Line: React.FC<{it: Extract<Item, {type: 'line'}>; ctx: Ctx; pr: Projector
   for (let i = 1; i < pts.length; i++) len += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]);
   const color = colorOf(ctx.s, it.color, ctx.s.style.ink);
   const isAccent = color === ctx.s.style.accent;
-  const opacity = (it.opacity ?? (isAccent ? 0.9 : 0.55)) * vis;
+  const opacity = (it.opacity ?? (isAccent ? 0.9 : 0.8)) * vis;
   const width = it.width ?? 2.5;
   const points = pts.map((p) => p.join(',')).join(' ');
   // Dashed lines still draw themselves: a solid line drawn on reveals the dashes (mask).
@@ -313,7 +313,7 @@ const Circle: React.FC<{it: CircleItem; ctx: Ctx; pr: Projector}> = ({it, ctx, p
           ry={ry}
           fill="none"
           stroke={stroke}
-          strokeOpacity={stroke === ctx.s.style.accent ? 0.95 : 0.7}
+          strokeOpacity={stroke === ctx.s.style.accent ? 0.95 : 0.85}
           strokeWidth={sw}
           strokeLinecap="round"
           strokeDasharray={it.dash ? `${it.dash} ${it.dash * 0.8}` : `${per} ${per}`}
@@ -428,9 +428,12 @@ const Label: React.FC<{it: LabelItem; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}
         fontWeight: 800,
         fontSize: size,
         letterSpacing: '0.32em',
-        paddingLeft: '0.32em', // balances the trailing letter space
         color: ctx.s.style.ink,
-        textShadow: `0 0 10px ${ctx.s.style.background}, 0 0 18px ${ctx.s.style.background}, 0 0 4px ${ctx.s.style.background}, 0 0 26px ${ctx.s.style.background}`,
+        // A soft parchment backing so labels stay readable over dark ink.
+        background: `rgba(${hexToRgb(ctx.s.style.background)}, 0.82)`,
+        boxShadow: `0 0 ${size * 0.6}px ${size * 0.45}px rgba(${hexToRgb(ctx.s.style.background)}, 0.82)`,
+        borderRadius: size,
+        padding: `${size * 0.12}px ${size * 0.35}px ${size * 0.12}px ${size * 0.67}px`,
         whiteSpace: 'nowrap',
         textAlign: 'center',
       }}
@@ -740,10 +743,19 @@ const Subtitles: React.FC<{ctx: Ctx; captions: ReturnType<typeof buildCaptions>}
         fontSize: sub.size,
         lineHeight: 1.15,
         color: ctx.s.style.ink,
-        textShadow: `0 0 8px ${ctx.s.style.background}, 0 0 16px ${ctx.s.style.background}, 0 0 3px ${ctx.s.style.background}`,
       }}
     >
-      {c.text}
+      <span
+        style={{
+          display: 'inline-block',
+          padding: '6px 26px 10px',
+          borderRadius: 999,
+          background: `rgba(${hexToRgb(ctx.s.style.background)}, 0.86)`,
+          boxShadow: `0 0 26px 16px rgba(${hexToRgb(ctx.s.style.background)}, 0.86)`,
+        }}
+      >
+        {c.text}
+      </span>
     </div>
   );
 };

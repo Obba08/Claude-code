@@ -153,7 +153,7 @@ const note = (text: string, y: number, tin: number, tout: number, size?: number)
 /** A list: heading plus items that appear one by one, all leaving together. */
 const list = (heading: string, rows: [string, number][], tout: number, y0 = 360, gap = 92, headingAt?: number) => {
   note(heading, y0, headingAt ?? rows[0][1] - 0.6, tout, 40);
-  rows.forEach(([text, tin], i) => note(text, y0 + 120 + i * gap, tin, tout, 30));
+  rows.forEach(([text, tin], i) => note(text, y0 + 120 + i * gap, tin, tout, 32));
 };
 
 // Heart motion: opacity (dimming behind lists) and size (stretching), collected then sorted.
@@ -178,7 +178,7 @@ const T1 = {
   inside: w(5, 'inside'),
 };
 // A faint copy of the heart far behind everything: a slower, blurred layer for depth.
-pic({pic: 'exterior', at: [H0[0] + 40, H0[1] + 30], width: 900, depth: 2.4, opacity: 0.1, show: {in: T1.inside, out: w(104, 'chest'), fade: 1.6}});
+pic({pic: 'exterior', at: [H0[0] + 40, H0[1] + 30], width: 900, depth: 3, opacity: 0.055, show: {in: T1.inside, out: w(104, 'chest'), fade: 1.6}});
 
 pic({id: 'chest', pic: 'chest', at: C.center, width: C.width, show: {in: -1, out: we(5, 'inside') + 0.2, fade: 1.2}});
 // End of the video: the chest comes back, matching the very first frame.
@@ -197,7 +197,7 @@ add({type: 'pulse', at: H0, radius: 130, start: T1.fine, count: 2, interval: 1.0
 
 // Into the heart: the outside of the heart fades up in place of the drawing's heart.
 moveTo(T1.lets, s(6) + 1.2, H0, Z_HEART);
-pic({id: 'exterior', pic: 'exterior', at: E.center, width: E.width, show: {in: T1.inside - 0.5, out: w(7, 'four'), fade: 1.0}, beat: [{start: s(6), end: w(7, 'four') + 1, bpm: 62, amount: 0.012}]});
+pic({id: 'exterior', pic: 'exterior', at: E.center, width: E.width, show: {in: T1.inside - 0.5, out: w(7, 'pump') + 1.1, fade: 0.6}, beat: [{start: s(6), end: w(7, 'four') + 1, bpm: 62, amount: 0.012}]});
 
 // ================================================================ 2. The heart (6–16)
 
@@ -228,7 +228,7 @@ tag('TO THE BODY', P(462, 50), w(11, 'body'), se(11) + 0.8, [0, -40]);
 
 // 12–13: the septum
 moveTo(s(12), se(12), P(450, 820), 3.1);
-line({path: SEPTUM, drawStart: w(12, 'wall'), drawEnd: w(12, 'septum') + 0.4, width: 3, show: {in: w(12, 'wall'), out: se(13) + 0.3}});
+line({path: SEPTUM, drawStart: w(12, 'wall'), drawEnd: w(12, 'septum') + 0.4, width: 6, show: {in: w(12, 'wall'), out: se(13) + 0.3}});
 tag('SEPTUM', P(452, 830), w(12, 'septum'), se(13) + 0.3, [150, 0]);
 light({path: RV_SHORT, start: w(13, 'keep'), end: w(13, 'keep') + 2.4, count: 2, gap: 0.7});
 light({path: LV_SHORT, start: w(13, 'keep'), end: w(13, 'keep') + 2.4, count: 2, gap: 0.7});
@@ -237,8 +237,8 @@ light({path: LV_SHORT, start: w(13, 'keep'), end: w(13, 'keep') + 2.4, count: 2,
 moveTo(s(14), se(14), P(450, 860), 2.9);
 add({type: 'glow', at: P(600, 900), radius: 55, breathe: true, show: {in: w(14, 'squeezes'), out: se(15) + 0.3}});
 add({type: 'pulse', at: P(600, 900), radius: 70, start: w(14, 'squeezes'), count: 3, interval: 1.0, color: 'ink'});
-line({path: [P(720, 860), P(560, 878)], smooth: false, arrow: true, width: 7, drawStart: w(15, 'pressure'), drawEnd: w(15, 'pressure') + 0.8, show: {in: w(15, 'pressure'), out: se(16)}});
-line({path: [P(190, 860), P(290, 872)], smooth: false, arrow: true, width: 3, drawStart: w(15, 'pressure') + 0.3, drawEnd: w(15, 'pressure') + 1.0, show: {in: w(15, 'pressure') + 0.3, out: se(16)}});
+line({path: [P(720, 860), P(560, 878)], smooth: false, arrow: true, width: 9, drawStart: w(15, 'pressure'), drawEnd: w(15, 'pressure') + 0.8, show: {in: w(15, 'pressure'), out: se(16)}});
+line({path: [P(190, 860), P(290, 872)], smooth: false, arrow: true, width: 5, drawStart: w(15, 'pressure') + 0.3, drawEnd: w(15, 'pressure') + 1.0, show: {in: w(15, 'pressure') + 0.3, out: se(16)}});
 tag('HIGHER PRESSURE', P(650, 860), w(15, 'higher'), se(16), [0, -110]);
 
 // ================================================================ 3. A door before birth (17–26)
@@ -251,11 +251,11 @@ tag('LUNGS: NOT USED YET', P(700, 266), w(19, 'lungs'), se(19) + 0.3, [-120, -60
 
 // 20–22: the foramen ovale
 moveTo(s(20), w(20, 'opening'), OVAL, 4.6);
-circle({at: OVAL, radius: 14 * k, radiusY: 34 * k, stroke: 'ink', strokeWidth: 2.5, draw: [w(20, 'opening'), w(20, 'opening') + 0.9], show: {in: w(20, 'opening'), out: w(24, 'seals')}});
+circle({at: OVAL, radius: 14 * k, radiusY: 34 * k, stroke: 'ink', strokeWidth: 4.5, draw: [w(20, 'opening'), w(20, 'opening') + 0.9], show: {in: w(20, 'opening'), out: w(24, 'seals')}});
 // The flap: a small door hinged at the top of the opening, open then shut.
 const FLAP_OPEN = PS([[433, 606], [452, 628], [470, 656], [482, 684]]);
 const FLAP_SHUT = PS([[433, 606], [438, 630], [437, 656], [433, 676]]);
-line({path: FLAP_OPEN, drawStart: w(20, 'flap'), drawEnd: w(20, 'door') + 0.3, width: 3.5, show: {in: w(20, 'flap'), out: w(24, 'shut')}});
+line({path: FLAP_OPEN, drawStart: w(20, 'flap'), drawEnd: w(20, 'door') + 0.3, width: 6, show: {in: w(20, 'flap'), out: w(24, 'shut')}});
 tag('FORAMEN OVALE', OVAL, w(21, 'foramen'), se(22), [0, -170]);
 light({path: FORAMEN, start: w(22, 'slips'), end: w(22, 'slips') + 2.4, count: 3, gap: 0.6, size: 26});
 tag('RIGHT → LEFT', OVAL, w(22, 'right'), se(22) + 0.3, [0, 170]);
@@ -266,7 +266,7 @@ note('FIRST BREATH', 260, w(23, 'breath'), se(23));
 light({path: RIGHT_OUT, start: w(23, 'lungs'), end: w(23, 'lungs') + 2.6, count: 3, gap: 0.6});
 // 24: the flap shuts and seals
 moveTo(s(24), w(24, 'shut'), OVAL, 4.4);
-line({path: FLAP_SHUT, drawStart: w(24, 'shut'), drawEnd: w(24, 'shut') + 0.6, width: 3.5, show: {in: w(24, 'shut'), out: se(26)}});
+line({path: FLAP_SHUT, drawStart: w(24, 'shut'), drawEnd: w(24, 'shut') + 0.6, width: 6, show: {in: w(24, 'shut'), out: se(26)}});
 tag('SEALS OVER TIME', OVAL, w(24, 'seals'), se(24) + 0.3, [0, -170]);
 // 25: one in four
 tag('1 IN 4 ADULTS', OVAL, w(25, 'one'), se(26), [0, -170]);
@@ -276,7 +276,7 @@ dots.forEach(([dx, dy], i) =>
     at: [OVAL[0] + dx, OVAL[1] + dy / 4.4],
     radius: 3.4,
     stroke: 'ink',
-    strokeWidth: 2.5,
+    strokeWidth: 4.5,
     fill: i === 0 ? '#3a3631' : undefined,
     show: {in: w(25, 'four') + i * 0.12, out: se(26)},
   }),
@@ -285,13 +285,13 @@ dots.forEach(([dx, dy], i) =>
 // ================================================================ 4. A true hole (27–31)
 
 moveTo(s(27), w(28, 'wall'), HOLE, 4.4);
-circle({at: HOLE, radius: HOLE_R + 3, stroke: 'ink', strokeWidth: 3, show: {in: w(28, 'gap'), out: se(31)}});
+circle({at: HOLE, radius: HOLE_R + 3, stroke: 'ink', strokeWidth: 5, show: {in: w(28, 'gap'), out: se(31)}});
 tag('A GAP IN THE WALL', HOLE, w(28, 'gap'), se(28) + 0.2, [0, -150]);
 moveTo(w(29, 'upper'), w(29, 'chambers'), P(433, 640), 3.8);
-circle({at: P(433, 625), radius: 12, stroke: 'ink', strokeWidth: 3, dash: 9, show: {in: w(29, 'upper'), out: se(31)}});
-tag('ATRIAL SEPTAL DEFECT', P(433, 625), w(29, 'atrial'), se(29) + 0.4, [0, -140], 30);
+circle({at: P(433, 625), radius: 12, stroke: 'ink', strokeWidth: 5, dash: 9, show: {in: w(29, 'upper'), out: se(31)}});
+tag('ATRIAL SEPTAL DEFECT', P(433, 625), w(29, 'atrial'), se(29) + 0.4, [0, -140], 32);
 moveTo(w(30, 'lower'), w(30, 'chambers'), HOLE, 3.8);
-tag('VENTRICULAR SEPTAL DEFECT', HOLE, w(30, 'ventricular'), se(30) + 0.4, [0, -140], 30);
+tag('VENTRICULAR SEPTAL DEFECT', HOLE, w(30, 'ventricular'), se(30) + 0.4, [0, -140], 32);
 moveTo(s(31), w(31, 'and'), P(450, 770), 2.9);
 tag('ASD', P(433, 625), w(31, 'asd'), se(31) + 0.3, [-120, 0]);
 tag('VSD', HOLE, w(31, 'vsd'), se(31) + 0.3, [-120, 0]);
@@ -305,10 +305,10 @@ dim(w(34, 'walls') - 0.3, se(35) + 0.5, 0.45);
 line({path: SEPTUM_TOP, drawStart: w(34, 'walls'), drawEnd: w(34, 'chambers'), width: 6, show: {in: w(34, 'walls'), out: se(36)}});
 line({path: SEPTUM_BOTTOM, drawStart: w(34, 'walls'), drawEnd: w(34, 'chambers'), width: 6, show: {in: w(34, 'walls'), out: se(36)}});
 moveTo(s(35), w(35, 'close'), HOLE, 3.8);
-circle({at: HOLE, radius: HOLE_R + 3, stroke: 'ink', strokeWidth: 3, show: {in: w(35, 'close'), out: se(36)}});
+circle({at: HOLE, radius: HOLE_R + 3, stroke: 'ink', strokeWidth: 5, show: {in: w(35, 'close'), out: se(36)}});
 tag('?', HOLE, w(36, 'nobody'), se(36), [0, -120], 54);
-tag('GENES · FAMILY HISTORY', HOLE, w(37, 'genes'), se(38) + 0.3, [0, -150], 30);
-tag('E.G. DOWN SYNDROME', HOLE, w(38, 'down'), se(38) + 0.3, [0, -95], 30);
+tag('GENES · FAMILY HISTORY', HOLE, w(37, 'genes'), se(38) + 0.3, [0, -150], 32);
+tag('E.G. DOWN SYNDROME', HOLE, w(38, 'down'), se(38) + 0.3, [0, -95], 32);
 move(s(39), w(39, 'risk'), ...HEART_VIEW);
 dim(s(39), se(42));
 list('DURING PREGNANCY', [['RUBELLA (GERMAN MEASLES)', w(40, 'rubella')], ['DIABETES NOT CONTROLLED', w(41, 'diabetes')], ['SMOKING · ALCOHOL', w(42, 'smoking')], ['SOME MEDICINES', w(42, 'medicines')]], se(42) + 0.2, 420);
@@ -317,8 +317,8 @@ note('BY ANYTHING A PARENT DID', 360, w(43, 'parent'), se(43) + 0.2, 34);
 
 // ================================================================ 6. How the body reacts (44–59)
 
-line({path: [P(720, 860), P(560, 878)], smooth: false, arrow: true, width: 7, drawStart: w(44, 'pressure'), drawEnd: w(44, 'pressure') + 0.8, show: {in: w(44, 'pressure'), out: s(46) + 0.4}});
-line({path: [P(190, 860), P(290, 872)], smooth: false, arrow: true, width: 3, drawStart: w(45, 'harder'), drawEnd: w(45, 'harder') + 0.8, show: {in: w(45, 'harder'), out: s(46) + 0.4}});
+line({path: [P(720, 860), P(560, 878)], smooth: false, arrow: true, width: 9, drawStart: w(44, 'pressure'), drawEnd: w(44, 'pressure') + 0.8, show: {in: w(44, 'pressure'), out: s(46) + 0.4}});
+line({path: [P(190, 860), P(290, 872)], smooth: false, arrow: true, width: 5, drawStart: w(45, 'harder'), drawEnd: w(45, 'harder') + 0.8, show: {in: w(45, 'harder'), out: s(46) + 0.4}});
 moveTo(s(46), w(46, 'leaks'), HOLE, 4.0);
 light({path: LEAK, start: w(46, 'leaks'), end: w(46, 'leaks') + 1.8, count: 4, gap: 0.55, size: 26});
 tag('LEFT → RIGHT', HOLE, w(46, 'left'), se(46) + 0.3, [0, -150]);
@@ -334,12 +334,12 @@ tag('SMALL HOLE', HOLE, w(50, 'small'), se(50) + 0.3, [0, -140]);
 light({path: LEAK_SMALL, start: w(50, 'barely'), end: w(50, 'barely') + 2.0, count: 2, gap: 0.9, size: 16, intensity: 0.6});
 // It closes on its own: a disc of wall colour slowly covers the hole.
 circle({at: HOLE, radius: HOLE_R + 1.5, fill: '#e6dac3', show: {in: w(51, 'close'), out: s(52) + 0.2, fade: 1.4}});
-tag('SOME CLOSE ON THEIR OWN', HOLE, w(51, 'close'), se(51) + 0.2, [0, -140], 30);
+tag('SOME CLOSE ON THEIR OWN', HOLE, w(51, 'close'), se(51) + 0.2, [0, -140], 32);
 
 // 52: a large hole — the heart works harder
 move(s(52), w(52, 'heart'), H0[0], H0[1], 2.8);
 tag('LARGE HOLE', HOLE, w(52, 'large'), se(52) + 0.3, [0, -150]);
-circle({at: HOLE, radius: HOLE_R + 7, stroke: 'ink', strokeWidth: 3.5, show: {in: w(52, 'large'), out: se(52) + 0.3}});
+circle({at: HOLE, radius: HOLE_R + 7, stroke: 'ink', strokeWidth: 5.5, show: {in: w(52, 'large'), out: se(52) + 0.3}});
 light({path: LEAK, start: w(52, 'heart'), end: w(52, 'heart') + 1.5, count: 5, gap: 0.35, size: 36});
 beats.push({start: w(52, 'large') + 0.05, end: se(52) + 0.5, bpm: 96, amount: 0.012});
 beats.push({start: se(52) + 0.55, end: w(83, 'takes'), bpm: 62, amount: 0.008});
@@ -354,8 +354,8 @@ note('SOMETIMES FOUND BY CHANCE', 600, w(55, 'adulthood'), se(55) + 0.2, 32);
 heartMotion.push({at: w(56, 'stretch') - 0.2, scale: 1}, {at: w(56, 'stretch') + 2.2, scale: 1.07}, {at: se(58), scale: 1.07}, {at: se(59), scale: 1});
 move(s(56), w(56, 'stretch'), H0[0], H0[1] + 10, 2.45);
 tag('THE HEART STRETCHES', H0, w(56, 'stretch'), se(56) + 0.3, [0, -300]);
-line({path: [P(560, 330), P(700, 230)], smooth: false, arrow: true, width: 5, drawStart: w(57, 'pressure'), drawEnd: w(57, 'pressure') + 0.8, show: {in: w(57, 'pressure'), out: se(57) + 0.3}});
-tag('HIGHER LUNG PRESSURE', P(700, 230), w(57, 'lungs'), se(57) + 0.3, [-120, -70], 30);
+line({path: [P(560, 330), P(700, 230)], smooth: false, arrow: true, width: 7, drawStart: w(57, 'pressure'), drawEnd: w(57, 'pressure') + 0.8, show: {in: w(57, 'pressure'), out: se(57) + 0.3}});
+tag('HIGHER LUNG PRESSURE', P(700, 230), w(57, 'lungs'), se(57) + 0.3, [-120, -70], 32);
 // 58: the rhythm stutters — the signal starts, stops, starts again.
 light({path: SIGNAL, start: w(58, 'upset'), end: w(58, 'upset') + 1.4, count: 1, size: 26});
 light({path: SIGNAL, start: w(58, 'upset') + 1.7, end: w(58, 'upset') + 2.6, count: 1, size: 26});
@@ -370,7 +370,7 @@ add({type: 'pulse', at: HOLE, radius: 46, start: w(61, 'whooshing'), count: 4, i
 tag('MURMUR', HOLE, w(61, 'murmur'), se(62) + 0.3, [0, -150]);
 add({type: 'pulse', at: HOLE, radius: 46, start: w(62, 'sound'), count: 3, interval: 0.7, duration: 1.8, color: 'ink'});
 light({path: LEAK, start: w(62, 'rushing'), end: w(62, 'rushing') + 1.6, count: 3, gap: 0.5, size: 26});
-tag('MANY MURMURS ARE HARMLESS', HOLE, w(63, 'harmless'), se(63) + 0.3, [0, -150], 30);
+tag('MANY MURMURS ARE HARMLESS', HOLE, w(63, 'harmless'), se(63) + 0.3, [0, -150], 32);
 
 move(s(64), w(64, 'echocardiogram'), H0[0], H0[1] - 30, 2.25);
 line({path: FAN_EDGE, smooth: false, drawStart: w(64, 'echocardiogram'), drawEnd: w(64, 'echocardiogram') + 1.0, width: 2.5, show: {in: w(64, 'echocardiogram'), out: se(67)}});
@@ -382,9 +382,9 @@ const sweep = (frac: number): Vec[] => ARC.map(([x, y]) => [FAN_APEX[0] + (x - F
 [0.45, 0.65, 0.85].forEach((f, i) =>
   line({path: sweep(f), drawStart: w(65, 'scan') - 0.6 + i * 0.35, drawEnd: w(65, 'scan') + 0.3 + i * 0.35, width: 1.6, opacity: 0.35, show: {in: w(65, 'scan') - 0.6 + i * 0.35, out: se(67)}}),
 );
-circle({at: HOLE, radius: HOLE_R + 3, stroke: 'ink', strokeWidth: 3, show: {in: w(66, 'hole'), out: se(67)}});
+circle({at: HOLE, radius: HOLE_R + 3, stroke: 'ink', strokeWidth: 5, show: {in: w(66, 'hole'), out: se(67)}});
 line({path: [P(600, 905), P(380, 900)], smooth: false, arrow: true, color: 'accent', width: 4, drawStart: w(66, 'flowing') - 0.6, drawEnd: w(66, 'flowing') + 0.4, show: {in: w(66, 'flowing') - 0.6, out: se(67)}});
-tag('CAN BE SEEN BEFORE BIRTH', H0, w(67, 'before'), se(67) + 0.3, [0, -330], 30);
+tag('CAN BE SEEN BEFORE BIRTH', H0, w(67, 'before'), se(67) + 0.3, [0, -330], 32);
 move(s(68), w(68, 'records'), H0[0], H0[1] + 40, 2.2);
 line({path: ECG, smooth: false, color: 'accent', width: 3.5, drawStart: w(68, 'electrical') - 0.4, drawEnd: w(68, 'signals') + 1.0, show: {in: w(68, 'electrical') - 0.4, out: se(68) + 0.4}});
 tag('ECG', [P(430, 0)[0], HEART_BOTTOM_Y + 34], w(68, 'ecg'), se(68) + 0.4, [0, 80]);
@@ -395,14 +395,14 @@ tag('CHEST X-RAY', H0, w(68, 'x-ray'), se(68) + 0.4, [0, -320]);
 move(s(69), se(69), ...HEART_VIEW);
 tag('SIZE', H0, w(69, 'size'), se(69) + 0.3, [0, -340]);
 tag('PLACE', H0, w(69, 'where'), se(69) + 0.3, [0, -280]);
-tag('HOW THE BODY COPES', H0, w(69, 'coping'), se(69) + 0.3, [0, -220], 30);
+tag('HOW THE BODY COPES', H0, w(69, 'coping'), se(69) + 0.3, [0, -220], 32);
 moveTo(s(70), w(70, 'small'), HOLE, 3.6);
 tag('WAIT AND WATCH', HOLE, w(70, 'wait'), se(71) + 0.2, [0, -150]);
-tag('CHECK-UPS · SCANS', HOLE, w(71, 'check-ups'), se(71) + 0.2, [0, -90], 30);
+tag('CHECK-UPS · SCANS', HOLE, w(71, 'check-ups'), se(71) + 0.2, [0, -90], 32);
 light({path: LEAK_SMALL, start: w(70, 'small'), end: w(70, 'small') + 2.0, count: 2, gap: 1.0, size: 16, intensity: 0.6});
 move(s(72), w(72, 'medicines'), ...HEART_VIEW);
 tag('MEDICINES', H0, w(72, 'medicines'), se(73) + 0.3, [0, -320]);
-tag('LESS FLUID TO HANDLE', H0, w(73, 'fluid'), se(73) + 0.3, [0, -260], 30);
+tag('LESS FLUID TO HANDLE', H0, w(73, 'fluid'), se(73) + 0.3, [0, -260], 32);
 moveTo(s(74), w(74, 'close'), HOLE, 3.8);
 light({path: LEAK, start: w(74, 'close'), end: w(74, 'close') + 1.8, count: 3, gap: 0.55, size: 26});
 tag('HOLE STILL OPEN', HOLE, w(74, 'hole'), se(74) + 0.3, [0, -150]);
@@ -448,15 +448,15 @@ add({
 });
 tag('GAP PLUGGED', HOLE, w(80, 'plug'), se(80) + 0.3, [0, 150]);
 move(s(81), w(81, 'works'), H0[0], H0[1] + 10, 2.9);
-tag('ASD: OFTEN', P(433, 625), w(81, 'upper'), se(81) + 0.3, [0, -120], 30);
-tag('VSD: SOMETIMES', HOLE, w(81, 'lower'), se(81) + 0.3, [0, -120], 30);
+tag('ASD: OFTEN', P(433, 625), w(81, 'upper'), se(81) + 0.3, [0, -120], 32);
+tag('VSD: SOMETIMES', HOLE, w(81, 'lower'), se(81) + 0.3, [0, -120], 32);
 
 // 82–86: surgery with a patch
 note('2 · SURGERY', 250, w(82, 'second'), se(82) + 0.3);
-tag('HEART-LUNG MACHINE', H0, w(83, 'heart-lung'), se(83) + 0.3, [0, -320], 30);
-tag('A STILL HEART', H0, w(83, 'still'), se(83) + 0.3, [0, -260], 30);
+tag('HEART-LUNG MACHINE', H0, w(83, 'heart-lung'), se(83) + 0.3, [0, -320], 32);
+tag('A STILL HEART', H0, w(83, 'still'), se(83) + 0.3, [0, -260], 32);
 moveTo(s(84), w(84, 'stitches'), HOLE, 4.6);
-circle({at: HOLE, radius: HOLE_R + 5, stroke: 'ink', strokeWidth: 2.5, dash: 5, show: {in: w(84, 'stitches'), out: se(84) + 0.4}});
+circle({at: HOLE, radius: HOLE_R + 5, stroke: 'ink', strokeWidth: 4.5, dash: 5, show: {in: w(84, 'stitches'), out: se(84) + 0.4}});
 pic({
   id: 'patch',
   pic: 'patch',
@@ -469,7 +469,7 @@ pic({
 });
 tag('STITCHES', HOLE, w(84, 'stitches'), se(84) + 0.3, [0, -120]);
 tag('PATCH', HOLE, w(84, 'patch'), se(84) + 0.3, [0, 120]);
-tag('TISSUE GROWS OVER IT', HOLE, w(85, 'grows'), se(86) + 0.3, [0, -130], 30);
+tag('TISSUE GROWS OVER IT', HOLE, w(85, 'grows'), se(86) + 0.3, [0, -130], 32);
 beats.push({start: s(86), end: w(103, 'heart') + 2, bpm: 62, amount: 0.008});
 light({path: RV_SHORT, start: s(86), end: s(86) + 2.6, count: 2, gap: 0.7});
 light({path: LV_SHORT, start: s(86), end: s(86) + 2.6, count: 2, gap: 0.7});
@@ -480,8 +480,8 @@ tag('FULL, ACTIVE LIVES', H0, w(87, 'full'), se(87) + 0.4, [0, -330]);
 
 dim(s(88), se(97) + 0.2, 0.2);
 note('PREVENTION', 300, s(88), se(89) + 0.2, 42);
-note('NOT ALWAYS POSSIBLE', 400, w(89, 'not'), se(89) + 0.2, 30);
-note('NO KNOWN CAUSE, OFTEN', 470, w(89, 'cause'), se(89) + 0.2, 30);
+note('NOT ALWAYS POSSIBLE', 400, w(89, 'not'), se(89) + 0.2, 32);
+note('NO KNOWN CAUSE, OFTEN', 470, w(89, 'cause'), se(89) + 0.2, 32);
 list(
   'LOWER THE RISK',
   [
@@ -502,7 +502,7 @@ list(
 // ================================================================ 10. Pulling back (98–106)
 
 moveTo(s(98), w(99, 'gap'), HOLE, 3.2); // back to the gap, then out
-circle({at: HOLE, radius: HOLE_R + 3, stroke: 'ink', strokeWidth: 2.5, show: {in: w(99, 'gap'), out: se(99) + 0.2}});
+circle({at: HOLE, radius: HOLE_R + 3, stroke: 'ink', strokeWidth: 4.5, show: {in: w(99, 'gap'), out: se(99) + 0.2}});
 light({path: LEAK, start: w(100, 'blood'), end: w(100, 'blood') + 1.6, count: 1, size: 24, intensity: 0.7});
 add({type: 'pulse', at: H0, radius: 120, start: w(101, 'harder'), count: 1, duration: 1.8, color: 'ink'});
 add({type: 'pulse', at: HOLE, radius: 40, start: w(102, 'heard'), count: 2, interval: 0.6, duration: 1.6, color: 'ink'});
