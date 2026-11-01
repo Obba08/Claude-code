@@ -77,10 +77,21 @@ export interface PictureItem extends Base {
   anchor?: Vec;
   rotate?: number;
   motion?: MotionKey[];
+  /** Gentle heartbeat: the picture swells slightly in time, between start and end. */
+  beat?: BeatDef[];
   /** Follow a path (world points) between start and end, eased. Overrides x/y from motion while active. */
   pathMotion?: {path: Vec[]; start: number; end: number; ease?: Ease};
   /** Shrink + fade into a point, e.g. a germ being swallowed. */
   swallow?: {at: number; duration?: number; into: Vec};
+}
+
+export interface BeatDef {
+  start: number;
+  end: number;
+  /** Beats per minute. */
+  bpm?: number;
+  /** Extra scale at the peak of a beat, e.g. 0.02. */
+  amount?: number;
 }
 
 export interface LightItem extends Base {
@@ -105,8 +116,29 @@ export interface LineItem extends Base {
   drawStart: number;
   drawEnd: number;
   width?: number; // screen px
+  /** Any CSS colour, or 'accent' / 'ink'. */
   color?: string;
   smooth?: boolean;
+  /** Draw a small arrow head at the end. */
+  arrow?: boolean;
+  /** Dashed line: dash length in screen px. */
+  dash?: number;
+}
+
+/** A circle or ellipse in the world: an outline that draws itself, and/or a soft fill. */
+export interface CircleItem extends Base {
+  type: 'circle';
+  at: Vec;
+  radius: number; // world units
+  /** Vertical radius for an ellipse. Default = radius. */
+  radiusY?: number;
+  stroke?: string; // 'ink' | 'accent' | CSS colour
+  strokeWidth?: number; // screen px
+  dash?: number;
+  /** When the outline draws itself (default: during the fade in). */
+  draw?: [number, number];
+  fill?: string;
+  motion?: MotionKey[];
 }
 
 export interface PulseItem extends Base {
@@ -117,6 +149,8 @@ export interface PulseItem extends Base {
   count?: number;
   interval?: number;
   duration?: number;
+  /** 'accent' (default) or 'ink'. */
+  color?: string;
 }
 
 export interface GlowItem extends Base {
@@ -172,7 +206,8 @@ export type Item =
   | GlowItem
   | LabelItem
   | MagnifierItem
-  | OrbitItem;
+  | OrbitItem
+  | CircleItem;
 
 export interface VideoSettings {
   id: string;
@@ -191,6 +226,14 @@ export interface VideoSettings {
     dotGrid: {spacing: number; size: number; color: string; parallax: number};
     labelSize: number;
     fade: number;
+  };
+  /** Subtitles from the word timings, shown just above the bottom safe area. */
+  subtitles?: {
+    /** Height (px) kept for subtitles above the bottom safe area; content stays above it. */
+    band: number;
+    size: number;
+    /** Max characters per caption. */
+    maxChars?: number;
   };
   /** Fractions of the frame kept free of anything important. */
   safe: {top: number; bottom: number};

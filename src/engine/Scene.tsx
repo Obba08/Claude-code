@@ -1,7 +1,7 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import {applyFormat} from './format';
 import {AbsoluteFill, Audio, Img, continueRender, delayRender, staticFile, useCurrentFrame} from 'remotion';
-import type {Item, LabelItem, MagnifierItem, PictureItem, VideoSettings, Vec} from './types';
+import type {CircleItem, Item, LabelItem, MagnifierItem, PictureItem, Timings, VideoSettings, Vec} from './types';
 import {
   Cam,
   cameraAt,
@@ -46,10 +46,18 @@ const hexToRgb = (hex: string) => {
   return `${(n >> 16) & 255}, ${(n >> 8) & 255}, ${n & 255}`;
 };
 
+const colorOf = (s: VideoSettings, c: string | undefined, fallback: string) =>
+  !c ? fallback : c === 'accent' ? s.style.accent : c === 'ink' ? s.style.ink : c;
+
+/** Top and bottom of the area free for content (inside the safe margins, above the subtitles). */
+const contentArea = (s: VideoSettings) => ({
+  top: s.height * s.safe.top,
+  bottom: s.height * (1 - s.safe.bottom) - (s.subtitles?.band ?? 0),
+});
+
 const focusPoint = (s: VideoSettings): Vec => {
   // The middle of the area that is free to use (between the safe margins).
-  const top = s.height * s.safe.top;
-  const bottom = s.height * (1 - s.safe.bottom);
+  const {top, bottom} = contentArea(s);
   return [s.width / 2, (top + bottom) / 2];
 };
 
@@ -74,6 +82,17 @@ export const picturePose = (it: PictureItem, t: number): Pose => {
     const pts = smooth(it.pathMotion.path);
     const [x, y] = pointOnPath(pts, ease(it.pathMotion.ease, progress(t, it.pathMotion.start, it.pathMotion.end)));
     pose = {...pose, x, y};
+  }
+  if (it.beat) {
+    for (const b of it.beat) {
+      if (t < b.start || t > b.end) continue;
+      const period = 60 / (b.bpm ?? 64);
+      const ph = ((t - b.start) % period) / period;
+      // A soft double bump (lub-dub), faded in and out at the ends of the beating span.
+      const bump = (c: number, w: number) => Math.exp(-(((ph - c) / w) ** 2));
+      const env = Math.min(1, (t - b.start) / 0.8, (b.end - t) / 0.8);
+      pose = {...pose, scale: pose.scale * (1 + (b.amount ?? 0.015) * env * (bump(0.12, 0.07) + 0.6 * bump(0.32, 0.07)))};
+    }
   }
   if (it.swallow && t >= it.swallow.at) {
     const u = ease('inOut', progress(t, it.swallow.at, it.swallow.at + (it.swallow.duration ?? 1)));
@@ -185,19 +204,125 @@ const Line: React.FC<{it: Extract<Item, {type: 'line'}>; ctx: Ctx; pr: Projector
   const pts = (it.smooth === false ? it.path : smooth(it.path)).map(pr.toScreen);
   let len = 0;
   for (let i = 1; i < pts.length; i++) len += Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]);
-  return (
-    <svg style={{position: 'absolute', inset: 0, overflow: 'visible'}} width={ctx.s.width} height={ctx.s.height}>
+  const color = colorOf(ctx.s, it.color, ctx.s.style.ink);
+  const isAccent = color === ctx.s.style.accent;
+  const opacity = (it.opacity ?? (isAccent ? 0.9 : 0.55)) * vis;
+  const width = it.width ?? 2.5;
+  const points = pts.map((p) => p.join(',')).join(' ');
+  // Dashed lines still draw themselves: a solid line drawn on reveals the dashes (mask).
+  const maskId = `m${Math.abs(Math.round(pts[0][0] * 7 + pts[0][1] * 13 + len))}`;
+  // Arrow head at the current tip of the line.
+  let head: React.ReactNode = null;
+  if (it.arrow && u > 0.05) {
+    const tip = pointOnPath(pts, u);
+    const back = pointOnPath(pts, Math.max(0, u - 0.02));
+    const a = Math.atan2(tip[1] - back[1], tip[0] - back[0]);
+    const hl = Math.max(14, width * 4);
+    const p1: Vec = [tip[0] - hl * Math.cos(a - 0.45), tip[1] - hl * Math.sin(a - 0.45)];
+    const p2: Vec = [tip[0] - hl * Math.cos(a + 0.45), tip[1] - hl * Math.sin(a + 0.45)];
+    head = (
       <polyline
-        points={pts.map((p) => p.join(',')).join(' ')}
+        points={`${p1.join(',')} ${tip.join(',')} ${p2.join(',')}`}
         fill="none"
-        stroke={it.color ?? ctx.s.style.ink}
-        strokeOpacity={(it.opacity ?? 0.55) * visibility(it.show, ctx.t, ctx.s.style.fade)}
-        strokeWidth={it.width ?? 2.5}
+        stroke={color}
+        strokeOpacity={opacity}
+        strokeWidth={width}
         strokeLinecap="round"
         strokeLinejoin="round"
-        strokeDasharray={`${len} ${len}`}
-        strokeDashoffset={len * (1 - u)}
       />
+    );
+  }
+  return (
+    <svg style={{position: 'absolute', inset: 0, overflow: 'visible'}} width={ctx.s.width} height={ctx.s.height}>
+      {it.dash ? (
+        <>
+          <defs>
+            <mask id={maskId} maskUnits="userSpaceOnUse" x={-5000} y={-5000} width={20000} height={20000}>
+              <polyline
+                points={points}
+                fill="none"
+                stroke="#fff"
+                strokeWidth={width * 3}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeDasharray={`${len} ${len}`}
+                strokeDashoffset={len * (1 - u)}
+              />
+            </mask>
+          </defs>
+          <polyline
+            points={points}
+            mask={`url(#${maskId})`}
+            fill="none"
+            stroke={color}
+            strokeOpacity={opacity}
+            strokeWidth={width}
+            strokeLinecap="round"
+            strokeDasharray={`${it.dash} ${it.dash * 0.8}`}
+          />
+        </>
+      ) : (
+        <polyline
+          points={points}
+          fill="none"
+          stroke={color}
+          strokeOpacity={opacity}
+          strokeWidth={width}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray={`${len} ${len}`}
+          strokeDashoffset={len * (1 - u)}
+          style={isAccent ? {filter: `drop-shadow(0 0 6px ${color})`} : undefined}
+        />
+      )}
+      {head}
+    </svg>
+  );
+};
+
+// ---------------- circles ----------------
+
+const Circle: React.FC<{it: CircleItem; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}) => {
+  const vis = visibility(it.show, ctx.t, ctx.s.style.fade);
+  const pose = motionAt({x: it.at[0], y: it.at[1], scale: 1, rotate: 0, opacity: 1}, it.motion, ctx.t);
+  const o = vis * pose.opacity * (it.opacity ?? 1);
+  if (o <= 0.002) return null;
+  const [cx, cy] = pr.toScreen([pose.x, pose.y]);
+  const rx = it.radius * pr.scale * pose.scale;
+  const ry = (it.radiusY ?? it.radius) * pr.scale * pose.scale;
+  const drawFrom = it.draw?.[0] ?? it.show?.in ?? 0;
+  const drawTo = it.draw?.[1] ?? drawFrom + 0.9;
+  const u = ease('inOut', progress(ctx.t, drawFrom, drawTo));
+  // Ellipse perimeter (Ramanujan) for the draw-on effect.
+  const per = Math.PI * (3 * (rx + ry) - Math.sqrt((3 * rx + ry) * (rx + 3 * ry)));
+  const stroke = it.stroke ? colorOf(ctx.s, it.stroke, ctx.s.style.ink) : undefined;
+  const sw = it.strokeWidth ?? 2.5;
+  const pad = sw * 4 + 10;
+  return (
+    <svg
+      style={{position: 'absolute', left: cx - rx - pad, top: cy - ry - pad, overflow: 'visible', opacity: o}}
+      width={2 * (rx + pad)}
+      height={2 * (ry + pad)}
+    >
+      {it.fill && <ellipse cx={rx + pad} cy={ry + pad} rx={rx} ry={ry} fill={colorOf(ctx.s, it.fill, it.fill)} />}
+      {stroke && u > 0 && (
+        <ellipse
+          cx={rx + pad}
+          cy={ry + pad}
+          rx={rx}
+          ry={ry}
+          fill="none"
+          stroke={stroke}
+          strokeOpacity={stroke === ctx.s.style.accent ? 0.95 : 0.7}
+          strokeWidth={sw}
+          strokeLinecap="round"
+          strokeDasharray={it.dash ? `${it.dash} ${it.dash * 0.8}` : `${per} ${per}`}
+          strokeDashoffset={it.dash ? 0 : per * (1 - u)}
+          opacity={it.dash ? u : 1}
+          transform={`rotate(-90 ${rx + pad} ${ry + pad})`}
+          style={stroke === ctx.s.style.accent ? {filter: `drop-shadow(0 0 5px ${stroke})`} : undefined}
+        />
+      )}
     </svg>
   );
 };
@@ -205,7 +330,7 @@ const Line: React.FC<{it: Extract<Item, {type: 'line'}>; ctx: Ctx; pr: Projector
 // ---------------- pulses & glows ----------------
 
 const Pulse: React.FC<{it: Extract<Item, {type: 'pulse'}>; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}) => {
-  const rgb = hexToRgb(ctx.s.style.accent);
+  const rgb = hexToRgb(colorOf(ctx.s, it.color, ctx.s.style.accent));
   const vis = visibility(it.show, ctx.t, ctx.s.style.fade);
   const [cx, cy] = pr.toScreen(it.at);
   const out: React.ReactNode[] = [];
@@ -284,8 +409,9 @@ const Label: React.FC<{it: LabelItem; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}
   const off = it.offset ?? [0, 0];
   const size = it.size ?? ctx.s.style.labelSize;
   // Keep labels inside the free area of the frame.
-  const top = ctx.s.height * ctx.s.safe.top + size;
-  const bottom = ctx.s.height * (1 - ctx.s.safe.bottom) - size;
+  const area = contentArea(ctx.s);
+  const top = area.top + size;
+  const bottom = area.bottom - size;
   const x = clamp(p[0] + off[0], 200, ctx.s.width - 200);
   const y = clamp(p[1] + off[1], top, bottom);
   const a = appear(vis);
@@ -304,7 +430,7 @@ const Label: React.FC<{it: LabelItem; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}
         letterSpacing: '0.32em',
         paddingLeft: '0.32em', // balances the trailing letter space
         color: ctx.s.style.ink,
-        textShadow: '0 0 10px #fff, 0 0 18px #fff, 0 0 4px #fff',
+        textShadow: `0 0 10px ${ctx.s.style.background}, 0 0 18px ${ctx.s.style.background}, 0 0 4px ${ctx.s.style.background}, 0 0 26px ${ctx.s.style.background}`,
         whiteSpace: 'nowrap',
         textAlign: 'center',
       }}
@@ -496,6 +622,8 @@ const ItemView: React.FC<{it: Item; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}) 
       return <Magnifier it={it} ctx={ctx} pr={pr} />;
     case 'orbit':
       return <Orbit it={it} ctx={ctx} />;
+    case 'circle':
+      return <Circle it={it} ctx={ctx} pr={pr} />;
   }
 };
 
@@ -530,6 +658,96 @@ const DotGrid: React.FC<{ctx: Ctx}> = ({ctx}) => {
   );
 };
 
+// ---------------- subtitles ----------------
+
+/** Splits each sentence into evenly sized captions (no lone words, breaks after commas preferred). */
+export const buildCaptions = (tm: Timings, maxChars = 32) => {
+  const out: {start: number; end: number; text: string}[] = [];
+  const textOf = (ws: {text: string}[]) => ws.map((w) => w.text).join(' ');
+  for (const s of tm.sentences) {
+    const n = s.text.split(/\s+/).length;
+    const ws = tm.words.slice(s.firstWord, s.firstWord + n);
+    const total = textOf(ws).length;
+    const nMin = Math.max(1, Math.ceil(total / maxChars));
+    // Best split into k parts by dynamic programming over cut positions.
+    let best: {cost: number; parts: (typeof ws)[]} | null = null;
+    for (let parts = nMin; parts <= nMin + 1 && parts <= ws.length; parts++) {
+      const target = total / parts;
+      // dp[i][j]: best cost to put the first i words into j captions.
+      const dp: {cost: number; prev: number}[][] = Array.from({length: ws.length + 1}, () =>
+        Array.from({length: parts + 1}, () => ({cost: Infinity, prev: -1})),
+      );
+      dp[0][0] = {cost: 0, prev: -1};
+      for (let i = 1; i <= ws.length; i++) {
+        for (let j = 1; j <= parts; j++) {
+          for (let p = j - 1; p < i; p++) {
+            if (dp[p][j - 1].cost === Infinity) continue;
+            const chunk = ws.slice(p, i);
+            const len = textOf(chunk).length;
+            if (len > maxChars + 3 || (chunk.length < 2 && ws.length > 1)) continue;
+            let c = (len - target) ** 2;
+            if (i < ws.length && /[,:;]$/.test(chunk[chunk.length - 1].text)) c -= 250;
+            const total2 = dp[p][j - 1].cost + c;
+            if (total2 < dp[i][j].cost) dp[i][j] = {cost: total2, prev: p};
+          }
+        }
+      }
+      const end = dp[ws.length][parts];
+      if (end.cost === Infinity) continue;
+      const cost = end.cost + 400 * (parts - nMin);
+      if (!best || cost < best.cost) {
+        const chunks: (typeof ws)[] = [];
+        let i = ws.length;
+        for (let j = parts; j > 0; j--) {
+          const p = dp[i][j].prev;
+          chunks.unshift(ws.slice(p, i));
+          i = p;
+        }
+        best = {cost, parts: chunks};
+      }
+    }
+    for (const part of best?.parts ?? [ws]) {
+      out.push({start: part[0].start, end: part[part.length - 1].end, text: textOf(part)});
+    }
+  }
+  // Hold each caption until the next one starts (max 0.7 s extra).
+  out.forEach((c, i) => {
+    const next = out[i + 1]?.start ?? c.end + 1;
+    c.end = Math.min(next - 0.05, c.end + 0.7);
+  });
+  return out;
+};
+
+const Subtitles: React.FC<{ctx: Ctx; captions: ReturnType<typeof buildCaptions>}> = ({ctx, captions}) => {
+  const sub = ctx.s.subtitles!;
+  const c = captions.find((x) => ctx.t >= x.start - 0.08 && ctx.t <= x.end + 0.12);
+  if (!c) return null;
+  // Quick soft fade so captions never pop.
+  const v = Math.min(1, (ctx.t - (c.start - 0.08)) / 0.12, (c.end + 0.12 - ctx.t) / 0.12);
+  const y = ctx.s.height * (1 - ctx.s.safe.bottom) - sub.band / 2;
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        left: 60,
+        right: 60,
+        top: y,
+        transform: 'translateY(-50%)',
+        textAlign: 'center',
+        opacity: clamp(v, 0, 1),
+        fontFamily: ctx.s.style.font,
+        fontWeight: 800,
+        fontSize: sub.size,
+        lineHeight: 1.15,
+        color: ctx.s.style.ink,
+        textShadow: `0 0 8px ${ctx.s.style.background}, 0 0 16px ${ctx.s.style.background}, 0 0 3px ${ctx.s.style.background}`,
+      }}
+    >
+      {c.text}
+    </div>
+  );
+};
+
 // ---------------- the scene ----------------
 
 const useFont = (family: string, file: string) => {
@@ -560,6 +778,7 @@ export const Scene: React.FC<{settings: VideoSettings; format?: string}> = ({set
     });
   collect(s.items);
   const ctx: Ctx = {s, t, cam, byId};
+  const captions = useMemo(() => buildCaptions(s.timings, s.subtitles?.maxChars), [s]);
   const projectors = new Map<number, Projector>();
   const pr = (d = 1) => {
     if (!projectors.has(d)) projectors.set(d, layerProjector(ctx, d));
@@ -578,6 +797,7 @@ export const Scene: React.FC<{settings: VideoSettings; format?: string}> = ({set
       {labels.map((it, i) => (
         <ItemView key={`l${i}`} it={it} ctx={ctx} pr={pr(it.depth ?? 1)} />
       ))}
+      {s.subtitles && <Subtitles ctx={ctx} captions={captions} />}
       <Audio src={staticFile(s.audio)} />
     </AbsoluteFill>
   );

@@ -3,7 +3,7 @@
 // world, the camera path, lights, labels and all timings (tied to words of the narration).
 // To make a new video: copy this file, swap pictures/timings/positions, and point Root.tsx at it.
 
-import timingsJson from '../data/timings.json';
+import timingsJson from '../data/immune-system.timings.json';
 import {ease, placed, pointOnPath, smoothPath, timeHelpers} from '../engine/core';
 import type {CameraKey, Item, LabelItem, PictureItem, Timings, Vec, VideoSettings} from '../engine/types';
 

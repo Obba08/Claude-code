@@ -13,7 +13,7 @@ LAYOUT = {
 }[FMT]
 
 MAX_CHARS = 30  # per caption line
-t = json.load(open('src/data/timings.json'))
+t = json.load(open(__import__('subprocess').check_output(['node', 'tools/active.mjs'], text=True).strip()))
 words = t['words']
 
 captions = []  # (start, end, text)

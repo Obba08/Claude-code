@@ -4,11 +4,12 @@ import {bundle} from '@remotion/bundler';
 import {openBrowser, renderStill, selectComposition} from '@remotion/renderer';
 import fs from 'node:fs';
 import path from 'node:path';
+import {TIMINGS_FILE} from './active.mjs';
 
 const browserExecutable =
   process.env.REMOTION_BROWSER ??
   '/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell';
-const timings = JSON.parse(fs.readFileSync('src/data/timings.json', 'utf8'));
+const timings = JSON.parse(fs.readFileSync(TIMINGS_FILE, 'utf8'));
 const from = Number(process.argv[2] ?? 0);
 const to = Number(process.argv[3] ?? 1e9);
 const compId = process.env.COMP ?? 'Explainer';

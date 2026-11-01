@@ -2,8 +2,8 @@ import React from 'react';
 import {Composition} from 'remotion';
 import {Scene} from './engine/Scene';
 import {applyFormat} from './engine/format';
-// To make a new video, point this import at a new settings file.
-import settings from './settings/immune-system';
+// The active video is chosen in src/settings/active.ts.
+import settings from './settings/active';
 
 const duration = settings.timings.duration + settings.tail;
 
