@@ -1,6 +1,7 @@
 """Builds one short version of the full video that keeps the whole message, for TikTok / Reels.
 
-Usage: python3 tools/make_summary_clip.py
+Usage: python3 tools/make_summary_clip.py [full|90s]
+  full: about 2:20 at normal speed.  90s: a few repeating sentences dropped, played 1.3x faster.
 Picks whole sentences from across the video (so the voice and subtitles stay intact), joins them
 with short soft crossfades, puts a hook at the start and a small heading at the start of each part.
 Output: out/social/summary_<name>.mp4 (1080x1920, 30 fps).
@@ -13,6 +14,7 @@ import tempfile
 SRC = 'out/video.mp4'
 FONT = 'public/fonts/ttf/Inter-Bold.ttf'
 NAME = 'hole-in-the-heart'
+VARIANT = __import__('sys').argv[1] if len(__import__('sys').argv) > 1 else 'full'
 S = json.load(open(subprocess.check_output(['node', 'tools/active.mjs'], text=True).strip()))['sentences']
 
 # (sentence, heading shown when this sentence starts)
@@ -28,8 +30,16 @@ PLAN = [
     (105, None), (106, None),
 ]
 HOOK = ['A HOLE IN THE HEART,', 'EXPLAINED SIMPLY']
+SPEED = 1.0
+if VARIANT == '90s':
+    # Drop sentences whose point is already made elsewhere, then speed up gently.
+    drop = {80, 88, 89, 37, 93}
+    PLAN = [(n, h) for n, h in PLAN if n not in drop]
+    PLAN = [(n, 'PREVENTION' if n == 91 else h) for n, h in PLAN]  # the video's own heading was in a dropped sentence
+    SPEED = 1.3
+    NAME += '_90s'
 XF = 0.3  # crossfade length
-PAD_IN, PAD_OUT = 0.12, 0.25
+PAD_IN, PAD_OUT = (0.1, 0.2) if VARIANT == '90s' else (0.12, 0.25)
 
 tmp = tempfile.mkdtemp(dir=os.environ.get('TMPDIR', 'out'))
 segs = []
@@ -38,7 +48,8 @@ for i, (n, _) in enumerate(PLAN):
     start = max(0, s['start'] - PAD_IN)
     dur = s['end'] + PAD_OUT - start
     f = os.path.join(tmp, f'seg{i:02}.mp4')
-    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{start:.3f}', '-i', SRC, '-t', f'{dur:.3f}', '-r', '30',
+    subprocess.run(['ffmpeg', '-v', 'error', '-y', '-ss', f'{start:.3f}', '-t', f'{dur:.3f}', '-i', SRC,
+                    '-vf', f'setpts=PTS/{SPEED}', '-af', f'atempo={SPEED}', '-r', '30',
                     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '14', '-c:a', 'pcm_s16le', '-ar', '48000', f], check=True)
     real = float(subprocess.check_output(['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f]))
     segs.append((f, real))

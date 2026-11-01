@@ -114,7 +114,12 @@ Every caption ends with the same line, because this is health content: *General 
 
 ### Main clip: "A hole in the heart, explained simply" (post this one first)
 
-File: `out/social/summary_hole-in-the-heart.mp4` (2:23, made with `python3 tools/make_summary_clip.py`).
+**90-second version (recommended for TikTok / Reels):** `out/social/summary_hole-in-the-heart_90s.mp4` (1:34,
+`python3 tools/make_summary_clip.py 90s`). Same message, played 1.3x faster, with five sentences dropped
+whose point is already made elsewhere ("Together, they plug the gap", "Can it be prevented? Not always…",
+"Genes play a part…", and the diabetes step). The captions below fit both versions.
+
+Longer version: `out/social/summary_hole-in-the-heart.mp4` (2:25, made with `python3 tools/make_summary_clip.py`).
 It keeps the whole message in the video's own words: what it is, why it happens (and that it's usually
 nobody's fault), what it does to the blood, how doctors find it, how it's treated (wait and watch,
 catheter device, surgery with a patch), prevention, and that most people go on to live full lives.
@@ -134,7 +139,7 @@ A hole in the heart, explained simply 🫀
 ✔️ Why it happens: usually no single reason, and usually not something a parent did wrong
 ✔️ What it does: blood leaks through and the heart works harder
 ✔️ How it's fixed: watching and waiting, a device through a catheter, or surgery with a patch
-✔️ Lowering the risk: rubella vaccine, folic acid, diabetes control, no smoking or alcohol
+✔️ Lowering the risk: rubella vaccine, folic acid, no smoking or alcohol
 
 Most people who have one repaired go on to live full, active lives.
 
