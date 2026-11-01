@@ -489,8 +489,8 @@ const Magnifier: React.FC<{it: MagnifierItem; ctx: Ctx; pr: Projector}> = ({it, 
           r={srp}
           fill="none"
           stroke={ink}
-          strokeOpacity={0.6}
-          strokeWidth={2}
+          strokeOpacity={0.8}
+          strokeWidth={3.5}
           strokeDasharray={`${2 * Math.PI * srp}`}
           strokeDashoffset={2 * Math.PI * srp * (1 - lineU)}
         />
@@ -500,7 +500,7 @@ const Magnifier: React.FC<{it: MagnifierItem; ctx: Ctx; pr: Projector}> = ({it, 
             const e = lineU;
             const bx = lerp(a[0], b[0], e);
             const by = lerp(a[1], b[1], e);
-            return <line key={i} x1={a[0]} y1={a[1]} x2={bx} y2={by} stroke={ink} strokeOpacity={0.45} strokeWidth={1.6} />;
+            return <line key={i} x1={a[0]} y1={a[1]} x2={bx} y2={by} stroke={ink} strokeOpacity={0.7} strokeWidth={2.6} />;
           })}
       </svg>
       {u > 0.001 && (
@@ -514,7 +514,7 @@ const Magnifier: React.FC<{it: MagnifierItem; ctx: Ctx; pr: Projector}> = ({it, 
             borderRadius: '50%',
             overflow: 'hidden',
             background: ctx.s.style.background,
-            boxShadow: `0 0 0 2px rgba(29,29,31,0.55)`,
+            boxShadow: `0 0 0 4px rgba(${hexToRgb(ink)},0.8), 0 0 24px 6px rgba(${hexToRgb(ctx.s.style.background)},0.9)`,
             opacity: vis * Math.min(1, u * 3),
             filter: u < 0.999 ? `blur(${(1 - u) * 6}px)` : undefined,
           }}

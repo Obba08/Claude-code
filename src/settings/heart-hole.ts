@@ -182,7 +182,7 @@ pic({pic: 'exterior', at: [H0[0] + 40, H0[1] + 30], width: 900, depth: 3, opacit
 
 pic({id: 'chest', pic: 'chest', at: C.center, width: C.width, show: {in: -1, out: we(5, 'inside') + 0.2, fade: 1.2}});
 // End of the video: the chest comes back, matching the very first frame.
-pic({pic: 'chest', at: C.center, width: C.width, show: {in: w(104, 'chest') - 0.2, fade: 1.4}});
+pic({pic: 'chest', at: C.center, width: C.width, show: {in: w(104, 'chest') - 0.2, fade: 1.0}});
 
 move(0, T1.lets, CHEST_VIEW[0], CHEST_VIEW[1] - 20, 1.12); // slow push in toward the heart
 line({path: DIAPHRAGM, drawStart: T1.diaphragm - 0.2, drawEnd: T1.dome + 0.4, width: 6, opacity: 0.85, show: {in: T1.diaphragm - 0.2, out: T1.frightening}});
@@ -346,8 +346,8 @@ beats.push({start: se(52) + 0.55, end: w(83, 'takes'), bpm: 62, amount: 0.008});
 
 // 53–55: what people notice
 dim(s(53), se(55));
-list('IN BABIES', [['FAST BREATHING', w(53, 'fast')], ['SWEATING WHILE FEEDING', w(53, 'sweating')], ['TIRING EASILY', w(53, 'tiring')], ['SLOW WEIGHT GAIN', w(53, 'slow')]], se(53) + 0.2);
-list('CHILDREN AND ADULTS', [['OUT OF BREATH', w(54, 'out')], ['TIRED WITH EXERCISE', w(54, 'tired')], ['CHEST INFECTIONS', w(54, 'chest')]], se(54) + 0.2);
+list('IN BABIES', [['FAST BREATHING', w(53, 'fast')], ['SWEATING WHILE FEEDING', w(53, 'sweating')], ['TIRING EASILY', w(53, 'tiring')], ['SLOW WEIGHT GAIN', w(53, 'slow')]], se(53) + 0.2, 360, 92, s(53));
+list('CHILDREN AND ADULTS', [['OUT OF BREATH', w(54, 'out')], ['TIRED WITH EXERCISE', w(54, 'tired')], ['CHEST INFECTIONS', w(54, 'chest')]], se(54) + 0.2, 360, 92, s(54));
 note('SOMETIMES FOUND BY CHANCE', 600, w(55, 'adulthood'), se(55) + 0.2, 32);
 
 // 56–59: over many years
@@ -382,6 +382,7 @@ const sweep = (frac: number): Vec[] => ARC.map(([x, y]) => [FAN_APEX[0] + (x - F
 [0.45, 0.65, 0.85].forEach((f, i) =>
   line({path: sweep(f), drawStart: w(65, 'scan') - 0.6 + i * 0.35, drawEnd: w(65, 'scan') + 0.3 + i * 0.35, width: 1.6, opacity: 0.35, show: {in: w(65, 'scan') - 0.6 + i * 0.35, out: se(67)}}),
 );
+line({path: SEPTUM, drawStart: w(66, 'walls') - 0.3, drawEnd: w(66, 'walls') + 0.7, width: 6, show: {in: w(66, 'walls') - 0.3, out: se(67)}});
 circle({at: HOLE, radius: HOLE_R + 3, stroke: 'ink', strokeWidth: 5, show: {in: w(66, 'hole'), out: se(67)}});
 line({path: [P(600, 905), P(380, 900)], smooth: false, arrow: true, color: 'accent', width: 4, drawStart: w(66, 'flowing') - 0.6, drawEnd: w(66, 'flowing') + 0.4, show: {in: w(66, 'flowing') - 0.6, out: se(67)}});
 tag('CAN BE SEEN BEFORE BIRTH', H0, w(67, 'before'), se(67) + 0.3, [0, -330], 32);
@@ -411,8 +412,8 @@ note('1 · CATHETER', 250, w(75, 'two'), se(76) + 0.3);
 note('2 · SURGERY', 320, w(75, 'two') + 0.6, s(76));
 
 // 77–81: closing with a device through a catheter
-move(s(77), w(77, 'catheter'), H0[0] - 20, H0[1] + 140, 1.9);
-line({path: CATHETER, drawStart: w(77, 'guides'), drawEnd: w(77, 'heart'), width: 4.5, opacity: 0.7, show: {in: w(77, 'guides'), out: w(81, 'works')}});
+move(s(77), w(77, 'catheter'), H0[0] - 30, H0[1] + 120, 2.05);
+line({path: CATHETER, drawStart: w(77, 'guides'), drawEnd: w(77, 'heart'), width: 7, opacity: 0.8, show: {in: w(77, 'guides'), out: w(81, 'works')}});
 tag('CATHETER', P(170, 1180), w(77, 'catheter'), se(77), [110, 40]);
 moveTo(w(77, 'heart') - 1.5, se(77), P(380, 880), 3.2);
 const DEV_TRAVEL_START = w(78, 'travels') - 0.6;
@@ -430,8 +431,8 @@ pic({
 moveTo(s(79), w(79, 'opens'), HOLE, 4.2);
 tag('TWO SMALL DISCS', HOLE, w(79, 'discs'), se(80) + 0.3, [0, -170]);
 // A magnifier grows out of the hole to show the device opening across the wall.
-const MAG_C: Vec = [HOLE[0] + 2, HOLE[1] - 62];
-const MAG_R = 36;
+const MAG_C: Vec = [HOLE[0] + 68, HOLE[1] - 22];
+const MAG_R = 33;
 const M = 3.2; // magnification inside the circle
 add({
   type: 'magnifier',
@@ -510,8 +511,8 @@ line({path: FAN_EDGE, smooth: false, drawStart: w(102, 'seen'), drawEnd: w(102, 
 move(w(99, 'gap') + 0.3, se(101), H0[0], H0[1], 2.4);
 move(se(101), w(103, 'heart'), ...HEART_VIEW);
 // The cut-away fades back into the closed heart.
-pic({pic: 'exterior', at: E.center, width: E.width, show: {in: w(103, 'heart') - 0.4, out: w(104, 'chest') + 0.6, fade: 1.2}, beat: [{start: w(103, 'heart'), end: w(105, 'small'), bpm: 62, amount: 0.01}]});
-move(w(104, 'and'), w(105, 'common') + 1, ...CHEST_VIEW);
+pic({pic: 'exterior', at: E.center, width: E.width, show: {in: w(103, 'heart') - 0.4, out: w(104, 'chest') + 0.3, fade: 0.8}, beat: [{start: w(103, 'heart'), end: w(105, 'small'), bpm: 62, amount: 0.01}]});
+move(s(104), w(105, 'common') + 1, ...CHEST_VIEW);
 add({type: 'pulse', at: H0, radius: 150, start: w(105, 'small'), count: 6, interval: 1.0, duration: 2.0});
 const END = timings.duration + 1;
 cam.push({at: END, x: CHEST_VIEW[0], y: CHEST_VIEW[1], zoom: CHEST_VIEW[2]});
