@@ -1,9 +1,9 @@
 # A Hole in the Heart — Script
 
-Format: vertical 9:16 · about 8–9 minutes · one calm narrator (NARRATOR ROB) · about 1,150 words
+Format: vertical 9:16 · about 8–9 minutes · one calm narrator (NARRATOR ROB) · about 1,170 words
 
 Note on length: at a calm pace a narrator reads about 140–150 words a minute, so 2,500 words would run
-about 17 minutes. To stay under 10 minutes, the narration is about 1,150 words.
+about 17 minutes. To stay under 10 minutes, the narration is about 1,170 words.
 
 ---
 
@@ -11,12 +11,12 @@ about 17 minutes. To stay under 10 minutes, the narration is about 1,150 words.
 
 **NARRATOR ROB:**
 
-*The baby*
+*The chest*
 
-1. This is a newborn baby, and inside its chest is a heart with a small hole in it.
+1. This is a human chest, and the heart resting on the diaphragm, this dome of muscle, can have a hole in its wall.
 2. That sounds frightening.
-3. But a hole in the heart is one of the most common things a baby can be born with.
-4. And very often, it turns out fine.
+3. But a hole in the heart is one of the most common heart problems people are born with.
+4. Some people find out as babies, some as adults, and very often, it turns out fine.
 5. Let's go inside and see what's going on.
 
 *The heart*
@@ -35,13 +35,13 @@ about 17 minutes. To stay under 10 minutes, the narration is about 1,150 words.
 
 *A door before birth*
 
-17. Before birth, a baby doesn't breathe air.
-18. It gets its oxygen from its mother, through the placenta.
+17. Before birth, none of us breathes air.
+18. We get our oxygen from our mother, through the placenta.
 19. So the lungs don't need much blood yet.
 20. To skip them, the upper wall has a small natural opening, with a flap like a little door.
 21. It's called the foramen ovale.
 22. Blood slips through it, from the right side to the left.
-23. After birth, the baby takes its first breaths, and the pressures in the heart change.
+23. At birth, the diaphragm pulls down for the first breath, the lungs fill with air, and the pressures in the heart change.
 24. The flap gets pushed shut, and it usually seals over time.
 25. In about one in four adults, it never fully seals.
 26. Most of them never know, and it causes them no problems.
@@ -80,9 +80,9 @@ about 17 minutes. To stay under 10 minutes, the narration is about 1,150 words.
 50. If the hole is small, this barely matters.
 51. Many small holes cause no symptoms, and some close on their own as the child grows.
 52. If the hole is large, the heart and lungs have to work much harder.
-53. A baby may breathe fast, sweat while feeding, tire easily, and gain weight slowly.
-54. Feeding is hard work for a baby. With an overworked heart, it's even harder.
-55. Some holes aren't found until adulthood, when a person may feel short of breath or tired during exercise.
+53. In babies, it can mean fast breathing, sweating while feeding, tiring easily, and slow weight gain.
+54. In children and adults, it can mean getting out of breath, feeling tired during exercise, or catching chest infections often.
+55. Some holes aren't found until adulthood, sometimes during a check-up for something else.
 56. Over many years, a large hole that isn't treated can stretch parts of the heart.
 57. It can raise the pressure in the blood vessels of the lungs.
 58. And it can upset the heart's rhythm.
@@ -105,7 +105,7 @@ about 17 minutes. To stay under 10 minutes, the narration is about 1,150 words.
 69. Treatment depends on the size of the hole, where it is, and how the body is coping.
 70. For small holes, the plan is often to wait and watch.
 71. Regular check-ups. Regular scans.
-72. If a baby is struggling, medicines can help.
+72. If someone is struggling, medicines can help.
 73. Some help the body get rid of extra fluid, so the heart and lungs have less to handle.
 74. But medicine doesn't close the hole.
 75. To close it, there are two main ways.
@@ -120,7 +120,7 @@ about 17 minutes. To stay under 10 minutes, the narration is about 1,150 words.
 84. The hole is closed with stitches, or covered with a small patch.
 85. Over the following months, the heart's own tissue grows over the device or the patch.
 86. It becomes part of the wall.
-87. Most children who have a hole like this repaired grow up to live full, active lives.
+87. Most people who have a hole like this repaired go on to live full, active lives.
 
 *Prevention*
 
@@ -143,7 +143,7 @@ about 17 minutes. To stay under 10 minutes, the narration is about 1,150 words.
 101. A heart working a little harder to make up for it.
 102. Heard with a stethoscope. Seen with a scan. Closed with a device or a stitch.
 103. Here's the heart again, whole.
-104. And here's the baby.
+104. And here's the chest again, the heart resting on the diaphragm.
 105. A small hole. A common problem.
 106. And one that doctors today know very well how to treat.
 
@@ -151,21 +151,24 @@ about 17 minutes. To stay under 10 minutes, the narration is about 1,150 words.
 
 ## 2. Shot list
 
-One continuous camera move, no hard cuts. The camera starts on the sleeping baby, pushes into
-its chest, passes through the front of the heart into a cut-open view, travels along the wall
-between the two sides, and at the end pulls all the way back out to the baby, landing on the
+One continuous camera move, no hard cuts. The camera starts on a human chest, pushes in to
+the heart resting on the diaphragm, passes through the front of the heart into a cut-open view, travels along the wall
+between the two sides, and at the end pulls all the way back out to the chest, landing on the
 opening frame so the video can loop.
 
-Everything glowing blue (blood flow, electrical signals) and all labels and text are added by the
-animation. The pictures stay plain ink and graphite.
+Blue accent rule: the pictures are plain ink and graphite. The animation adds one soft neon blue
+(#5E9BE0, the channel's accent) and uses it only for two things: moving blood and the heart's
+electrical signals. Everything else the animation adds (labels, arrows, outlines, sound ripples,
+the catheter line) is drawn in dark ink. This keeps blue meaning "something flowing", so the viewer
+can always follow the blood, and lets every flow move on its own.
 
 | # | Narration | On screen | Camera |
 |---|-----------|-----------|--------|
-| 1 | This is a newborn baby, and inside its chest is a heart with a small hole in it. | `newborn.png` centered on the parchment. A faint blue glow pulses softly over the chest, in time with a heartbeat. | Slow push in toward the chest. |
-| 2 | That sounds frightening. | Baby sleeps, chest gently rising and falling. | Push continues, very slow. |
-| 3 | But a hole in the heart is one of the most common things a baby can be born with. | Label "one of the most common birth defects" writes on beside the baby. | Push continues. |
-| 4 | And very often, it turns out fine. | Label fades. Baby's chest keeps rising and falling. | Push continues, the chest now fills most of the frame. |
-| 5 | Let's go inside and see what's going on. | The chest becomes see-through; `heart_exterior.png` fades up inside it as `newborn.png` fades away. | Push through the chest, landing on the whole heart. |
+| 1 | This is a human chest, and the heart resting on the diaphragm, this dome of muscle, can have a hole in its wall. | `chest.png` centered on the parchment. The diaphragm is traced with a thin ink outline and labelled "diaphragm"; a faint blue electrical pulse ripples across the heart in time with a heartbeat. | Slow push in toward the heart. |
+| 2 | That sounds frightening. | Label fades. The diaphragm rises and falls gently with each breath. | Push continues, very slow. |
+| 3 | But a hole in the heart is one of the most common heart problems people are born with. | Label "one of the most common heart problems at birth" writes on beside the chest. | Push continues. |
+| 4 | Some people find out as babies, some as adults, and very often, it turns out fine. | Labels "babies" and "adults" appear, then fade. The diaphragm keeps rising and falling. | Push continues; the heart now fills most of the frame. |
+| 5 | Let's go inside and see what's going on. | `heart_exterior.png` fades up in place of the heart in the drawing as `chest.png` fades away. | Push through the chest, landing on the whole heart. |
 | 6 | Here's the heart, about the size of its owner's fist. | `heart_exterior.png` centered, beating gently (slow scale pulse). | Settle and hold, slight drift. |
 | 7 | It's a pump with four rooms, called chambers. | The front of `heart_exterior.png` fades away, revealing `heart_cutaway.png` underneath. Label "4 chambers". | Push in a little through the front of the heart. |
 | 8 | Two on the right, two on the left. | Labels "right" and "left" appear over each side. (The heart's right side is on the viewer's left, as in a textbook.) | Hold, centered on the cutaway. |
@@ -177,13 +180,13 @@ animation. The pictures stay plain ink and graphite.
 | 14 | The left side squeezes much harder than the right, because it has to reach every part of the body. | Left side squeezes with a stronger pulse than the right. | Slight push toward the left lower chamber. |
 | 15 | So the pressure on the left is higher. | Two pressure arrows appear: a large one on the left, a small one on the right. Label "higher pressure". | Ease back to show both sides. |
 | 16 | Keep that in mind. It matters in a moment. | Arrows fade to a faint outline and stay. | Hold. |
-| 17 | Before birth, a baby doesn't breathe air. | Whole cutaway dims slightly. Label "before birth". | Slow drift up to the upper wall. |
-| 18 | It gets its oxygen from its mother, through the placenta. | A blue line flows in from the bottom edge of the frame into the right upper chamber. Label "from the mother (placenta)". | Follow the line in. |
+| 17 | Before birth, none of us breathes air. | Whole cutaway dims slightly. Label "before birth". | Slow drift up to the upper wall. |
+| 18 | We get our oxygen from our mother, through the placenta. | A blue line flows in from the bottom edge of the frame into the right upper chamber. Label "from the mother (placenta)". | Follow the line in. |
 | 19 | So the lungs don't need much blood yet. | The path toward the lungs fades to grey. | Hold on the upper chambers. |
 | 20 | To skip them, the upper wall has a small natural opening, with a flap like a little door. | A small oval spot on the upper wall (drawn in the picture as a thin spot) is outlined. A thin ink flap swings open over it. | Push in on the oval spot. |
 | 21 | It's called the foramen ovale. | Label "foramen ovale". | Hold close. |
 | 22 | Blood slips through it, from the right side to the left. | Blue flow passes through the open flap, right to left. | Hold, small drift with the flow. |
-| 23 | After birth, the baby takes its first breaths, and the pressures in the heart change. | Label "after birth". The path to the lungs lights up with blue flow again. | Ease back a little. |
+| 23 | At birth, the diaphragm pulls down for the first breath, the lungs fill with air, and the pressures in the heart change. | Label "first breath". The path to the lungs lights up with blue flow again. | Ease back a little. |
 | 24 | The flap gets pushed shut, and it usually seals over time. | The flap swings closed; the outline softens until the wall looks smooth. | Push back in on the spot. |
 | 25 | In about one in four adults, it never fully seals. | "1 in 4 adults" writes on. Four small ink circles appear, one filled in. | Hold. |
 | 26 | Most of them never know, and it causes them no problems. | Circles and label fade. | Slight drift. |
@@ -213,15 +216,15 @@ animation. The pictures stay plain ink and graphite.
 | 50 | If the hole is small, this barely matters. | The opening shrinks (scaled down by animation); the leak becomes a thin trickle. Label "small hole". | Push in slightly. |
 | 51 | Many small holes cause no symptoms, and some close on their own as the child grows. | The small opening closes slowly; the wall looks whole. | Hold close. |
 | 52 | If the hole is large, the heart and lungs have to work much harder. | Opening returns, larger. Thick blue flow through it. The whole heart beats faster. Label "large hole". | Pull back to the whole cutaway. |
-| 53 | A baby may breathe fast, sweat while feeding, tire easily, and gain weight slowly. | `newborn.png` fades in, small, in a round inset beside the heart, chest rising fast. Labels appear one by one: "fast breathing", "sweating while feeding", "tires easily", "slow weight gain". | Hold, framing heart and inset together. |
-| 54 | Feeding is hard work for a baby. With an overworked heart, it's even harder. | Inset baby's breathing slows to resting. Labels fade. | Slight drift toward the inset. |
-| 55 | Some holes aren't found until adulthood, when a person may feel short of breath or tired during exercise. | Inset fades. Labels "found in adulthood", "short of breath", "tired with exercise". | Drift back to center on the heart. |
+| 53 | In babies, it can mean fast breathing, sweating while feeding, tiring easily, and slow weight gain. | Heading "babies". Labels appear one by one beside the heart: "fast breathing", "sweating while feeding", "tires easily", "slow weight gain". | Ease back slightly to make room for the text. |
+| 54 | In children and adults, it can mean getting out of breath, feeling tired during exercise, or catching chest infections often. | Heading changes to "children and adults". Labels: "out of breath", "tired with exercise", "frequent chest infections". | Hold. |
+| 55 | Some holes aren't found until adulthood, sometimes during a check-up for something else. | Labels fade. Label "sometimes found by chance". | Drift back to center on the heart. |
 | 56 | Over many years, a large hole that isn't treated can stretch parts of the heart. | Right side of the cutaway slowly swells (animated scale). Label "heart stretches". | Ease back slightly. |
 | 57 | It can raise the pressure in the blood vessels of the lungs. | Vessels at the top toward the lungs outlined; a pressure arrow grows there. Label "higher lung pressure". | Tilt up. |
 | 58 | And it can upset the heart's rhythm. | A blue electrical line runs across the heart muscle, its rhythm stuttering. Label "uneven rhythm". | Tilt back down, hold. |
 | 59 | That's why doctors keep a close eye on larger holes. | Heart returns to normal size; labels fade. | Settle on whole cutaway. |
 | 60 | Often, the first clue is a sound. | Heart beats steadily. | Hold. |
-| 61 | Through a stethoscope, a doctor may hear a whooshing noise, called a murmur. | Soft grey sound ripples spread out from the opening. Label "murmur". | Push in on the opening. |
+| 61 | Through a stethoscope, a doctor may hear a whooshing noise, called a murmur. | Thin ink sound ripples spread out from the opening. Label "murmur". | Push in on the opening. |
 | 62 | That can be the sound of blood rushing through the gap. | The ripples sync with the blue flow through the opening. | Hold close. |
 | 63 | But many murmurs are harmless, so a murmur alone doesn't mean there's a hole. | Ripples fade. Label "many murmurs are harmless". | Ease back. |
 | 64 | To see inside, doctors use an echocardiogram. | A fan-shaped scan outline sweeps down from the top of the frame over the heart; outside the fan dims. Label "echocardiogram". | Pull back to fit the whole fan. |
@@ -232,7 +235,7 @@ animation. The pictures stay plain ink and graphite.
 | 69 | Treatment depends on the size of the hole, where it is, and how the body is coping. | Three labels: "size", "place", "symptoms". | Hold. |
 | 70 | For small holes, the plan is often to wait and watch. | Labels fade. Small opening, steady trickle. Label "wait and watch". | Gentle push in. |
 | 71 | Regular check-ups. Regular scans. | A small calendar-style row of ink tick marks writes on. | Hold. |
-| 72 | If a baby is struggling, medicines can help. | Label "medicines". | Hold. |
+| 72 | If someone is struggling, medicines can help. | Label "medicines". | Hold. |
 | 73 | Some help the body get rid of extra fluid, so the heart and lungs have less to handle. | Blue flow through the heart thins slightly; heart beat slows a little. Label "remove extra fluid". | Slight drift. |
 | 74 | But medicine doesn't close the hole. | Label "hole still open". Blue leak still passes through the opening. | Push in on the opening. |
 | 75 | To close it, there are two main ways. | Labels "1 · catheter" and "2 · surgery". | Pull back to whole cutaway. |
@@ -247,7 +250,7 @@ animation. The pictures stay plain ink and graphite.
 | 84 | The hole is closed with stitches, or covered with a small patch. | `surgical_patch.png` lowers into place over the opening. Short ink stitch marks draw in around its edge. | Push in close. |
 | 85 | Over the following months, the heart's own tissue grows over the device or the patch. | Graphite shading creeps over the patch's edges until it blends with the wall. Label "tissue grows over". | Hold close. |
 | 86 | It becomes part of the wall. | Patch now looks like part of the septum. Blue flow returns, staying on each side. Heart beats again. | Slow pull back. |
-| 87 | Most children who have a hole like this repaired grow up to live full, active lives. | Whole cutaway beats evenly. | Continue pulling back to the whole cutaway. |
+| 87 | Most people who have a hole like this repaired go on to live full, active lives. | Whole cutaway beats evenly. | Continue pulling back to the whole cutaway. |
 | 88 | Can it be prevented? | Heading "prevention" writes on above the heart. | Hold. |
 | 89 | Not always. Many holes form with no known cause. | Label "not always preventable". | Hold. |
 | 90 | But some steps lower the risk of birth defects in general. | Label fades. A short list begins under the heading. | Ease back slightly to make room. |
@@ -264,21 +267,21 @@ animation. The pictures stay plain ink and graphite.
 | 101 | A heart working a little harder to make up for it. | The heart gives one stronger beat. | Pulling back. |
 | 102 | Heard with a stethoscope. Seen with a scan. Closed with a device or a stitch. | Three quick ghosts on the wall: sound ripples, the scan fan, the device and patch. Each fades. | Pulling back. |
 | 103 | Here's the heart again, whole. | `heart_cutaway.png` fades into `heart_exterior.png`, beating evenly. | Pull back to the whole heart. |
-| 104 | And here's the baby. | `newborn.png` fades in around the heart; the heart fades into the chest. | Long pull back out of the chest. |
-| 105 | A small hole. A common problem. | Baby sleeps; soft blue glow over the chest, same as shot 1. | Pull back continues. |
+| 104 | And here's the chest again, the heart resting on the diaphragm. | `chest.png` fades in around the heart; the heart settles into place on the diaphragm. | Long pull back. |
+| 105 | A small hole. A common problem. | The diaphragm rises and falls; faint blue pulse over the heart, same as shot 1. | Pull back continues. |
 | 106 | And one that doctors today know very well how to treat. | Glow settles. Frame matches shot 1 exactly. | Land on the opening frame. Loops to shot 1. |
 
 ---
 
 ## 3. Picture list
 
-Five pictures. Each is a single object on its own, with no labels, numbers, text or blue flow drawn in.
+Five pictures. Each is a single object on its own, with no labels, numbers, text or blue drawn in.
 Make each one by putting its description in front of the style line (section 4) in place of
 "a human heart".
 
 | File name | What's in it |
 |-----------|--------------|
-| `newborn.png` | A newborn baby sleeping on its back, seen from slightly above, whole body in view. Arms bent up near the head, chest bare and clearly visible, a plain cloth nappy. Calm face, eyes closed. No blanket, no crib, nothing else. |
+| `chest.png` | A front view of an adult human torso, from the base of the neck to the waist, as one anatomical figure. The front of the chest is opened to show the ribcage, both lungs, the heart in the middle, and the dome-shaped diaphragm right under the heart and lungs. No head, no arms below the shoulders, no other objects. |
 | `heart_exterior.png` | A whole human heart seen from the front, with the large blood vessels at the top cut short. Smooth outer surface, gentle shading, no cut-open parts. |
 | `heart_cutaway.png` | A human heart cut open from the front to show all four chambers, the valves, and the wall of muscle between the left and right sides. The upper part of the wall has a small, slightly thinner oval spot. The lower part of the wall has one small, round, clean opening. |
 | `closure_device.png` | A small heart-hole closure device on its own: two round discs of fine woven wire mesh, joined at the centre by a short narrow waist, seen at a three-quarter angle, fully opened. |
@@ -288,4 +291,8 @@ Make each one by putting its description in front of the style line (section 4) 
 
 ## 4. Style line
 
-A vintage scientific medical illustration of a human heart, fine ink lines, cross-hatching, stippling, detailed anatomical etching, soft smudged graphite shading. Set against a clean, lightly textured cream parchment paper background. A single accent color of glowing neon soft blue is used exclusively to show electrical currents and fluid movement flowing through the valves. Academic textbook aesthetic, minimalist composition, crisp details, high contrast, 8k resolution
+A vintage scientific medical illustration of a human heart, fine ink lines, cross-hatching, stippling, detailed anatomical etching, soft smudged graphite shading. Set against a clean, lightly textured cream parchment paper background. Black ink and graphite only, no color, no text, no labels, a single object on its own. Academic textbook aesthetic, minimalist composition, crisp details, high contrast, 8k resolution
+
+(Your blue accent sentence is moved out of the picture prompt on purpose. If the image maker draws the
+blue, it gets stuck in the picture and can't move. The animation adds it instead; see the blue accent
+rule at the top of the shot list.)
