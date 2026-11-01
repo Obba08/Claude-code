@@ -1,9 +1,9 @@
 # A Hole in the Heart — Script
 
-Format: vertical 9:16 · about 8–9 minutes · one calm narrator (NARRATOR ROB) · about 1,250 words
+Format: vertical 9:16 · about 8–9 minutes · one calm narrator (NARRATOR ROB) · about 1,150 words
 
 Note on length: at a calm pace a narrator reads about 140–150 words a minute, so 2,500 words would run
-about 17 minutes. To stay under 10 minutes, the narration is about 1,250 words.
+about 17 minutes. To stay under 10 minutes, the narration is about 1,150 words.
 
 ---
 
