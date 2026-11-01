@@ -109,8 +109,38 @@ Short clips (made with `python3 tools/make_clips.py`, hook text baked into the f
 | 2 | `clip2_same-blood-twice.mp4` | 0:31 | Why blood leaks left to right, and the heart pumps the same blood twice |
 | 3 | `clip3_no-open-chest.mp4` | 0:34 | Closing a hole with a catheter and a two-disc device |
 
-Suggested order: clip 1 first (widest appeal), then 3, then 2.
+Suggested order: the main clip first (it carries the whole message), then the short clips as follow-ups: 1, 3, 2.
 Every caption ends with the same line, because this is health content: *General education, not medical advice.*
+
+### Main clip: "A hole in the heart, explained simply" (post this one first)
+
+File: `out/social/summary_hole-in-the-heart.mp4` (2:23, made with `python3 tools/make_summary_clip.py`).
+It keeps the whole message in the video's own words: what it is, why it happens (and that it's usually
+nobody's fault), what it does to the blood, how doctors find it, how it's treated (wait and watch,
+catheter device, surgery with a patch), prevention, and that most people go on to live full lives.
+Headings on screen: WHAT IT IS · WHY IT HAPPENS · WHAT IT DOES · HOW DOCTORS FIND IT · HOW IT IS TREATED.
+
+TikTok:
+```
+A hole in the heart is one of the most common heart problems people are born with, and very often it turns out fine 🫀 What it is, why it happens, what it does to your blood, how doctors find and fix it, and what lowers the risk.
+General education, not medical advice.
+#heart #congenitalheartdefect #anatomy #learnontiktok #health
+```
+Instagram Reels:
+```
+A hole in the heart, explained simply 🫀
+
+✔️ What it is: a gap in the wall between the two sides of the heart
+✔️ Why it happens: usually no single reason, and usually not something a parent did wrong
+✔️ What it does: blood leaks through and the heart works harder
+✔️ How it's fixed: watching and waiting, a device through a catheter, or surgery with a patch
+✔️ Lowering the risk: rubella vaccine, folic acid, diabetes control, no smoking or alcohol
+
+Most people who have one repaired go on to live full, active lives.
+
+General education, not medical advice.
+#heart #congenitalheartdefect #anatomy #humanbody #healtheducation
+```
 
 ### Clip 1: "Everyone is born with a hole in their heart"
 
