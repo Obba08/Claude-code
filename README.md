@@ -2,7 +2,7 @@
 
 A reusable template for calm, vertical (1080×1920, 60 fps) explainer videos filmed by **one camera** moving over a page of illustrations.
 
-The first video made with it: *How the immune system works* (`script.md`).
+The first video made with it: *How the immune system works* (`scripts/immune-system.md`).
 
 ## How it fits together
 
