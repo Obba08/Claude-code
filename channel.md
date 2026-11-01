@@ -97,3 +97,111 @@ Pinned comment (all platforms):
 ```
 Which part of your body should we zoom into next? 👇
 ```
+
+## Posting kit: "A Hole in the Heart"
+
+Full video: `out/video.mp4` (8:24, 9:16, voice + subtitles). Phone copy: `out/video_phone.mp4`.
+Short clips (made with `python3 tools/make_clips.py`, hook text baked into the first 3.6 s): `out/social/`
+
+| Clip | File | Length | Covers |
+|------|------|--------|--------|
+| 1 | `clip1_born-with-a-hole.mp4` | 0:48 | The opening every baby has before birth, and why 1 in 4 adults still have it |
+| 2 | `clip2_same-blood-twice.mp4` | 0:31 | Why blood leaks left to right, and the heart pumps the same blood twice |
+| 3 | `clip3_no-open-chest.mp4` | 0:34 | Closing a hole with a catheter and a two-disc device |
+
+Suggested order: clip 1 first (widest appeal), then 3, then 2.
+Every caption ends with the same line, because this is health content: *General education, not medical advice.*
+
+### Clip 1: "Everyone is born with a hole in their heart"
+
+TikTok:
+```
+Before you were born, your heart had a small opening with a flap like a door 🫀 It lets blood skip the lungs. At birth it usually seals… but in about 1 in 4 adults it never fully does. Most never know.
+General education, not medical advice.
+#heart #anatomy #humanbody #learnontiktok #science
+```
+Instagram Reels:
+```
+Every one of us had a hole in our heart before birth.
+
+It's called the foramen ovale: a small opening with a flap that lets blood skip the lungs while we're in the womb. After the first breath it usually seals. In about 1 in 4 adults it never fully does, and most of them never know. 🫀
+
+General education, not medical advice.
+#heart #anatomy #humanbody #sciencefacts #learnsomethingnew
+```
+
+### Clip 2: "What a hole in the heart does to your blood"
+
+TikTok:
+```
+The left side of your heart pushes harder than the right. So if there's a hole between them, blood leaks through, goes back to the lungs, and gets pumped twice 🔁 Small holes often barely matter, and some close on their own.
+General education, not medical advice.
+#heart #anatomy #biology #learnontiktok #science
+```
+Instagram Reels:
+```
+Why a hole in the heart makes the heart work harder 🫀
+
+The left side pushes harder than the right, so blood leaks through the gap from left to right, straight back to the lungs. The heart ends up pumping the same blood twice. Many small holes cause no symptoms, and some close on their own.
+
+General education, not medical advice.
+#heart #anatomy #biology #humanbody #sciencefacts
+```
+
+### Clip 3: "Closing a heart hole without opening the chest"
+
+TikTok:
+```
+How doctors can close a hole in the heart without opening the chest: a thin tube goes up a blood vessel from the leg, and a small folded device opens into two discs that plug the gap 🩺
+General education, not medical advice.
+#heart #medicine #anatomy #learnontiktok #science
+```
+Instagram Reels:
+```
+Some holes in the heart can be closed without opening the chest. 🩺
+
+A thin tube called a catheter is guided up a blood vessel, usually from the top of the leg, into the heart. A small folded device travels through it and opens on both sides of the wall like two discs, plugging the gap.
+
+General education, not medical advice.
+#heart #medicine #anatomy #humanbody #sciencefacts
+```
+
+Pinned comment (all clips):
+```
+Full 8-minute explainer on the channel: causes, how the body reacts, treatment and prevention 👇
+```
+
+### YouTube (full video)
+
+Title options (all under 60 characters, pick one):
+1. `Everyone Is Born With a Hole in Their Heart` (43)
+2. `1 in 4 Adults Still Have This Gap in Their Heart` (48)
+3. `How Doctors Close a Heart Hole Without Opening the Chest` (56)
+4. `A Hole in the Heart: Why It Happens and How It's Fixed` (54)
+5. `What a Hole in the Heart Actually Does to Your Blood` (52)
+
+Why each one is honest: every baby has the foramen ovale before birth (1); it stays partly open in about 1 in 4 adults (2); catheter closure is covered in the video (3); causes and treatment are both covered (4); the left-to-right leak and "pumped twice" are covered (5).
+
+Thumbnail concepts (mock-ups in `thumbnails/`):
+- **A, "YOU WERE BORN WITH A HOLE IN YOUR HEART"** (`thumbnails/heart-hole_thumb_A.png`): the cut-open heart, close up, with a soft blue ring around the foramen ovale (the oval spot in the upper wall) and a line from the text to it. Pairs with titles 1 or 2.
+- **B, "CLOSED WITHOUT OPENING THE CHEST"** (`thumbnails/heart-hole_thumb_B.png`): the whole cut-open heart with the hole ringed, and a magnifying circle showing the two-disc closure device. Pairs with titles 3 or 4.
+
+Description:
+```
+A hole in the heart is one of the most common heart problems people are born with, and very often it turns out fine. This calm, illustrated explainer follows the blood through the heart to show what the hole is, why it happens, how the body reacts, how doctors find and treat it, and what lowers the risk.
+
+0:00 The chest and the heart
+1:14 A door before birth (the foramen ovale)
+2:01 A true hole: ASD and VSD
+2:28 Why it happens
+3:22 How the body reacts
+4:44 How doctors find it
+5:30 How doctors treat it
+7:03 Prevention
+7:49 Stepping back
+
+General education, not medical advice. If you have questions about your own heart, talk to a doctor.
+
+#heart #anatomy #humanbody
+```
+Tags (YouTube settings): hole in the heart, atrial septal defect, ventricular septal defect, ASD, VSD, foramen ovale, PFO, congenital heart defect, heart anatomy, how the heart works, catheter closure, heart explained
