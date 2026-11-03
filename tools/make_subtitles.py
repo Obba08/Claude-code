@@ -1,4 +1,5 @@
-# Builds subtitles from the word timings: out/subtitles.srt (plain) and out/subtitles.ass (styled, burned in).
+# Builds subtitle files from the word timings: <video.json subtitles>.srt (plain, for upload) and .ass (styled).
+# The video itself already has captions burned in by the Remotion scene (same phrase splitting).
 # Each caption is a short phrase (max ~30 characters), split at commas where possible,
 # shown from its first word to just before the next caption, so it follows the voice exactly.
 import json
@@ -8,12 +9,12 @@ import sys
 # Usage: python3 tools/make_subtitles.py [vertical|square]
 FMT = sys.argv[1] if len(sys.argv) > 1 else 'vertical'
 LAYOUT = {
-    'vertical': dict(w=1080, h=1920, size=54, margin_v=372, outline=7, out='out/subtitles'),
+    'vertical': dict(w=1080, h=1920, size=54, margin_v=372, outline=7, out=json.load(open('video.json')).get('subtitles', 'out/subtitles')),
     'square': dict(w=1080, h=1080, size=46, margin_v=62, outline=6, out='out/subtitles-square'),
 }[FMT]
 
-MAX_CHARS = 30  # per caption line
-t = json.load(open('src/data/timings.json'))
+MAX_CHARS = 24  # per caption line (same as the burned-in captions)
+t = json.load(open(json.load(open('video.json'))['timings']))
 words = t['words']
 
 captions = []  # (start, end, text)
@@ -34,7 +35,7 @@ def best_split(ws):
             if max(lens) > MAX_CHARS + 3 or min(len(p) for p in parts) < 2:
                 continue
             cost = sum((l - target) ** 2 for l in lens) + 400 * (n - n_min)
-            cost -= sum(250 for p in parts[:-1] if p[-1]['text'].endswith(','))
+            cost -= sum(250 for p in parts[:-1] if p[-1]['text'][-1:] in ',:…')
             if best is None or cost < best[0]:
                 best = (cost, parts)
     return best[1] if best else [ws]

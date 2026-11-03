@@ -4,7 +4,7 @@ from PIL import Image, ImageDraw
 fps = int(os.environ.get('FPS', 60))
 src = os.environ.get('STILLS', 'out/stills')
 sheets = os.environ.get('SHEETS', 'out/sheets')
-t = json.load(open('src/data/timings.json'))
+t = json.load(open(json.load(open('video.json'))['timings']))
 starts = {round(s['start'] * fps): s['n'] for s in t['sentences']}
 files = sorted(glob.glob(src + '/f*.jpeg'))
 lo = float(sys.argv[1]) if len(sys.argv) > 1 else 0

@@ -81,6 +81,10 @@ export interface PictureItem extends Base {
   pathMotion?: {path: Vec[]; start: number; end: number; ease?: Ease};
   /** Shrink + fade into a point, e.g. a germ being swallowed. */
   swallow?: {at: number; duration?: number; into: Vec};
+  /** Heartbeat: a soft "lub-dub" swell at each of these times (seconds). Use beatTimes() to make them. */
+  beats?: number[];
+  /** How much it swells on a beat (0.03 = 3 %). */
+  beatAmount?: number;
 }
 
 export interface LightItem extends Base {
@@ -126,10 +130,13 @@ export interface GlowItem extends Base {
   /** Gentle breathing of the glow. */
   breathe?: boolean;
   motion?: MotionKey[];
+  /** Brightens and swells on each of these times (a heartbeat). */
+  beats?: number[];
 }
 
 export interface LabelItem extends Base {
   type: 'label';
+  /** Use \n for a second line. */
   text: string;
   /** World point the label belongs to … */
   anchor?: Vec;
@@ -164,6 +171,16 @@ export interface OrbitItem extends Base {
   text?: string;
 }
 
+/** A knob in world space whose glowing arc shows a level (e.g. the brain as a volume knob). */
+export interface DialItem extends Base {
+  type: 'dial';
+  at: Vec;
+  radius: number; // world units
+  /** Level over time, 0..1. Eased between keys. */
+  keys: {at: number; value: number; ease?: Ease}[];
+  text?: string;
+}
+
 export type Item =
   | PictureItem
   | LightItem
@@ -172,7 +189,8 @@ export type Item =
   | GlowItem
   | LabelItem
   | MagnifierItem
-  | OrbitItem;
+  | OrbitItem
+  | DialItem;
 
 export interface VideoSettings {
   id: string;
@@ -197,6 +215,21 @@ export interface VideoSettings {
   pictures: Record<string, PictureDef>;
   camera: CameraKey[];
   items: Item[];
+  /** Burned-in captions built from the word timings. */
+  subtitles?: {
+    font: string;
+    /** Font file inside /public and its weight. */
+    fontFile: string;
+    weight: number;
+    size: number;
+    /** Screen y of the caption's center line. */
+    y: number;
+    maxChars: number;
+    /** Colour of the word being spoken (default: accent). */
+    highlight?: string;
+  };
+  /** A faint handle in the middle of the frame. */
+  watermark?: {text: string; opacity: number; size: number; font: string; fontFile: string; weight: number};
   /** Extra frame shapes, rendered as extra compositions. */
   formats?: Record<string, FormatDef>;
 }

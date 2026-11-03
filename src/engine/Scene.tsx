@@ -1,8 +1,9 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import {applyFormat} from './format';
 import {AbsoluteFill, Audio, Img, continueRender, delayRender, staticFile, useCurrentFrame} from 'remotion';
-import type {Item, LabelItem, MagnifierItem, PictureItem, VideoSettings, Vec} from './types';
+import type {DialItem, Item, LabelItem, MagnifierItem, PictureItem, Timings, VideoSettings, Vec} from './types';
 import {
+  beatSwell,
   Cam,
   cameraAt,
   clamp,
@@ -95,7 +96,8 @@ const Picture: React.FC<{it: PictureItem; ctx: Ctx; pr: Projector}> = ({it, ctx,
   const opacity = vis * pose.opacity * (it.opacity ?? 1);
   if (opacity <= 0.002) return null;
   const a = appear(vis);
-  const k = (it.width / def.w) * pose.scale * a.scale; // world units per image px
+  const beat = 1 + (it.beatAmount ?? 0.03) * beatSwell(it.beats, ctx.t);
+  const k = (it.width / def.w) * pose.scale * a.scale * beat; // world units per image px
   const w = def.w * k * pr.scale;
   const h = def.h * k * pr.scale;
   // Where does the image center go, given the anchor pixel sits at the pose position?
@@ -245,7 +247,8 @@ const Glow: React.FC<{it: Extract<Item, {type: 'glow'}>; ctx: Ctx; pr: Projector
   const o = vis * pose.opacity * (it.opacity ?? 1);
   if (o <= 0.002) return null;
   const breathe = it.breathe ? 0.85 + 0.15 * Math.sin(ctx.t * 2.4) : 1;
-  const r = it.radius * pr.scale * pose.scale * breathe;
+  const b = beatSwell(it.beats, ctx.t);
+  const r = it.radius * pr.scale * pose.scale * breathe * (1 + 0.25 * b);
   const [cx, cy] = pr.toScreen([pose.x, pose.y]);
   return (
     <div
@@ -256,7 +259,7 @@ const Glow: React.FC<{it: Extract<Item, {type: 'glow'}>; ctx: Ctx; pr: Projector
         width: r * 2,
         height: r * 2,
         borderRadius: '50%',
-        opacity: o,
+        opacity: it.beats ? o * (0.45 + 0.55 * b) : o,
         background: `radial-gradient(circle, rgba(${rgb},0.55) 0%, rgba(${rgb},0.28) 35%, rgba(${rgb},0.08) 60%, rgba(${rgb},0) 72%)`,
       }}
     />
@@ -305,7 +308,8 @@ const Label: React.FC<{it: LabelItem; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}
         paddingLeft: '0.32em', // balances the trailing letter space
         color: ctx.s.style.ink,
         textShadow: '0 0 10px #fff, 0 0 18px #fff, 0 0 4px #fff',
-        whiteSpace: 'nowrap',
+        whiteSpace: 'pre',
+        lineHeight: 1.35,
         textAlign: 'center',
       }}
     >
@@ -476,6 +480,186 @@ const Orbit: React.FC<{it: Extract<Item, {type: 'orbit'}>; ctx: Ctx}> = ({it, ct
   );
 };
 
+// ---------------- dial (a knob that shows a level) ----------------
+
+const Dial: React.FC<{it: DialItem; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}) => {
+  const vis = visibility(it.show, ctx.t, ctx.s.style.fade) * (it.opacity ?? 1);
+  if (vis <= 0.002) return null;
+  let value = it.keys[0].value;
+  for (let i = 1; i < it.keys.length; i++) {
+    const a = it.keys[i - 1];
+    const b = it.keys[i];
+    if (ctx.t >= b.at) value = b.value;
+    else if (ctx.t > a.at) {
+      value = lerp(a.value, b.value, ease(b.ease, progress(ctx.t, a.at, b.at)));
+      break;
+    } else break;
+  }
+  const [cx, cy] = pr.toScreen(it.at);
+  const r = it.radius * pr.scale;
+  const rgb = hexToRgb(ctx.s.style.accent);
+  const a0 = 135; // the knob sweeps 270°, from bottom-left to bottom-right
+  const sweep = 270;
+  const arc = (from: number, to: number) => {
+    const p = (deg: number) => [cx + r * Math.cos((deg * Math.PI) / 180), cy + r * Math.sin((deg * Math.PI) / 180)];
+    const [x1, y1] = p(from);
+    const [x2, y2] = p(to);
+    return `M ${x1} ${y1} A ${r} ${r} 0 ${to - from > 180 ? 1 : 0} 1 ${x2} ${y2}`;
+  };
+  const end = a0 + sweep * Math.max(0.001, value);
+  const tip: Vec = [cx + r * Math.cos((end * Math.PI) / 180), cy + r * Math.sin((end * Math.PI) / 180)];
+  const pointer: Vec = [cx + r * 0.62 * Math.cos((end * Math.PI) / 180), cy + r * 0.62 * Math.sin((end * Math.PI) / 180)];
+  const a = appear(vis);
+  const s = r * 0.42;
+  return (
+    <div style={{position: 'absolute', inset: 0, opacity: vis, filter: a.blur > 0.05 ? `blur(${a.blur}px)` : undefined}}>
+      <svg style={{position: 'absolute', inset: 0, overflow: 'visible'}} width={ctx.s.width} height={ctx.s.height}>
+        <circle cx={cx} cy={cy} r={r * 1.25} fill="#fff" fillOpacity={0.92} />
+        <path d={arc(a0, a0 + sweep)} fill="none" stroke={ctx.s.style.ink} strokeOpacity={0.18} strokeWidth={r * 0.14} strokeLinecap="round" />
+        <path d={arc(a0, end)} fill="none" stroke={`rgb(${rgb})`} strokeOpacity={0.85} strokeWidth={r * 0.14} strokeLinecap="round" style={{filter: `drop-shadow(0 0 ${r * 0.12}px rgba(${rgb},0.8))`}} />
+        <circle cx={cx} cy={cy} r={r * 0.78} fill="#fff" stroke={ctx.s.style.ink} strokeOpacity={0.55} strokeWidth={2} />
+        <line x1={cx} y1={cy} x2={pointer[0]} y2={pointer[1]} stroke={ctx.s.style.ink} strokeOpacity={0.75} strokeWidth={Math.max(2, r * 0.07)} strokeLinecap="round" />
+      </svg>
+      <div
+        style={{
+          position: 'absolute',
+          left: tip[0] - s * 1.6,
+          top: tip[1] - s * 1.6,
+          width: s * 3.2,
+          height: s * 3.2,
+          borderRadius: '50%',
+          background: `radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(${rgb},0.95) 14%, rgba(${rgb},0.45) 34%, rgba(${rgb},0.12) 58%, rgba(${rgb},0) 72%)`,
+          filter: 'blur(2px)',
+        }}
+      />
+      {it.text && (
+        <div
+          style={{
+            position: 'absolute',
+            left: cx,
+            top: cy + r * 1.25 + 34,
+            transform: 'translate(-50%,-50%)',
+            fontFamily: ctx.s.style.font,
+            fontWeight: 800,
+            fontSize: 28,
+            letterSpacing: '0.32em',
+            paddingLeft: '0.32em',
+            color: ctx.s.style.ink,
+            whiteSpace: 'nowrap',
+            textShadow: '0 0 10px #fff, 0 0 18px #fff',
+          }}
+        >
+          {it.text}
+        </div>
+      )}
+    </div>
+  );
+};
+
+// ---------------- subtitles ----------------
+
+type Caption = {start: number; end: number; words: {text: string; start: number; end: number}[]};
+
+/** Splits each sentence into short, even phrases (no lone words), preferring breaks after commas. */
+export const buildCaptions = (timings: Timings, maxChars: number): Caption[] => {
+  const caps: Caption[] = [];
+  for (const s of timings.sentences) {
+    const n = s.text.split(/\s+/).length;
+    const ws = timings.words.slice(s.firstWord, s.firstWord + n);
+    const len = (p: typeof ws) => p.map((w) => w.text).join(' ').length;
+    const total = len(ws);
+    const nMin = Math.max(1, Math.ceil(total / maxChars));
+    let best: {cost: number; parts: (typeof ws)[]} | null = null;
+    const tryCuts = (cuts: number[]) => {
+      const bounds = [0, ...cuts, ws.length];
+      const parts = bounds.slice(1).map((b, i) => ws.slice(bounds[i], b));
+      const lens = parts.map(len);
+      if (Math.max(...lens) > maxChars + 3 || (parts.length > 1 && Math.min(...parts.map((p) => p.length)) < 2)) return;
+      const target = total / parts.length;
+      let cost = lens.reduce((a, l) => a + (l - target) ** 2, 0) + 400 * (parts.length - nMin);
+      cost -= parts.slice(0, -1).filter((p) => /[,:…]$/.test(p[p.length - 1].text)).length * 250;
+      if (!best || cost < best.cost) best = {cost, parts};
+    };
+    const choose = (k: number, from: number, acc: number[]) => {
+      if (acc.length === k) return tryCuts(acc);
+      for (let i = from; i < ws.length; i++) choose(k, i + 1, [...acc, i]);
+    };
+    for (let parts = nMin; parts <= nMin + 1 && parts <= ws.length; parts++) choose(parts - 1, 1, []);
+    const chosen = (best as {parts: (typeof ws)[]} | null)?.parts ?? [ws];
+    chosen.forEach((p) => caps.push({start: p[0].start, end: p[p.length - 1].end, words: p}));
+  }
+  // Hold each caption until the next one starts (at most 0.6 s longer), never overlapping.
+  caps.forEach((c, i) => {
+    const next = caps[i + 1]?.start ?? c.end + 0.8;
+    c.end = Math.max(c.end, Math.min(next - 0.02, c.end + 0.6));
+  });
+  return caps;
+};
+
+const Subtitles: React.FC<{ctx: Ctx; caps: Caption[]}> = ({ctx, caps}) => {
+  const sub = ctx.s.subtitles!;
+  const c = caps.find((x) => ctx.t >= x.start - 0.06 && ctx.t < x.end);
+  if (!c) return null;
+  const fade = Math.min(1, (ctx.t - (c.start - 0.06)) / 0.12, (c.end - ctx.t) / 0.12);
+  const hl = sub.highlight ?? ctx.s.style.accent;
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        left: 60,
+        right: 60,
+        top: sub.y,
+        transform: 'translateY(-50%)',
+        textAlign: 'center',
+        fontFamily: sub.font,
+        fontWeight: sub.weight,
+        fontSize: sub.size,
+        lineHeight: 1.2,
+        color: ctx.s.style.ink,
+        opacity: fade,
+        textShadow: '0 0 6px #fff, 0 0 12px #fff, 0 0 20px #fff, 0 0 3px #fff',
+      }}
+    >
+      {c.words.map((w, i) => {
+        const on = ctx.t >= w.start && ctx.t < (c.words[i + 1]?.start ?? c.end);
+        return (
+          <span key={i} style={{color: on ? hl : undefined, transition: 'none'}}>
+            {w.text}
+            {i < c.words.length - 1 ? ' ' : ''}
+          </span>
+        );
+      })}
+    </div>
+  );
+};
+
+const Watermark: React.FC<{ctx: Ctx}> = ({ctx}) => {
+  const w = ctx.s.watermark!;
+  return (
+    <div
+      style={{
+        position: 'absolute',
+        left: 0,
+        right: 0,
+        top: ctx.s.height / 2,
+        transform: 'translateY(-50%)',
+        textAlign: 'center',
+        fontFamily: w.font,
+        fontWeight: w.weight,
+        fontSize: w.size,
+        letterSpacing: '0.2em',
+        paddingLeft: '0.2em',
+        color: ctx.s.style.ink,
+        opacity: w.opacity,
+        mixBlendMode: 'multiply',
+        pointerEvents: 'none',
+      }}
+    >
+      {w.text}
+    </div>
+  );
+};
+
 // ---------------- dispatcher ----------------
 
 const ItemView: React.FC<{it: Item; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}) => {
@@ -496,6 +680,8 @@ const ItemView: React.FC<{it: Item; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}) 
       return <Magnifier it={it} ctx={ctx} pr={pr} />;
     case 'orbit':
       return <Orbit it={it} ctx={ctx} />;
+    case 'dial':
+      return <Dial it={it} ctx={ctx} pr={pr} />;
   }
 };
 
@@ -532,10 +718,11 @@ const DotGrid: React.FC<{ctx: Ctx}> = ({ctx}) => {
 
 // ---------------- the scene ----------------
 
-const useFont = (family: string, file: string) => {
+const useFont = (family: string, file: string, weight = '800') => {
   const [handle] = useState(() => delayRender('font'));
   useEffect(() => {
-    const face = new FontFace(family, `url(${staticFile(file)})`, {weight: '800'});
+    if (!file) return continueRender(handle);
+    const face = new FontFace(family, `url(${staticFile(file)})`, {weight});
     face
       .load()
       .then((f) => {
@@ -549,6 +736,9 @@ const useFont = (family: string, file: string) => {
 export const Scene: React.FC<{settings: VideoSettings; format?: string}> = ({settings, format}) => {
   const s = useMemo(() => applyFormat(settings, format), [settings, format]);
   useFont(s.style.font, 'fonts/inter-latin-800-normal.woff2');
+  useFont(s.subtitles?.font ?? '', s.subtitles?.fontFile ?? '', String(s.subtitles?.weight ?? 800));
+  useFont(s.watermark?.font ?? '', s.watermark?.fontFile ?? '', String(s.watermark?.weight ?? 800));
+  const caps = useMemo(() => (s.subtitles ? buildCaptions(s.timings, s.subtitles.maxChars) : []), [s]);
   const frame = useCurrentFrame();
   const t = frame / s.fps;
   const cam = cameraAt(s.camera, t);
@@ -575,10 +765,12 @@ export const Scene: React.FC<{settings: VideoSettings; format?: string}> = ({set
       {rest.map((it, i) => (
         <ItemView key={i} it={it} ctx={ctx} pr={pr(it.depth ?? 1)} />
       ))}
+      {s.watermark && <Watermark ctx={ctx} />}
       {labels.map((it, i) => (
         <ItemView key={`l${i}`} it={it} ctx={ctx} pr={pr(it.depth ?? 1)} />
       ))}
-      <Audio src={staticFile(s.audio)} />
+      {s.subtitles && <Subtitles ctx={ctx} caps={caps} />}
+      {s.audio && <Audio src={staticFile(s.audio)} />}
     </AbsoluteFill>
   );
 };

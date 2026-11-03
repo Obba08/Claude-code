@@ -1,0 +1,288 @@
+1
+00:00:00,000 --> 00:00:00,758
+Since you started
+
+2
+00:00:00,778 --> 00:00:02,302
+scrolling, your heart has
+
+3
+00:00:02,322 --> 00:00:04,186
+beaten hundreds of times…
+
+4
+00:00:04,377 --> 00:00:05,042
+and you never
+
+5
+00:00:05,062 --> 00:00:06,322
+told it to once.
+
+6
+00:00:06,397 --> 00:00:07,190
+And it's never
+
+7
+00:00:07,210 --> 00:00:08,226
+waited for you.
+
+8
+00:00:08,580 --> 00:00:09,163
+So who's been
+
+9
+00:00:09,183 --> 00:00:10,281
+running the show?
+
+10
+00:00:10,635 --> 00:00:11,602
+Tucked in the heart's
+
+11
+00:00:11,622 --> 00:00:13,006
+upper right chamber is
+
+12
+00:00:13,026 --> 00:00:14,422
+a tiny patch of cells
+
+13
+00:00:14,442 --> 00:00:16,237
+called the SA node.
+
+14
+00:00:16,428 --> 00:00:16,814
+It's your
+
+15
+00:00:16,834 --> 00:00:18,149
+built-in pacemaker.
+
+16
+00:00:18,169 --> 00:00:19,345
+It fires its own
+
+17
+00:00:19,365 --> 00:00:20,683
+electrical spark,
+
+18
+00:00:20,712 --> 00:00:23,272
+about 100,000 times a day.
+
+19
+00:00:23,347 --> 00:00:24,967
+It never asked you once.
+
+20
+00:00:25,100 --> 00:00:25,835
+Heart cells
+
+21
+00:00:25,855 --> 00:00:27,089
+grown in a dish,
+
+22
+00:00:27,109 --> 00:00:29,190
+with no body and no brain,
+
+23
+00:00:29,210 --> 00:00:30,865
+start beating on their own.
+
+24
+00:00:31,056 --> 00:00:31,547
+So what does
+
+25
+00:00:31,567 --> 00:00:32,607
+your brain do?
+
+26
+00:00:32,868 --> 00:00:33,718
+You know that jolt
+
+27
+00:00:33,738 --> 00:00:34,987
+from a jump scare,
+
+28
+00:00:35,015 --> 00:00:36,296
+when your heart races
+
+29
+00:00:36,316 --> 00:00:37,715
+before you even think?
+
+30
+00:00:38,162 --> 00:00:38,978
+That's your brain
+
+31
+00:00:38,998 --> 00:00:40,409
+cranking the volume up.
+
+32
+00:00:40,542 --> 00:00:41,300
+Falling asleep,
+
+33
+00:00:41,320 --> 00:00:42,452
+it turns it down.
+
+34
+00:00:42,585 --> 00:00:43,714
+Try it now:
+
+35
+00:00:43,734 --> 00:00:45,235
+breathe in slowly and your
+
+36
+00:00:45,255 --> 00:00:46,829
+pulse speeds up slightly.
+
+37
+00:00:46,904 --> 00:00:48,733
+Breathe out, it slows.
+
+38
+00:00:48,924 --> 00:00:50,091
+Here's the twist:
+
+39
+00:00:50,352 --> 00:00:51,156
+most of the time,
+
+40
+00:00:51,176 --> 00:00:51,737
+your brain is
+
+41
+00:00:51,757 --> 00:00:52,913
+pressing the brake.
+
+42
+00:00:53,104 --> 00:00:54,396
+In a heart transplant,
+
+43
+00:00:54,416 --> 00:00:55,722
+the nerves are cut.
+
+44
+00:00:55,797 --> 00:00:57,533
+The new heart still beats…
+
+45
+00:00:57,724 --> 00:00:58,845
+just faster.
+
+46
+00:00:59,036 --> 00:01:00,422
+It even has backups,
+
+47
+00:01:00,442 --> 00:01:01,072
+like your phone's
+
+48
+00:01:01,092 --> 00:01:02,201
+low-power mode.
+
+49
+00:01:02,276 --> 00:01:03,661
+If the main spark fails,
+
+50
+00:01:03,681 --> 00:01:04,369
+a second spot
+
+51
+00:01:04,389 --> 00:01:06,183
+takes over, slower.
+
+52
+00:01:06,258 --> 00:01:07,086
+If that fails,
+
+53
+00:01:07,106 --> 00:01:08,702
+a third, slower still.
+
+54
+00:01:08,836 --> 00:01:09,651
+And when backups
+
+55
+00:01:09,671 --> 00:01:10,487
+aren't enough,
+
+56
+00:01:10,507 --> 00:01:12,197
+doctors fit a pacemaker.
+
+57
+00:01:12,272 --> 00:01:13,309
+That small bump some
+
+58
+00:01:13,329 --> 00:01:14,110
+grandparents have
+
+59
+00:01:14,130 --> 00:01:15,320
+under the collarbone?
+
+60
+00:01:15,581 --> 00:01:16,470
+That's it,
+
+61
+00:01:16,545 --> 00:01:18,675
+doing the SA node's job.
+
+62
+00:01:18,751 --> 00:01:19,790
+The one catch:
+
+63
+00:01:20,144 --> 00:01:21,250
+your heart still needs
+
+64
+00:01:21,270 --> 00:01:22,910
+oxygen, and breathing
+
+65
+00:01:22,930 --> 00:01:24,306
+is your brain's job.
+
+66
+00:01:24,497 --> 00:01:25,583
+But the beat?
+
+67
+00:01:25,612 --> 00:01:26,091
+It's doing
+
+68
+00:01:26,111 --> 00:01:27,252
+that right now.
+
+69
+00:01:27,272 --> 00:01:28,405
+Without asking.
+
+70
+00:01:28,596 --> 00:01:29,551
+Follow for more
+
+71
+00:01:29,571 --> 00:01:30,747
+things your body does
+
+72
+00:01:30,767 --> 00:01:32,433
+without asking you.
+

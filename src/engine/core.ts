@@ -200,3 +200,45 @@ export const pathLength = (pts: Vec[]) => {
   const c = cumLengths(pts);
   return c[c.length - 1];
 };
+
+// ---------- heartbeat ----------
+
+/**
+ * Times of heartbeats between start and end, for a rate that can change.
+ * keys: beats per minute at given times; the rate glides smoothly between keys.
+ */
+export const beatTimes = (start: number, end: number, keys: {at: number; bpm: number}[], phase = 0): number[] => {
+  const bpmAt = (t: number) => {
+    if (t <= keys[0].at) return keys[0].bpm;
+    for (let i = 1; i < keys.length; i++) {
+      if (t <= keys[i].at) return lerp(keys[i - 1].bpm, keys[i].bpm, ease('inOut', progress(t, keys[i - 1].at, keys[i].at)));
+    }
+    return keys[keys.length - 1].bpm;
+  };
+  const out: number[] = [];
+  let t = start + phase;
+  while (t < end) {
+    out.push(t);
+    t += 60 / bpmAt(t);
+  }
+  return out;
+};
+
+// One soft swell: up in 0.1 s, down in 0.3 s (eased both ways, so it never pops).
+const swellAt = (x: number) => {
+  if (x < 0 || x > 0.4) return 0;
+  return x < 0.1 ? ease('inOut', x / 0.1) : 1 - ease('inOut', (x - 0.1) / 0.3);
+};
+
+/** 0..1 "lub-dub" strength at time t for a list of beat times. */
+export const beatSwell = (beats: number[] | undefined, t: number): number => {
+  if (!beats || beats.length === 0) return 0;
+  let v = 0;
+  for (let i = beats.length - 1; i >= 0; i--) {
+    const d = t - beats[i];
+    if (d < 0) continue;
+    if (d > 0.8) break;
+    v = Math.max(v, swellAt(d), 0.55 * swellAt(d - 0.24));
+  }
+  return v;
+};

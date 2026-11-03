@@ -1,0 +1,7 @@
+{
+  "_note": "Which video the tools work on. Change together with the settings import in src/Root.tsx.",
+  "settings": "src/settings/heart.ts",
+  "timings": "src/data/heart-timings.json",
+  "audio": "public/audio/heart-narration.mp3",
+  "subtitles": "subtitles/heart"
+}

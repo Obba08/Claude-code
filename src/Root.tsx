@@ -1,9 +1,12 @@
 import React from 'react';
-import {Composition} from 'remotion';
+import {Composition, getInputProps} from 'remotion';
 import {Scene} from './engine/Scene';
 import {applyFormat} from './engine/format';
 // To make a new video, point this import at a new settings file.
-import settings from './settings/immune-system';
+import baseSettings from './settings/heart';
+
+// `--props='{"noAudio":true}'` renders without the voice (for silent previews).
+const settings = getInputProps().noAudio ? {...baseSettings, audio: ''} : baseSettings;
 
 const duration = settings.timings.duration + settings.tail;
 

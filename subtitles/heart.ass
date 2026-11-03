@@ -1,0 +1,85 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Sub,Inter,54,&H001F1D1D,&H001F1D1D,&H00FFFFFF,&H00FFFFFF,-1,0,0,0,100,100,0.5,0,1,7,0,2,80,80,372,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.76,Sub,,0,0,0,,{\blur4\fad(120,120)}Since you started
+Dialogue: 0,0:00:00.78,0:00:02.30,Sub,,0,0,0,,{\blur4\fad(120,120)}scrolling, your heart has
+Dialogue: 0,0:00:02.32,0:00:04.19,Sub,,0,0,0,,{\blur4\fad(120,120)}beaten hundreds of times…
+Dialogue: 0,0:00:04.38,0:00:05.04,Sub,,0,0,0,,{\blur4\fad(120,120)}and you never
+Dialogue: 0,0:00:05.06,0:00:06.32,Sub,,0,0,0,,{\blur4\fad(120,120)}told it to once.
+Dialogue: 0,0:00:06.40,0:00:07.19,Sub,,0,0,0,,{\blur4\fad(120,120)}And it's never
+Dialogue: 0,0:00:07.21,0:00:08.23,Sub,,0,0,0,,{\blur4\fad(120,120)}waited for you.
+Dialogue: 0,0:00:08.58,0:00:09.16,Sub,,0,0,0,,{\blur4\fad(120,120)}So who's been
+Dialogue: 0,0:00:09.18,0:00:10.28,Sub,,0,0,0,,{\blur4\fad(120,120)}running the show?
+Dialogue: 0,0:00:10.64,0:00:11.60,Sub,,0,0,0,,{\blur4\fad(120,120)}Tucked in the heart's
+Dialogue: 0,0:00:11.62,0:00:13.01,Sub,,0,0,0,,{\blur4\fad(120,120)}upper right chamber is
+Dialogue: 0,0:00:13.03,0:00:14.42,Sub,,0,0,0,,{\blur4\fad(120,120)}a tiny patch of cells
+Dialogue: 0,0:00:14.44,0:00:16.24,Sub,,0,0,0,,{\blur4\fad(120,120)}called the SA node.
+Dialogue: 0,0:00:16.43,0:00:16.81,Sub,,0,0,0,,{\blur4\fad(120,120)}It's your
+Dialogue: 0,0:00:16.83,0:00:18.15,Sub,,0,0,0,,{\blur4\fad(120,120)}built-in pacemaker.
+Dialogue: 0,0:00:18.17,0:00:19.34,Sub,,0,0,0,,{\blur4\fad(120,120)}It fires its own
+Dialogue: 0,0:00:19.36,0:00:20.68,Sub,,0,0,0,,{\blur4\fad(120,120)}electrical spark,
+Dialogue: 0,0:00:20.71,0:00:23.27,Sub,,0,0,0,,{\blur4\fad(120,120)}about 100,000 times a day.
+Dialogue: 0,0:00:23.35,0:00:24.97,Sub,,0,0,0,,{\blur4\fad(120,120)}It never asked you once.
+Dialogue: 0,0:00:25.10,0:00:25.84,Sub,,0,0,0,,{\blur4\fad(120,120)}Heart cells
+Dialogue: 0,0:00:25.86,0:00:27.09,Sub,,0,0,0,,{\blur4\fad(120,120)}grown in a dish,
+Dialogue: 0,0:00:27.11,0:00:29.19,Sub,,0,0,0,,{\blur4\fad(120,120)}with no body and no brain,
+Dialogue: 0,0:00:29.21,0:00:30.86,Sub,,0,0,0,,{\blur4\fad(120,120)}start beating on their own.
+Dialogue: 0,0:00:31.06,0:00:31.55,Sub,,0,0,0,,{\blur4\fad(120,120)}So what does
+Dialogue: 0,0:00:31.57,0:00:32.61,Sub,,0,0,0,,{\blur4\fad(120,120)}your brain do?
+Dialogue: 0,0:00:32.87,0:00:33.72,Sub,,0,0,0,,{\blur4\fad(120,120)}You know that jolt
+Dialogue: 0,0:00:33.74,0:00:34.99,Sub,,0,0,0,,{\blur4\fad(120,120)}from a jump scare,
+Dialogue: 0,0:00:35.02,0:00:36.30,Sub,,0,0,0,,{\blur4\fad(120,120)}when your heart races
+Dialogue: 0,0:00:36.32,0:00:37.72,Sub,,0,0,0,,{\blur4\fad(120,120)}before you even think?
+Dialogue: 0,0:00:38.16,0:00:38.98,Sub,,0,0,0,,{\blur4\fad(120,120)}That's your brain
+Dialogue: 0,0:00:39.00,0:00:40.41,Sub,,0,0,0,,{\blur4\fad(120,120)}cranking the volume up.
+Dialogue: 0,0:00:40.54,0:00:41.30,Sub,,0,0,0,,{\blur4\fad(120,120)}Falling asleep,
+Dialogue: 0,0:00:41.32,0:00:42.45,Sub,,0,0,0,,{\blur4\fad(120,120)}it turns it down.
+Dialogue: 0,0:00:42.58,0:00:43.71,Sub,,0,0,0,,{\blur4\fad(120,120)}Try it now:
+Dialogue: 0,0:00:43.73,0:00:45.24,Sub,,0,0,0,,{\blur4\fad(120,120)}breathe in slowly and your
+Dialogue: 0,0:00:45.26,0:00:46.83,Sub,,0,0,0,,{\blur4\fad(120,120)}pulse speeds up slightly.
+Dialogue: 0,0:00:46.90,0:00:48.73,Sub,,0,0,0,,{\blur4\fad(120,120)}Breathe out, it slows.
+Dialogue: 0,0:00:48.92,0:00:50.09,Sub,,0,0,0,,{\blur4\fad(120,120)}Here's the twist:
+Dialogue: 0,0:00:50.35,0:00:51.16,Sub,,0,0,0,,{\blur4\fad(120,120)}most of the time,
+Dialogue: 0,0:00:51.18,0:00:51.74,Sub,,0,0,0,,{\blur4\fad(120,120)}your brain is
+Dialogue: 0,0:00:51.76,0:00:52.91,Sub,,0,0,0,,{\blur4\fad(120,120)}pressing the brake.
+Dialogue: 0,0:00:53.10,0:00:54.40,Sub,,0,0,0,,{\blur4\fad(120,120)}In a heart transplant,
+Dialogue: 0,0:00:54.42,0:00:55.72,Sub,,0,0,0,,{\blur4\fad(120,120)}the nerves are cut.
+Dialogue: 0,0:00:55.80,0:00:57.53,Sub,,0,0,0,,{\blur4\fad(120,120)}The new heart still beats…
+Dialogue: 0,0:00:57.72,0:00:58.84,Sub,,0,0,0,,{\blur4\fad(120,120)}just faster.
+Dialogue: 0,0:00:59.04,0:01:00.42,Sub,,0,0,0,,{\blur4\fad(120,120)}It even has backups,
+Dialogue: 0,0:01:00.44,0:01:01.07,Sub,,0,0,0,,{\blur4\fad(120,120)}like your phone's
+Dialogue: 0,0:01:01.09,0:01:02.20,Sub,,0,0,0,,{\blur4\fad(120,120)}low-power mode.
+Dialogue: 0,0:01:02.28,0:01:03.66,Sub,,0,0,0,,{\blur4\fad(120,120)}If the main spark fails,
+Dialogue: 0,0:01:03.68,0:01:04.37,Sub,,0,0,0,,{\blur4\fad(120,120)}a second spot
+Dialogue: 0,0:01:04.39,0:01:06.18,Sub,,0,0,0,,{\blur4\fad(120,120)}takes over, slower.
+Dialogue: 0,0:01:06.26,0:01:07.09,Sub,,0,0,0,,{\blur4\fad(120,120)}If that fails,
+Dialogue: 0,0:01:07.11,0:01:08.70,Sub,,0,0,0,,{\blur4\fad(120,120)}a third, slower still.
+Dialogue: 0,0:01:08.84,0:01:09.65,Sub,,0,0,0,,{\blur4\fad(120,120)}And when backups
+Dialogue: 0,0:01:09.67,0:01:10.49,Sub,,0,0,0,,{\blur4\fad(120,120)}aren't enough,
+Dialogue: 0,0:01:10.51,0:01:12.20,Sub,,0,0,0,,{\blur4\fad(120,120)}doctors fit a pacemaker.
+Dialogue: 0,0:01:12.27,0:01:13.31,Sub,,0,0,0,,{\blur4\fad(120,120)}That small bump some
+Dialogue: 0,0:01:13.33,0:01:14.11,Sub,,0,0,0,,{\blur4\fad(120,120)}grandparents have
+Dialogue: 0,0:01:14.13,0:01:15.32,Sub,,0,0,0,,{\blur4\fad(120,120)}under the collarbone?
+Dialogue: 0,0:01:15.58,0:01:16.47,Sub,,0,0,0,,{\blur4\fad(120,120)}That's it,
+Dialogue: 0,0:01:16.54,0:01:18.68,Sub,,0,0,0,,{\blur4\fad(120,120)}doing the SA node's job.
+Dialogue: 0,0:01:18.75,0:01:19.79,Sub,,0,0,0,,{\blur4\fad(120,120)}The one catch:
+Dialogue: 0,0:01:20.14,0:01:21.25,Sub,,0,0,0,,{\blur4\fad(120,120)}your heart still needs
+Dialogue: 0,0:01:21.27,0:01:22.91,Sub,,0,0,0,,{\blur4\fad(120,120)}oxygen, and breathing
+Dialogue: 0,0:01:22.93,0:01:24.31,Sub,,0,0,0,,{\blur4\fad(120,120)}is your brain's job.
+Dialogue: 0,0:01:24.50,0:01:25.58,Sub,,0,0,0,,{\blur4\fad(120,120)}But the beat?
+Dialogue: 0,0:01:25.61,0:01:26.09,Sub,,0,0,0,,{\blur4\fad(120,120)}It's doing
+Dialogue: 0,0:01:26.11,0:01:27.25,Sub,,0,0,0,,{\blur4\fad(120,120)}that right now.
+Dialogue: 0,0:01:27.27,0:01:28.40,Sub,,0,0,0,,{\blur4\fad(120,120)}Without asking.
+Dialogue: 0,0:01:28.60,0:01:29.55,Sub,,0,0,0,,{\blur4\fad(120,120)}Follow for more
+Dialogue: 0,0:01:29.57,0:01:30.75,Sub,,0,0,0,,{\blur4\fad(120,120)}things your body does
+Dialogue: 0,0:01:30.77,0:01:32.43,Sub,,0,0,0,,{\blur4\fad(120,120)}without asking you.

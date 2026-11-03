@@ -1,0 +1,1707 @@
+{
+ "audio": "audio/heart-narration.mp3",
+ "voice": "Brian - Deep, Resonant and Comforting (ElevenLabs nPczCjzI2devNBz1zQrb)",
+ "model": "eleven_multilingual_v2",
+ "voiceSettings": {
+  "stability": 0.48,
+  "similarity_boost": 0.78,
+  "style": 0.05,
+  "use_speaker_boost": true
+ },
+ "wordTimingsFrom": "ElevenLabs Scribe v1 transcription of the same take (matches the script word for word)",
+ "duration": 92.183,
+ "sentences": [
+  {
+   "n": 1,
+   "text": "Since you started scrolling, your heart has beaten hundreds of times… and you never told it to once.",
+   "start": 0.0,
+   "end": 6.072,
+   "firstWord": 0
+  },
+  {
+   "n": 2,
+   "text": "And it's never waited for you.",
+   "start": 6.397,
+   "end": 7.976,
+   "firstWord": 18
+  },
+  {
+   "n": 3,
+   "text": "So who's been running the show?",
+   "start": 8.58,
+   "end": 10.031,
+   "firstWord": 24
+  },
+  {
+   "n": 4,
+   "text": "Tucked in the heart's upper right chamber is a tiny patch of cells called the SA node.",
+   "start": 10.635,
+   "end": 15.987,
+   "firstWord": 30
+  },
+  {
+   "n": 5,
+   "text": "It's your built-in pacemaker.",
+   "start": 16.428,
+   "end": 18.018,
+   "firstWord": 47
+  },
+  {
+   "n": 6,
+   "text": "It fires its own electrical spark, about 100,000 times a day.",
+   "start": 18.169,
+   "end": 23.022,
+   "firstWord": 51
+  },
+  {
+   "n": 7,
+   "text": "It never asked you once.",
+   "start": 23.347,
+   "end": 24.717,
+   "firstWord": 62
+  },
+  {
+   "n": 8,
+   "text": "Heart cells grown in a dish, with no body and no brain, start beating on their own.",
+   "start": 25.1,
+   "end": 30.615,
+   "firstWord": 67
+  },
+  {
+   "n": 9,
+   "text": "So what does your brain do?",
+   "start": 31.056,
+   "end": 32.357,
+   "firstWord": 84
+  },
+  {
+   "n": 10,
+   "text": "You know that jolt from a jump scare, when your heart races before you even think?",
+   "start": 32.868,
+   "end": 37.465,
+   "firstWord": 90
+  },
+  {
+   "n": 11,
+   "text": "That's your brain cranking the volume up.",
+   "start": 38.162,
+   "end": 40.159,
+   "firstWord": 106
+  },
+  {
+   "n": 12,
+   "text": "Falling asleep, it turns it down.",
+   "start": 40.542,
+   "end": 42.202,
+   "firstWord": 113
+  },
+  {
+   "n": 13,
+   "text": "Try it now: breathe in slowly and your pulse speeds up slightly.",
+   "start": 42.585,
+   "end": 46.579,
+   "firstWord": 119
+  },
+  {
+   "n": 14,
+   "text": "Breathe out, it slows.",
+   "start": 46.904,
+   "end": 48.483,
+   "firstWord": 131
+  },
+  {
+   "n": 15,
+   "text": "Here's the twist: most of the time, your brain is pressing the brake.",
+   "start": 48.924,
+   "end": 52.663,
+   "firstWord": 135
+  },
+  {
+   "n": 16,
+   "text": "In a heart transplant, the nerves are cut.",
+   "start": 53.104,
+   "end": 55.472,
+   "firstWord": 148
+  },
+  {
+   "n": 17,
+   "text": "The new heart still beats… just faster.",
+   "start": 55.797,
+   "end": 58.595,
+   "firstWord": 156
+  },
+  {
+   "n": 18,
+   "text": "It even has backups, like your phone's low-power mode.",
+   "start": 59.036,
+   "end": 61.951,
+   "firstWord": 163
+  },
+  {
+   "n": 19,
+   "text": "If the main spark fails, a second spot takes over, slower.",
+   "start": 62.276,
+   "end": 65.933,
+   "firstWord": 172
+  },
+  {
+   "n": 20,
+   "text": "If that fails, a third, slower still.",
+   "start": 66.258,
+   "end": 68.452,
+   "firstWord": 183
+  },
+  {
+   "n": 21,
+   "text": "And when backups aren't enough, doctors fit a pacemaker.",
+   "start": 68.836,
+   "end": 71.947,
+   "firstWord": 190
+  },
+  {
+   "n": 22,
+   "text": "That small bump some grandparents have under the collarbone?",
+   "start": 72.272,
+   "end": 75.07,
+   "firstWord": 199
+  },
+  {
+   "n": 23,
+   "text": "That's it, doing the SA node's job.",
+   "start": 75.581,
+   "end": 78.425,
+   "firstWord": 208
+  },
+  {
+   "n": 24,
+   "text": "The one catch: your heart still needs oxygen, and breathing is your brain's job.",
+   "start": 78.751,
+   "end": 84.056,
+   "firstWord": 215
+  },
+  {
+   "n": 25,
+   "text": "But the beat?",
+   "start": 84.497,
+   "end": 85.333,
+   "firstWord": 229
+  },
+  {
+   "n": 26,
+   "text": "It's doing that right now.",
+   "start": 85.612,
+   "end": 87.028,
+   "firstWord": 232
+  },
+  {
+   "n": 27,
+   "text": "Without asking.",
+   "start": 87.272,
+   "end": 88.155,
+   "firstWord": 237
+  },
+  {
+   "n": 28,
+   "text": "Follow for more things your body does without asking you.",
+   "start": 88.596,
+   "end": 92.183,
+   "firstWord": 239
+  }
+ ],
+ "words": [
+  {
+   "i": 0,
+   "text": "Since",
+   "start": 0.0,
+   "end": 0.279
+  },
+  {
+   "i": 1,
+   "text": "you",
+   "start": 0.313,
+   "end": 0.395
+  },
+  {
+   "i": 2,
+   "text": "started",
+   "start": 0.464,
+   "end": 0.743
+  },
+  {
+   "i": 3,
+   "text": "scrolling,",
+   "start": 0.778,
+   "end": 1.428
+  },
+  {
+   "i": 4,
+   "text": "your",
+   "start": 1.637,
+   "end": 1.788
+  },
+  {
+   "i": 5,
+   "text": "heart",
+   "start": 1.846,
+   "end": 2.043
+  },
+  {
+   "i": 6,
+   "text": "has",
+   "start": 2.09,
+   "end": 2.229
+  },
+  {
+   "i": 7,
+   "text": "beaten",
+   "start": 2.322,
+   "end": 2.635
+  },
+  {
+   "i": 8,
+   "text": "hundreds",
+   "start": 2.752,
+   "end": 3.158
+  },
+  {
+   "i": 9,
+   "text": "of",
+   "start": 3.193,
+   "end": 3.251
+  },
+  {
+   "i": 10,
+   "text": "times…",
+   "start": 3.32,
+   "end": 3.936
+  },
+  {
+   "i": 11,
+   "text": "and",
+   "start": 4.377,
+   "end": 4.516
+  },
+  {
+   "i": 12,
+   "text": "you",
+   "start": 4.574,
+   "end": 4.656
+  },
+  {
+   "i": 13,
+   "text": "never",
+   "start": 4.783,
+   "end": 5.004
+  },
+  {
+   "i": 14,
+   "text": "told",
+   "start": 5.062,
+   "end": 5.271
+  },
+  {
+   "i": 15,
+   "text": "it",
+   "start": 5.306,
+   "end": 5.364
+  },
+  {
+   "i": 16,
+   "text": "to",
+   "start": 5.399,
+   "end": 5.492
+  },
+  {
+   "i": 17,
+   "text": "once.",
+   "start": 5.608,
+   "end": 6.072
+  },
+  {
+   "i": 18,
+   "text": "And",
+   "start": 6.397,
+   "end": 6.548
+  },
+  {
+   "i": 19,
+   "text": "it's",
+   "start": 6.606,
+   "end": 6.745
+  },
+  {
+   "i": 20,
+   "text": "never",
+   "start": 6.896,
+   "end": 7.152
+  },
+  {
+   "i": 21,
+   "text": "waited",
+   "start": 7.21,
+   "end": 7.454
+  },
+  {
+   "i": 22,
+   "text": "for",
+   "start": 7.488,
+   "end": 7.581
+  },
+  {
+   "i": 23,
+   "text": "you.",
+   "start": 7.639,
+   "end": 7.976
+  },
+  {
+   "i": 24,
+   "text": "So",
+   "start": 8.58,
+   "end": 8.731
+  },
+  {
+   "i": 25,
+   "text": "who's",
+   "start": 8.789,
+   "end": 8.986
+  },
+  {
+   "i": 26,
+   "text": "been",
+   "start": 9.021,
+   "end": 9.149
+  },
+  {
+   "i": 27,
+   "text": "running",
+   "start": 9.183,
+   "end": 9.392
+  },
+  {
+   "i": 28,
+   "text": "the",
+   "start": 9.427,
+   "end": 9.497
+  },
+  {
+   "i": 29,
+   "text": "show?",
+   "start": 9.543,
+   "end": 10.031
+  },
+  {
+   "i": 30,
+   "text": "Tucked",
+   "start": 10.635,
+   "end": 10.96
+  },
+  {
+   "i": 31,
+   "text": "in",
+   "start": 10.995,
+   "end": 11.053
+  },
+  {
+   "i": 32,
+   "text": "the",
+   "start": 11.076,
+   "end": 11.146
+  },
+  {
+   "i": 33,
+   "text": "heart's",
+   "start": 11.204,
+   "end": 11.505
+  },
+  {
+   "i": 34,
+   "text": "upper",
+   "start": 11.622,
+   "end": 11.889
+  },
+  {
+   "i": 35,
+   "text": "right",
+   "start": 12.005,
+   "end": 12.225
+  },
+  {
+   "i": 36,
+   "text": "chamber",
+   "start": 12.283,
+   "end": 12.69
+  },
+  {
+   "i": 37,
+   "text": "is",
+   "start": 12.806,
+   "end": 12.968
+  },
+  {
+   "i": 38,
+   "text": "a",
+   "start": 13.026,
+   "end": 13.061
+  },
+  {
+   "i": 39,
+   "text": "tiny",
+   "start": 13.142,
+   "end": 13.468
+  },
+  {
+   "i": 40,
+   "text": "patch",
+   "start": 13.537,
+   "end": 13.793
+  },
+  {
+   "i": 41,
+   "text": "of",
+   "start": 13.839,
+   "end": 13.897
+  },
+  {
+   "i": 42,
+   "text": "cells",
+   "start": 13.966,
+   "end": 14.361
+  },
+  {
+   "i": 43,
+   "text": "called",
+   "start": 14.442,
+   "end": 14.698
+  },
+  {
+   "i": 44,
+   "text": "the",
+   "start": 14.721,
+   "end": 14.802
+  },
+  {
+   "i": 45,
+   "text": "SA",
+   "start": 14.93,
+   "end": 15.395
+  },
+  {
+   "i": 46,
+   "text": "node.",
+   "start": 15.511,
+   "end": 15.987
+  },
+  {
+   "i": 47,
+   "text": "It's",
+   "start": 16.428,
+   "end": 16.625
+  },
+  {
+   "i": 48,
+   "text": "your",
+   "start": 16.66,
+   "end": 16.776
+  },
+  {
+   "i": 49,
+   "text": "built-in",
+   "start": 16.834,
+   "end": 17.217
+  },
+  {
+   "i": 50,
+   "text": "pacemaker.",
+   "start": 17.31,
+   "end": 18.018
+  },
+  {
+   "i": 51,
+   "text": "It",
+   "start": 18.169,
+   "end": 18.309
+  },
+  {
+   "i": 52,
+   "text": "fires",
+   "start": 18.402,
+   "end": 18.819
+  },
+  {
+   "i": 53,
+   "text": "its",
+   "start": 18.889,
+   "end": 19.028
+  },
+  {
+   "i": 54,
+   "text": "own",
+   "start": 19.098,
+   "end": 19.319
+  },
+  {
+   "i": 55,
+   "text": "electrical",
+   "start": 19.365,
+   "end": 19.83
+  },
+  {
+   "i": 56,
+   "text": "spark,",
+   "start": 19.888,
+   "end": 20.433
+  },
+  {
+   "i": 57,
+   "text": "about",
+   "start": 20.712,
+   "end": 20.991
+  },
+  {
+   "i": 58,
+   "text": "100,000",
+   "start": 21.049,
+   "end": 21.559
+  },
+  {
+   "i": 59,
+   "text": "times",
+   "start": 21.617,
+   "end": 22.419
+  },
+  {
+   "i": 60,
+   "text": "a",
+   "start": 22.465,
+   "end": 22.5
+  },
+  {
+   "i": 61,
+   "text": "day.",
+   "start": 22.558,
+   "end": 23.022
+  },
+  {
+   "i": 62,
+   "text": "It",
+   "start": 23.347,
+   "end": 23.51
+  },
+  {
+   "i": 63,
+   "text": "never",
+   "start": 23.603,
+   "end": 23.835
+  },
+  {
+   "i": 64,
+   "text": "asked",
+   "start": 23.905,
+   "end": 24.125
+  },
+  {
+   "i": 65,
+   "text": "you",
+   "start": 24.16,
+   "end": 24.253
+  },
+  {
+   "i": 66,
+   "text": "once.",
+   "start": 24.334,
+   "end": 24.717
+  },
+  {
+   "i": 67,
+   "text": "Heart",
+   "start": 25.1,
+   "end": 25.356
+  },
+  {
+   "i": 68,
+   "text": "cells",
+   "start": 25.414,
+   "end": 25.774
+  },
+  {
+   "i": 69,
+   "text": "grown",
+   "start": 25.855,
+   "end": 26.122
+  },
+  {
+   "i": 70,
+   "text": "in",
+   "start": 26.157,
+   "end": 26.227
+  },
+  {
+   "i": 71,
+   "text": "a",
+   "start": 26.285,
+   "end": 26.308
+  },
+  {
+   "i": 72,
+   "text": "dish,",
+   "start": 26.378,
+   "end": 26.9
+  },
+  {
+   "i": 73,
+   "text": "with",
+   "start": 27.109,
+   "end": 27.295
+  },
+  {
+   "i": 74,
+   "text": "no",
+   "start": 27.411,
+   "end": 27.597
+  },
+  {
+   "i": 75,
+   "text": "body",
+   "start": 27.689,
+   "end": 27.991
+  },
+  {
+   "i": 76,
+   "text": "and",
+   "start": 28.038,
+   "end": 28.107
+  },
+  {
+   "i": 77,
+   "text": "no",
+   "start": 28.189,
+   "end": 28.316
+  },
+  {
+   "i": 78,
+   "text": "brain,",
+   "start": 28.398,
+   "end": 28.967
+  },
+  {
+   "i": 79,
+   "text": "start",
+   "start": 29.21,
+   "end": 29.524
+  },
+  {
+   "i": 80,
+   "text": "beating",
+   "start": 29.605,
+   "end": 29.907
+  },
+  {
+   "i": 81,
+   "text": "on",
+   "start": 29.965,
+   "end": 30.035
+  },
+  {
+   "i": 82,
+   "text": "their",
+   "start": 30.07,
+   "end": 30.22
+  },
+  {
+   "i": 83,
+   "text": "own.",
+   "start": 30.279,
+   "end": 30.615
+  },
+  {
+   "i": 84,
+   "text": "So",
+   "start": 31.056,
+   "end": 31.207
+  },
+  {
+   "i": 85,
+   "text": "what",
+   "start": 31.265,
+   "end": 31.393
+  },
+  {
+   "i": 86,
+   "text": "does",
+   "start": 31.428,
+   "end": 31.532
+  },
+  {
+   "i": 87,
+   "text": "your",
+   "start": 31.567,
+   "end": 31.672
+  },
+  {
+   "i": 88,
+   "text": "brain",
+   "start": 31.707,
+   "end": 31.916
+  },
+  {
+   "i": 89,
+   "text": "do?",
+   "start": 31.985,
+   "end": 32.357
+  },
+  {
+   "i": 90,
+   "text": "You",
+   "start": 32.868,
+   "end": 32.995
+  },
+  {
+   "i": 91,
+   "text": "know",
+   "start": 33.042,
+   "end": 33.158
+  },
+  {
+   "i": 92,
+   "text": "that",
+   "start": 33.216,
+   "end": 33.344
+  },
+  {
+   "i": 93,
+   "text": "jolt",
+   "start": 33.425,
+   "end": 33.692
+  },
+  {
+   "i": 94,
+   "text": "from",
+   "start": 33.738,
+   "end": 33.866
+  },
+  {
+   "i": 95,
+   "text": "a",
+   "start": 33.912,
+   "end": 33.936
+  },
+  {
+   "i": 96,
+   "text": "jump",
+   "start": 34.005,
+   "end": 34.226
+  },
+  {
+   "i": 97,
+   "text": "scare,",
+   "start": 34.272,
+   "end": 34.737
+  },
+  {
+   "i": 98,
+   "text": "when",
+   "start": 35.015,
+   "end": 35.19
+  },
+  {
+   "i": 99,
+   "text": "your",
+   "start": 35.224,
+   "end": 35.375
+  },
+  {
+   "i": 100,
+   "text": "heart",
+   "start": 35.457,
+   "end": 35.689
+  },
+  {
+   "i": 101,
+   "text": "races",
+   "start": 35.805,
+   "end": 36.246
+  },
+  {
+   "i": 102,
+   "text": "before",
+   "start": 36.316,
+   "end": 36.571
+  },
+  {
+   "i": 103,
+   "text": "you",
+   "start": 36.606,
+   "end": 36.687
+  },
+  {
+   "i": 104,
+   "text": "even",
+   "start": 36.768,
+   "end": 36.989
+  },
+  {
+   "i": 105,
+   "text": "think?",
+   "start": 37.047,
+   "end": 37.465
+  },
+  {
+   "i": 106,
+   "text": "That's",
+   "start": 38.162,
+   "end": 38.44
+  },
+  {
+   "i": 107,
+   "text": "your",
+   "start": 38.475,
+   "end": 38.603
+  },
+  {
+   "i": 108,
+   "text": "brain",
+   "start": 38.649,
+   "end": 38.916
+  },
+  {
+   "i": 109,
+   "text": "cranking",
+   "start": 38.998,
+   "end": 39.392
+  },
+  {
+   "i": 110,
+   "text": "the",
+   "start": 39.439,
+   "end": 39.508
+  },
+  {
+   "i": 111,
+   "text": "volume",
+   "start": 39.543,
+   "end": 39.868
+  },
+  {
+   "i": 112,
+   "text": "up.",
+   "start": 39.903,
+   "end": 40.159
+  },
+  {
+   "i": 113,
+   "text": "Falling",
+   "start": 40.542,
+   "end": 40.878
+  },
+  {
+   "i": 114,
+   "text": "asleep,",
+   "start": 40.925,
+   "end": 41.296
+  },
+  {
+   "i": 115,
+   "text": "it",
+   "start": 41.32,
+   "end": 41.389
+  },
+  {
+   "i": 116,
+   "text": "turns",
+   "start": 41.424,
+   "end": 41.656
+  },
+  {
+   "i": 117,
+   "text": "it",
+   "start": 41.703,
+   "end": 41.761
+  },
+  {
+   "i": 118,
+   "text": "down.",
+   "start": 41.796,
+   "end": 42.202
+  },
+  {
+   "i": 119,
+   "text": "Try",
+   "start": 42.585,
+   "end": 42.875
+  },
+  {
+   "i": 120,
+   "text": "it",
+   "start": 42.933,
+   "end": 43.003
+  },
+  {
+   "i": 121,
+   "text": "now:",
+   "start": 43.061,
+   "end": 43.491
+  },
+  {
+   "i": 122,
+   "text": "breathe",
+   "start": 43.734,
+   "end": 44.025
+  },
+  {
+   "i": 123,
+   "text": "in",
+   "start": 44.071,
+   "end": 44.152
+  },
+  {
+   "i": 124,
+   "text": "slowly",
+   "start": 44.269,
+   "end": 44.791
+  },
+  {
+   "i": 125,
+   "text": "and",
+   "start": 44.907,
+   "end": 45.046
+  },
+  {
+   "i": 126,
+   "text": "your",
+   "start": 45.093,
+   "end": 45.209
+  },
+  {
+   "i": 127,
+   "text": "pulse",
+   "start": 45.255,
+   "end": 45.511
+  },
+  {
+   "i": 128,
+   "text": "speeds",
+   "start": 45.534,
+   "end": 45.859
+  },
+  {
+   "i": 129,
+   "text": "up",
+   "start": 45.906,
+   "end": 45.998
+  },
+  {
+   "i": 130,
+   "text": "slightly.",
+   "start": 46.045,
+   "end": 46.579
+  },
+  {
+   "i": 131,
+   "text": "Breathe",
+   "start": 46.904,
+   "end": 47.229
+  },
+  {
+   "i": 132,
+   "text": "out,",
+   "start": 47.287,
+   "end": 47.577
+  },
+  {
+   "i": 133,
+   "text": "it",
+   "start": 47.624,
+   "end": 47.763
+  },
+  {
+   "i": 134,
+   "text": "slows.",
+   "start": 47.821,
+   "end": 48.483
+  },
+  {
+   "i": 135,
+   "text": "Here's",
+   "start": 48.924,
+   "end": 49.168
+  },
+  {
+   "i": 136,
+   "text": "the",
+   "start": 49.203,
+   "end": 49.272
+  },
+  {
+   "i": 137,
+   "text": "twist:",
+   "start": 49.319,
+   "end": 49.841
+  },
+  {
+   "i": 138,
+   "text": "most",
+   "start": 50.352,
+   "end": 50.608
+  },
+  {
+   "i": 139,
+   "text": "of",
+   "start": 50.654,
+   "end": 50.7
+  },
+  {
+   "i": 140,
+   "text": "the",
+   "start": 50.747,
+   "end": 50.817
+  },
+  {
+   "i": 141,
+   "text": "time,",
+   "start": 50.863,
+   "end": 51.153
+  },
+  {
+   "i": 142,
+   "text": "your",
+   "start": 51.176,
+   "end": 51.293
+  },
+  {
+   "i": 143,
+   "text": "brain",
+   "start": 51.351,
+   "end": 51.571
+  },
+  {
+   "i": 144,
+   "text": "is",
+   "start": 51.618,
+   "end": 51.687
+  },
+  {
+   "i": 145,
+   "text": "pressing",
+   "start": 51.757,
+   "end": 52.094
+  },
+  {
+   "i": 146,
+   "text": "the",
+   "start": 52.14,
+   "end": 52.21
+  },
+  {
+   "i": 147,
+   "text": "brake.",
+   "start": 52.245,
+   "end": 52.663
+  },
+  {
+   "i": 148,
+   "text": "In",
+   "start": 53.104,
+   "end": 53.243
+  },
+  {
+   "i": 149,
+   "text": "a",
+   "start": 53.301,
+   "end": 53.324
+  },
+  {
+   "i": 150,
+   "text": "heart",
+   "start": 53.406,
+   "end": 53.615
+  },
+  {
+   "i": 151,
+   "text": "transplant,",
+   "start": 53.661,
+   "end": 54.334
+  },
+  {
+   "i": 152,
+   "text": "the",
+   "start": 54.416,
+   "end": 54.52
+  },
+  {
+   "i": 153,
+   "text": "nerves",
+   "start": 54.601,
+   "end": 54.868
+  },
+  {
+   "i": 154,
+   "text": "are",
+   "start": 54.903,
+   "end": 55.008
+  },
+  {
+   "i": 155,
+   "text": "cut.",
+   "start": 55.043,
+   "end": 55.472
+  },
+  {
+   "i": 156,
+   "text": "The",
+   "start": 55.797,
+   "end": 55.925
+  },
+  {
+   "i": 157,
+   "text": "new",
+   "start": 55.995,
+   "end": 56.134
+  },
+  {
+   "i": 158,
+   "text": "heart",
+   "start": 56.204,
+   "end": 56.401
+  },
+  {
+   "i": 159,
+   "text": "still",
+   "start": 56.459,
+   "end": 56.68
+  },
+  {
+   "i": 160,
+   "text": "beats…",
+   "start": 56.738,
+   "end": 57.283
+  },
+  {
+   "i": 161,
+   "text": "just",
+   "start": 57.724,
+   "end": 57.968
+  },
+  {
+   "i": 162,
+   "text": "faster.",
+   "start": 58.026,
+   "end": 58.595
+  },
+  {
+   "i": 163,
+   "text": "It",
+   "start": 59.036,
+   "end": 59.176
+  },
+  {
+   "i": 164,
+   "text": "even",
+   "start": 59.222,
+   "end": 59.408
+  },
+  {
+   "i": 165,
+   "text": "has",
+   "start": 59.466,
+   "end": 59.629
+  },
+  {
+   "i": 166,
+   "text": "backups,",
+   "start": 59.722,
+   "end": 60.36
+  },
+  {
+   "i": 167,
+   "text": "like",
+   "start": 60.442,
+   "end": 60.604
+  },
+  {
+   "i": 168,
+   "text": "your",
+   "start": 60.627,
+   "end": 60.732
+  },
+  {
+   "i": 169,
+   "text": "phone's",
+   "start": 60.767,
+   "end": 61.045
+  },
+  {
+   "i": 170,
+   "text": "low-power",
+   "start": 61.092,
+   "end": 61.521
+  },
+  {
+   "i": 171,
+   "text": "mode.",
+   "start": 61.579,
+   "end": 61.951
+  },
+  {
+   "i": 172,
+   "text": "If",
+   "start": 62.276,
+   "end": 62.415
+  },
+  {
+   "i": 173,
+   "text": "the",
+   "start": 62.473,
+   "end": 62.543
+  },
+  {
+   "i": 174,
+   "text": "main",
+   "start": 62.613,
+   "end": 62.787
+  },
+  {
+   "i": 175,
+   "text": "spark",
+   "start": 62.845,
+   "end": 63.147
+  },
+  {
+   "i": 176,
+   "text": "fails,",
+   "start": 63.228,
+   "end": 63.657
+  },
+  {
+   "i": 177,
+   "text": "a",
+   "start": 63.681,
+   "end": 63.716
+  },
+  {
+   "i": 178,
+   "text": "second",
+   "start": 63.797,
+   "end": 64.064
+  },
+  {
+   "i": 179,
+   "text": "spot",
+   "start": 64.099,
+   "end": 64.354
+  },
+  {
+   "i": 180,
+   "text": "takes",
+   "start": 64.389,
+   "end": 64.621
+  },
+  {
+   "i": 181,
+   "text": "over,",
+   "start": 64.679,
+   "end": 65.051
+  },
+  {
+   "i": 182,
+   "text": "slower.",
+   "start": 65.376,
+   "end": 65.933
+  },
+  {
+   "i": 183,
+   "text": "If",
+   "start": 66.258,
+   "end": 66.397
+  },
+  {
+   "i": 184,
+   "text": "that",
+   "start": 66.455,
+   "end": 66.63
+  },
+  {
+   "i": 185,
+   "text": "fails,",
+   "start": 66.711,
+   "end": 67.082
+  },
+  {
+   "i": 186,
+   "text": "a",
+   "start": 67.106,
+   "end": 67.14
+  },
+  {
+   "i": 187,
+   "text": "third,",
+   "start": 67.233,
+   "end": 67.57
+  },
+  {
+   "i": 188,
+   "text": "slower",
+   "start": 67.593,
+   "end": 67.907
+  },
+  {
+   "i": 189,
+   "text": "still.",
+   "start": 67.965,
+   "end": 68.452
+  },
+  {
+   "i": 190,
+   "text": "And",
+   "start": 68.836,
+   "end": 68.975
+  },
+  {
+   "i": 191,
+   "text": "when",
+   "start": 69.021,
+   "end": 69.161
+  },
+  {
+   "i": 192,
+   "text": "backups",
+   "start": 69.219,
+   "end": 69.637
+  },
+  {
+   "i": 193,
+   "text": "aren't",
+   "start": 69.671,
+   "end": 69.869
+  },
+  {
+   "i": 194,
+   "text": "enough,",
+   "start": 69.904,
+   "end": 70.356
+  },
+  {
+   "i": 195,
+   "text": "doctors",
+   "start": 70.507,
+   "end": 70.949
+  },
+  {
+   "i": 196,
+   "text": "fit",
+   "start": 71.007,
+   "end": 71.158
+  },
+  {
+   "i": 197,
+   "text": "a",
+   "start": 71.204,
+   "end": 71.227
+  },
+  {
+   "i": 198,
+   "text": "pacemaker.",
+   "start": 71.274,
+   "end": 71.947
+  },
+  {
+   "i": 199,
+   "text": "That",
+   "start": 72.272,
+   "end": 72.446
+  },
+  {
+   "i": 200,
+   "text": "small",
+   "start": 72.516,
+   "end": 72.806
+  },
+  {
+   "i": 201,
+   "text": "bump",
+   "start": 72.876,
+   "end": 73.085
+  },
+  {
+   "i": 202,
+   "text": "some",
+   "start": 73.143,
+   "end": 73.294
+  },
+  {
+   "i": 203,
+   "text": "grandparents",
+   "start": 73.329,
+   "end": 73.863
+  },
+  {
+   "i": 204,
+   "text": "have",
+   "start": 73.909,
+   "end": 74.095
+  },
+  {
+   "i": 205,
+   "text": "under",
+   "start": 74.13,
+   "end": 74.292
+  },
+  {
+   "i": 206,
+   "text": "the",
+   "start": 74.327,
+   "end": 74.397
+  },
+  {
+   "i": 207,
+   "text": "collarbone?",
+   "start": 74.432,
+   "end": 75.07
+  },
+  {
+   "i": 208,
+   "text": "That's",
+   "start": 75.581,
+   "end": 75.836
+  },
+  {
+   "i": 209,
+   "text": "it,",
+   "start": 75.894,
+   "end": 76.22
+  },
+  {
+   "i": 210,
+   "text": "doing",
+   "start": 76.545,
+   "end": 76.788
+  },
+  {
+   "i": 211,
+   "text": "the",
+   "start": 76.835,
+   "end": 76.916
+  },
+  {
+   "i": 212,
+   "text": "SA",
+   "start": 77.032,
+   "end": 77.392
+  },
+  {
+   "i": 213,
+   "text": "node's",
+   "start": 77.508,
+   "end": 77.822
+  },
+  {
+   "i": 214,
+   "text": "job.",
+   "start": 77.891,
+   "end": 78.425
+  },
+  {
+   "i": 215,
+   "text": "The",
+   "start": 78.751,
+   "end": 78.855
+  },
+  {
+   "i": 216,
+   "text": "one",
+   "start": 78.913,
+   "end": 79.052
+  },
+  {
+   "i": 217,
+   "text": "catch:",
+   "start": 79.087,
+   "end": 79.54
+  },
+  {
+   "i": 218,
+   "text": "your",
+   "start": 80.144,
+   "end": 80.306
+  },
+  {
+   "i": 219,
+   "text": "heart",
+   "start": 80.399,
+   "end": 80.631
+  },
+  {
+   "i": 220,
+   "text": "still",
+   "start": 80.689,
+   "end": 80.91
+  },
+  {
+   "i": 221,
+   "text": "needs",
+   "start": 80.968,
+   "end": 81.189
+  },
+  {
+   "i": 222,
+   "text": "oxygen,",
+   "start": 81.27,
+   "end": 82.048
+  },
+  {
+   "i": 223,
+   "text": "and",
+   "start": 82.292,
+   "end": 82.442
+  },
+  {
+   "i": 224,
+   "text": "breathing",
+   "start": 82.512,
+   "end": 82.884
+  },
+  {
+   "i": 225,
+   "text": "is",
+   "start": 82.93,
+   "end": 83.0
+  },
+  {
+   "i": 226,
+   "text": "your",
+   "start": 83.046,
+   "end": 83.162
+  },
+  {
+   "i": 227,
+   "text": "brain's",
+   "start": 83.197,
+   "end": 83.499
+  },
+  {
+   "i": 228,
+   "text": "job.",
+   "start": 83.557,
+   "end": 84.056
+  },
+  {
+   "i": 229,
+   "text": "But",
+   "start": 84.497,
+   "end": 84.66
+  },
+  {
+   "i": 230,
+   "text": "the",
+   "start": 84.695,
+   "end": 84.776
+  },
+  {
+   "i": 231,
+   "text": "beat?",
+   "start": 84.869,
+   "end": 85.333
+  },
+  {
+   "i": 232,
+   "text": "It's",
+   "start": 85.612,
+   "end": 85.809
+  },
+  {
+   "i": 233,
+   "text": "doing",
+   "start": 85.856,
+   "end": 86.065
+  },
+  {
+   "i": 234,
+   "text": "that",
+   "start": 86.111,
+   "end": 86.227
+  },
+  {
+   "i": 235,
+   "text": "right",
+   "start": 86.297,
+   "end": 86.494
+  },
+  {
+   "i": 236,
+   "text": "now.",
+   "start": 86.552,
+   "end": 87.028
+  },
+  {
+   "i": 237,
+   "text": "Without",
+   "start": 87.272,
+   "end": 87.597
+  },
+  {
+   "i": 238,
+   "text": "asking.",
+   "start": 87.644,
+   "end": 88.155
+  },
+  {
+   "i": 239,
+   "text": "Follow",
+   "start": 88.596,
+   "end": 88.967
+  },
+  {
+   "i": 240,
+   "text": "for",
+   "start": 89.037,
+   "end": 89.176
+  },
+  {
+   "i": 241,
+   "text": "more",
+   "start": 89.269,
+   "end": 89.501
+  },
+  {
+   "i": 242,
+   "text": "things",
+   "start": 89.571,
+   "end": 89.908
+  },
+  {
+   "i": 243,
+   "text": "your",
+   "start": 89.966,
+   "end": 90.105
+  },
+  {
+   "i": 244,
+   "text": "body",
+   "start": 90.163,
+   "end": 90.407
+  },
+  {
+   "i": 245,
+   "text": "does",
+   "start": 90.465,
+   "end": 90.709
+  },
+  {
+   "i": 246,
+   "text": "without",
+   "start": 90.767,
+   "end": 91.092
+  },
+  {
+   "i": 247,
+   "text": "asking",
+   "start": 91.15,
+   "end": 91.498
+  },
+  {
+   "i": 248,
+   "text": "you.",
+   "start": 91.58,
+   "end": 92.183
+  }
+ ]
+}
