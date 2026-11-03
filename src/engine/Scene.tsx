@@ -1,5 +1,6 @@
 import React, {useEffect, useMemo, useState} from 'react';
 import {applyFormat} from './format';
+import {buildCaptions, Overlay} from './Overlay';
 import {AbsoluteFill, Audio, Img, continueRender, delayRender, staticFile, useCurrentFrame} from 'remotion';
 import type {Item, LabelItem, MagnifierItem, PictureItem, VideoSettings, Vec} from './types';
 import {
@@ -532,23 +533,27 @@ const DotGrid: React.FC<{ctx: Ctx}> = ({ctx}) => {
 
 // ---------------- the scene ----------------
 
-const useFont = (family: string, file: string) => {
-  const [handle] = useState(() => delayRender('font'));
+// Loads every font before the first frame is drawn, so text never swaps mid-video.
+const useFonts = (fonts: {family: string; file: string; weight: number}[]) => {
+  const [handle] = useState(() => delayRender('fonts'));
+  const key = fonts.map((f) => f.family + f.weight + f.file).join('|');
   useEffect(() => {
-    const face = new FontFace(family, `url(${staticFile(file)})`, {weight: '800'});
-    face
-      .load()
-      .then((f) => {
-        document.fonts.add(f);
-        continueRender(handle);
-      })
-      .catch(() => continueRender(handle));
-  }, [family, file, handle]);
+    Promise.all(
+      fonts.map((f) =>
+        new FontFace(f.family, `url(${staticFile(f.file)})`, {weight: String(f.weight)})
+          .load()
+          .then((face) => document.fonts.add(face))
+          .catch(() => undefined),
+      ),
+    ).then(() => continueRender(handle));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [key, handle]);
 };
 
 export const Scene: React.FC<{settings: VideoSettings; format?: string}> = ({settings, format}) => {
   const s = useMemo(() => applyFormat(settings, format), [settings, format]);
-  useFont(s.style.font, 'fonts/inter-latin-800-normal.woff2');
+  useFonts([{family: s.style.font, file: 'fonts/inter-latin-800-normal.woff2', weight: 800}, ...(s.fonts ?? [])]);
+  const captions = useMemo(() => (s.subtitles ? buildCaptions(s.timings, s.subtitles.maxChars) : []), [s]);
   const frame = useCurrentFrame();
   const t = frame / s.fps;
   const cam = cameraAt(s.camera, t);
@@ -578,7 +583,8 @@ export const Scene: React.FC<{settings: VideoSettings; format?: string}> = ({set
       {labels.map((it, i) => (
         <ItemView key={`l${i}`} it={it} ctx={ctx} pr={pr(it.depth ?? 1)} />
       ))}
-      <Audio src={staticFile(s.audio)} />
+      <Overlay s={s} t={t} captions={captions} />
+      {s.audio ? <Audio src={staticFile(s.audio)} /> : null}
     </AbsoluteFill>
   );
 };

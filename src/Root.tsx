@@ -3,7 +3,7 @@ import {Composition} from 'remotion';
 import {Scene} from './engine/Scene';
 import {applyFormat} from './engine/format';
 // To make a new video, point this import at a new settings file.
-import settings from './settings/immune-system';
+import settings from './settings/apoptosis';
 
 const duration = settings.timings.duration + settings.tail;
 

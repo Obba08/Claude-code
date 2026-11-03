@@ -174,12 +174,48 @@ export type Item =
   | MagnifierItem
   | OrbitItem;
 
+/** Captions built from the word timings, shown phrase by phrase. */
+export interface SubtitleStyle {
+  font: string; // a font loaded via `fonts`
+  weight: number;
+  size: number; // px
+  /** Screen y of the caption's center line. */
+  y: number;
+  /** Max characters per caption. */
+  maxChars: number;
+  color: string;
+  /** Opacity of words not spoken yet (0..1). 1 = whole phrase at once. */
+  upcoming: number;
+  uppercase?: boolean;
+}
+
+export interface WatermarkStyle {
+  text: string;
+  font: string;
+  weight: number;
+  size: number;
+  opacity: number;
+  /** Screen position of its center. Default: middle of the frame. */
+  at?: Vec;
+}
+
+export interface FontDef {
+  family: string;
+  file: string; // path inside /public
+  weight: number;
+}
+
 export interface VideoSettings {
   id: string;
   width: number;
   height: number;
   fps: number;
+  /** Path inside /public. Empty while there is no voice yet. */
   audio: string;
+  /** Extra fonts to load (labels use style.font). */
+  fonts?: FontDef[];
+  subtitles?: SubtitleStyle;
+  watermark?: WatermarkStyle;
   timings: Timings;
   /** Extra seconds after the voice ends. */
   tail: number;
