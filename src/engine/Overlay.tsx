@@ -48,22 +48,24 @@ export const buildCaptions = (timings: Timings, maxChars: number): Caption[] => 
       out.push({start: part[0].start, end: part[part.length - 1].end, words: part.map((w) => ({text: w.text, start: w.start}))});
     }
   }
-  // Hold each caption until the next one starts (max +0.6 s), never overlapping.
+  // Hold each caption a little after its last word (max +0.6 s), but always end before the next
+  // one starts, so two captions are never on screen together.
   out.forEach((c, i) => {
     const next = out[i + 1]?.start ?? c.end + 0.8;
-    c.end = Math.max(c.end, Math.min(next - 0.04, c.end + 0.6));
+    c.end = Math.min(c.end + 0.6, next - 0.03);
   });
   return out;
 };
 
 const Subtitles: React.FC<{st: SubtitleStyle; captions: Caption[]; t: number; width: number}> = ({st, captions, t, width}) => {
-  const fade = 0.16;
+  const fade = 0.14;
   return (
     <>
       {captions.map((c, i) => {
-        if (t < c.start - fade || t > c.end + fade) return null;
-        const vin = ease('inOut', progress(t, c.start - fade, c.start));
-        const vout = 1 - ease('inOut', progress(t, c.end, c.end + fade));
+        // Fade in from just before the first word; fade out so it is gone by `end`.
+        if (t < c.start - 0.03 || t > c.end) return null;
+        const vin = ease('inOut', progress(t, c.start - 0.03, c.start - 0.03 + fade));
+        const vout = 1 - ease('inOut', progress(t, c.end - fade, c.end));
         const v = Math.min(vin, vout);
         return (
           <div
@@ -85,7 +87,7 @@ const Subtitles: React.FC<{st: SubtitleStyle; captions: Caption[]; t: number; wi
               color: st.color,
               textTransform: st.uppercase ? 'uppercase' : undefined,
               // Soft white halo so captions read over the drawings without a box.
-              textShadow: '0 0 6px #fff, 0 0 14px #fff, 0 0 24px #fff, 0 0 3px #fff',
+              textShadow: '0 0 3px #fff, 0 0 8px #fff, 0 0 16px #fff, 0 0 28px #fff, 0 0 44px #fff, 0 0 60px #fff',
             }}
           >
             {c.words.map((w, k) => {

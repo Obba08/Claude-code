@@ -305,7 +305,7 @@ const Label: React.FC<{it: LabelItem; ctx: Ctx; pr: Projector}> = ({it, ctx, pr}
         letterSpacing: '0.32em',
         paddingLeft: '0.32em', // balances the trailing letter space
         color: ctx.s.style.ink,
-        textShadow: '0 0 10px #fff, 0 0 18px #fff, 0 0 4px #fff',
+        textShadow: '0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 30px #fff, 0 0 44px #fff',
         whiteSpace: 'nowrap',
         textAlign: 'center',
       }}

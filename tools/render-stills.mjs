@@ -21,8 +21,13 @@ const composition = await selectComposition({serveUrl, id: compId, puppeteerInst
 const fps = composition.fps;
 
 const times = new Set();
-for (let t = 0; t * fps < composition.durationInFrames; t += 0.5) times.add(Math.round(t * fps));
-for (const s of timings.sentences) times.add(Math.round(s.start * fps));
+if (process.env.TIMES) {
+  // Only these moments (seconds, comma separated), e.g. TIMES=4.5,19.6 for a quick re-check.
+  for (const x of process.env.TIMES.split(',')) times.add(Math.round(Number(x) * fps));
+} else {
+  for (let t = 0; t * fps < composition.durationInFrames; t += 0.5) times.add(Math.round(t * fps));
+  for (const s of timings.sentences) times.add(Math.round(s.start * fps));
+}
 const frames = [...times].filter((f) => f >= from * fps && f <= to * fps && f < composition.durationInFrames).sort((a, b) => a - b);
 
 const sentenceAt = (f) => timings.sentences.findLastIndex((s) => s.start * fps <= f + 0.5) + 1;

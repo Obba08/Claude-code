@@ -2,24 +2,28 @@
 
 A reusable template for calm, vertical (1080×1920, 60 fps) explainer videos filmed by **one camera** moving over a page of illustrations.
 
-The first video made with it: *How the immune system works* (`script.md`).
+Videos made with it: *How the immune system works* (`src/settings/immune-system.ts`) and *Apoptosis* (`script.md`, `src/settings/apoptosis.ts`, the current one).
 
 ## How it fits together
 
 | Path | What it is |
 |------|------------|
-| `src/settings/immune-system.ts` | **The only file that changes per video.** Pictures, where they sit, camera moves, lights, labels, magnifier, and every timing (tied to words of the narration). |
-| `src/data/timings.json` | Exact start/end time of every word and sentence of the voice. |
-| `public/audio/narration.mp3` | The voice. |
+| `src/settings/<video>.ts` | **The only file that changes per video.** Pictures, where they sit, camera moves, lights, labels, magnifier, subtitles, watermark and every timing (tied to words of the narration). |
+| `src/data/timings.json` | Exact start/end time of every word and sentence (one "sentence" per narration line of `script.md`). |
+| `public/audio/<video>.mp3` | The voice (its path is stored in `timings.json`). |
 | `images/` (linked as `public/images`) | Cut-out pictures. |
 | `src/engine/` | The engine: camera, depth layers, fades, lights, lines, labels, magnifier, dot grid. No video-specific content. |
 | `tools/render-stills.mjs` | Renders a check frame every 0.5 s and at every sentence start into `out/stills/`. |
 | `tools/contact_sheet.py` | Tiles those frames into sheets in `out/sheets/` with the safe-area lines drawn in. |
+| `tools/timings.py` | Builds `timings.json`: `estimate` (from `script.md`, before a voice exists) or `words <words.json> <audio>` (from a transcription, matched to the script word for word). |
+| `tools/cutout.py` | Removes the white background around a picture (only the white touching the border). |
+| `src/engine/Overlay.tsx` | Subtitles (built from the word timings) and the watermark. |
 
 ## Making a new video
 
-1. Put the cut-out pictures in `images/` and the voice in `public/audio/`.
-2. Put the word timings in `src/data/timings.json` (same shape: `duration`, `sentences`, `words`).
+1. Put the pictures in `images/` (`python3 tools/cutout.py in.png images/name.png`) and the voice in `public/audio/`.
+2. Make the word timings: `python3 tools/timings.py words words.json public/audio/<video>.mp3`
+   (or `python3 tools/timings.py estimate` to build and check the animation before the voice exists).
 3. Copy `src/settings/immune-system.ts` to a new file and change pictures, positions, camera keys and items.
    - `w(sentence, 'word')` gives the time a word starts. Use it for every timing so visuals land on their words.
    - `placed(picture, center, width).pt(px, py)` turns a pixel in a picture into a world position, so paths can be traced straight from the image.
@@ -44,6 +48,9 @@ Check it with `COMP=Explainer-square OUT=out/stills-square node tools/render-sti
 - `label`: bold, widely spaced text that fades in, stays crisp at any zoom and is kept inside the safe area.
 - `magnifier`: a circle that grows out of a detail, joined by two thin lines, with its own content inside.
 - `orbit`: a small dial with a light going round (time passing).
+
+Settings-level extras: `subtitles` (font, weight, size, y, max characters; words light up as they are spoken),
+`watermark` (text blended into the middle of the frame with multiply), `fonts` (extra font files to load).
 
 ## Motion rules built into the engine
 

@@ -82,7 +82,7 @@ const Cs = (px: number, py: number): Vec => [P[0] + (px - 680) * C.scale * SHRIN
 // Fragments (the cell after it breaks apart) and the macrophage.
 const FW = 19;
 const F0 = P;
-const DRIFT = 2.6; // how far the pieces drift down "like leaves"
+const DRIFT = 3.4; // how far the pieces drift down "like leaves"
 const F1 = add(F0, [0, DRIFT]);
 const Fr = placed(pictures.fragments, F0, FW);
 const MW = 40;
@@ -141,7 +141,7 @@ const T = {
 // ---------------------------------------------------------------- camera
 
 const OPEN = {x: 0, y: -28, zoom: 0.9};
-const Pc = add(P, [0.6, 0.9]); // cell slightly high, leaves room for the magnifier
+const Pc = add(P, [0.3, 0.9]); // cell slightly high, leaves room for the magnifier
 const D0: Vec = add(P, [6.8, -11.8]); // the damaged cell that will not die (S20)
 
 const cam = (at: number, p: Vec | {x: number; y: number}, zoom: number, ease?: CameraKey['ease']): CameraKey => {
@@ -152,21 +152,21 @@ const cam = (at: number, p: Vec | {x: number; y: number}, zoom: number, ease?: C
 const camera: CameraKey[] = [
   cam(0, OPEN, OPEN.zoom),
   cam(0.5, OPEN, 0.905), // S1 a breath, then a slow push toward the gap
-  cam(se(1) + 0.3, gapH, 1.45),
+  cam(se(1) + 0.3, H.pt(615, 600), 1.75),
   cam(se(2) + 0.3, E.pt(520, 400), 2.3), // S2 keep pushing while the hand becomes a paddle
   cam(se(3) + 0.2, E.pt(525, 380), 3.8), // S3 the web
   cam(T.signal + 0.4, P, 9), // S4 into the web: cells
   cam(se(5) + 0.2, P, 30), // S5 toward one cell
   cam(se(6) + 0.2, P, 42), // S6 slow drift while the name appears
-  cam(se(7) + 0.3, Pc, 80), // S7 push into the cell
-  cam(se(8) + 0.2, Pc, 84), // S8 hold on the mitochondria
-  cam(se(9) + 0.2, Pc, 80), // S9
+  cam(se(7) + 0.3, Pc, 72), // S7 push into the cell
+  cam(se(8) + 0.2, Pc, 76), // S8 hold on the mitochondria
+  cam(se(9) + 0.2, Pc, 73), // S9
   cam(T.caspases + 0.6, add(P, [0.4, 0.3]), 62), // S10 ease back to see the whole cell
   cam(se(11) + 0.2, add(P, [0.4, 0.3]), 64), // S11
   cam(T.shrinks + 1.4, add(P, [0.3, 0.25]), 74), // S12 follow the shrinking cell in
   cam(se(13) + 0.2, P, 70), // S13
-  cam(se(14) + 0.3, F1, 62), // S14 tilt down with the falling pieces
-  cam(se(15) + 0.1, F1, 60), // S15
+  cam(se(14) + 0.3, add(F0, [0, 1.2]), 60), // S14 tilt down with the falling pieces
+  cam(se(15) + 0.1, add(F0, [0, 1.4]), 58), // S15
   cam(T.macrophage + 2.0, add(F1, [8.5, -0.5]), 30), // S16 make room for the macrophage
   cam(se(16) + 0.2, add(F1, [8.5, -0.5]), 31),
   cam(se(17) + 0.3, add(P, [2, 1]), 15), // S17 the pull back starts
@@ -244,7 +244,7 @@ items.push(light({path: gapPath, start: T.gaps, end: T.gaps + 2.4, size: 34}));
 // S3 light runs along the rim of the web.
 items.push(
   light({path: rimPath, start: T.web - 0.1, end: T.web + 2.0, size: 30}),
-  label({text: 'WEB OF TISSUE', anchor: E.pt(528, 330), offset: [0, -150], show: {in: T.web, out: se(3) + 0.4}}),
+  label({text: 'WEB OF TISSUE', anchor: E.pt(528, 330), offset: [0, -215], show: {in: T.web, out: se(3) + 0.4}}),
 );
 
 // --- the tissue: a patch of cells in the web (hexagonal grid around P) ---
@@ -267,13 +267,13 @@ for (let r = -13; r <= 13; r++) {
   }
 }
 const isMain = (g: Cell) => g.d < 3;
-const cellPic = (g: Cell, show: PictureItem['show'], extra: Partial<PictureItem> = {}) =>
+const cellPic = (g: Cell, show: PictureItem['show'], extra: Partial<PictureItem> = {}, strength = 1) =>
   pic({
     pic: 'cell',
     at: add(P, g.o),
     width: CW * (0.92 + rand(g.i) * 0.14),
     rotate: (rand(g.i + 11) - 0.5) * 70,
-    opacity: g.edge > 0.72 ? Math.max(0, 1 - (g.edge - 0.72) / 0.28) : 1, // patch fades into the page
+    opacity: (g.edge > 0.72 ? Math.max(0, 1 - (g.edge - 0.72) / 0.28) : 1) * strength, // patch fades into the page
     show,
     ...extra,
   });
@@ -281,7 +281,7 @@ const cellPic = (g: Cell, show: PictureItem['show'], extra: Partial<PictureItem>
 // S4: the cells of the web appear (a soft wave outward); they leave when we go into one cell.
 grid
   .filter((g) => !isMain(g) && g.d < 32)
-  .forEach((g) => items.push(cellPic(g, {in: T.cells + g.d * 0.012, out: T.how, fade: 0.8})));
+  .forEach((g) => items.push(cellPic(g, {in: T.cells + g.d * 0.012, out: T.purpose - 0.2, fade: 1.0})));
 
 // S17–S21: the whole patch, appearing as the camera pulls back; a few blink out (S19).
 const near = (dx: number, dy: number) => grid.reduce((b, g) => (Math.hypot(g.o[0] - dx, g.o[1] - dy) < Math.hypot(b.o[0] - dx, b.o[1] - dy) ? g : b));
@@ -305,6 +305,7 @@ grid
         g,
         {in: T.notJust + 0.2 + g.d * 0.014, out: T.everyTime - 0.3, fade: 1.0},
         b >= 0 ? {motion: [{at: bt, opacity: 1}, {at: bt + 1.0, opacity: 0}]} : {},
+        0.55,
       ),
     );
     if (b >= 0) {
@@ -344,14 +345,14 @@ items.push(
 
 // S8 a magnifier grows out of one mitochondrion; light runs along its membrane.
 const MAG = 2.2; // magnification inside the circle
-const magCenter: Vec = add(Pc, [3.17, -5.29]);
+const magCenter: Vec = add(Pc, [3.5, -5.85]); // screen ~(805, 430) at zoom ~74
 const local = (px: number, py: number): Vec => [(px - M1px[0]) * C.scale * MAG, (py - M1px[1]) * C.scale * MAG];
 items.push({
   type: 'magnifier',
   source: M1,
   sourceRadius: 1.35,
   center: magCenter,
-  radius: 2.74,
+  radius: 3.0,
   grow: T.mitochondria,
   show: {in: T.mitochondria - 0.3, out: se(8) + 0.2, fade: 0.6},
   children: [
@@ -379,7 +380,8 @@ items.push(
   {
     type: 'glow',
     at: cellMid,
-    radius: 6.5,
+    radius: 6.2,
+    opacity: 0.5,
     breathe: true,
     show: {in: T.switches, out: T.shrinks, fade: 0.8},
     motion: [
@@ -413,7 +415,7 @@ const cuts: Vec[][] = [
 ];
 cuts.forEach((p, i) =>
   items.push(
-    line({path: C.pts(p as Vec[]), drawStart: T.cut + i * 0.22, drawEnd: T.cut + 0.35 + i * 0.22, width: 4, color: '#5E9BE0', opacity: 0.85, smooth: false, show: {out: T.shrinks - 0.1, fade: 0.6}}),
+    line({path: C.pts(p as Vec[]), drawStart: T.cut + i * 0.22, drawEnd: T.cut + 0.35 + i * 0.22, width: 7, color: '#5E9BE0', opacity: 0.95, smooth: false, show: {out: T.shrinks - 0.1, fade: 0.6}}),
   ),
 );
 
@@ -430,7 +432,7 @@ const chops: Vec[][] = [
 ];
 chops.forEach((p, i) =>
   items.push(
-    line({path: p.map(([x, y]) => Cs(x, y)), drawStart: T.chopped + i * 0.2, drawEnd: T.chopped + 0.35 + i * 0.2, width: 4, color: '#5E9BE0', opacity: 0.85, smooth: false, show: {out: T.breaks - 0.1, fade: 0.5}}),
+    line({path: p.map(([x, y]) => Cs(x, y)), drawStart: T.chopped + i * 0.2, drawEnd: T.chopped + 0.35 + i * 0.2, width: 6, color: '#5E9BE0', opacity: 0.95, smooth: false, show: {out: T.breaks - 0.1, fade: 0.5}}),
   ),
 );
 
@@ -447,7 +449,7 @@ items.push(
       {at: T.breaks - 0.1, scale: 0.86, x: F0[0], y: F0[1], rotate: 0},
       {at: T.breaks + 1.2, scale: 1},
       {at: T.name, x: F0[0], y: F0[1], rotate: 0},
-      {at: se(14) + 0.4, x: F1[0], y: F1[1], rotate: 7},
+      {at: se(14) + 0.4, x: F1[0], y: F1[1], rotate: 10},
     ],
     swallow: {at: T.eats, duration: 1.4, into: body},
   }),
@@ -505,6 +507,7 @@ copyTo.forEach((to, i) =>
       at: to,
       width: CW,
       rotate: (rand(d0Cell.i + 11) - 0.5) * 70,
+      opacity: 0.9,
       show: {in: copyAt[i] - 0.1, out: T.everyTime - 0.3, fade: 0.7},
       motion: [
         {at: 0, x: i === 0 ? d0[0] : copyTo[0][0], y: i === 0 ? d0[1] : copyTo[0][1]},
