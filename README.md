@@ -30,6 +30,7 @@ Videos made with it:
 5. Check: `node tools/render-stills.mjs && python3 tools/contact_sheet.py`
 6. Render: `npx remotion render Explainer out/video.mp4`
    (or render silently with `--props='{"noAudio":true}'` and add the voice with `tools/add-voice.sh`)
+   Music under the voice: `cp out/video.mp4 out/video_voice.mp4 && tools/add-music.sh`
 7. Subtitle file for uploading: `python3 tools/make_subtitles.py` (the video already has them burned in).
 
 ## Other frame shapes
