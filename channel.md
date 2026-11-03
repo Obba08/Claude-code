@@ -97,3 +97,61 @@ Pinned comment (all platforms):
 ```
 Which part of your body should we zoom into next? 👇
 ```
+
+## Posting kit: "Your heart runs itself"
+
+Which file to post (all three platforms): `out/heart_30fps.mp4` (9:16, 1:33, voice + music + subtitles, 46 MB).
+Full-quality master: `out/video.mp4` (60 fps).
+
+Cover / thumbnail: `thumbnails/heart-cover.png` (1080×1920). Text stays inside Instagram's 3:4 grid crop.
+- YouTube Shorts: upload it as the thumbnail in the YouTube app (or pick the frame at 0:14 if custom covers aren't offered).
+- TikTok: Cover → Upload. Instagram: Edit cover → Add from camera roll.
+
+### YouTube Shorts
+Title:
+```
+Who Tells Your Heart to Beat? (Not Your Brain) #shorts
+```
+Other titles to test:
+```
+Your Heart Has Its Own Spark Plug 🫀
+Why a Transplanted Heart Still Beats
+```
+Description:
+```
+You've never once told your heart to beat. So what does?
+
+Inside the heart's upper right chamber, a tiny patch of cells called the SA node fires its own electrical spark, about 100,000 times a day. Your brain only turns the speed up or down. That's why a transplanted heart keeps beating, even with its nerves cut.
+
+Try it: find your pulse, breathe in slowly… then out. Feel it change?
+
+#heart #humanbody #science #biology #shorts
+```
+Tags (YouTube settings): heart, how the heart beats, SA node, sinoatrial node, pacemaker, heart transplant, heartbeat, human body facts, biology explained, anatomy, science shorts
+
+### TikTok
+Caption:
+```
+You've never told your heart to beat. Not once. So who's doing it? 🫀⚡ (it's not your brain)
+
+#heart #humanbody #sciencetok #learnontiktok #biology #anatomy #didyouknow #science
+```
+On-screen hook (already in the video): "YOU NEVER TOLD IT TO BEAT"
+
+### Instagram Reels
+Caption:
+```
+Who tells your heart to beat? 🫀
+Not your brain. A tiny spark-maker inside your heart fires about 100,000 times a day, all on its own.
+
+Try it now: find your pulse, breathe in slowly… then out. Feel it change? 👇
+
+Save this for the next time someone says the brain controls everything.
+
+#heart #humanbody #sciencefacts #biology #anatomy #learnsomethingnew #didyouknow #fingertipfacts
+```
+
+Pinned comment (all platforms):
+```
+Did you feel your pulse change when you breathed in? 👇
+```
