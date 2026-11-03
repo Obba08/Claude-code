@@ -2,11 +2,11 @@
 
 ## Video 2: Your heart runs itself
 
-All 9 pictures passed the check on the first try (no redos).
+10 pictures. The first 9 passed on the first try. Later, phone_hand.png and wrist_pulse.png were replaced by seated_phone.png and seated_pulse.png, and body.png was added (passed on attempt 3).
 
 Model: GPT Image 2.5 (Sunburst), text to image, quality high, 2K. White background removed afterwards (clean transparent cut-outs).
 
-Credits used: 1,270 (130 per square picture, 155 per wide or tall one). About $3.60 on the Plus plan billed monthly ($34 for 12,000 credits).
+Credits used: 1,890 in total (1,270 for the first 9 pictures, 620 for the 3 replacements, the body redo and the blocked attempt). About $5.36 on the Plus plan billed monthly ($34 for 12,000 credits).
 
 ### heart.png
 
@@ -32,12 +32,14 @@ Aspect ratio: 4:3
 A single human brain seen from the left side, folded surface with clear grooves, the cerebellum at the back and a short brainstem pointing down, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
 ```
 
-### phone_hand.png
+### seated_phone.png
 
 Aspect ratio: 3:4
 
+Replaces phone_hand.png (you asked for a full seated person).
+
 ```
-A single human hand holding a smartphone upright, seen from the front, the thumb resting on the screen as if scrolling, the screen completely blank and plain, natural adult proportions, the wrist ending in a soft pencil fade, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
+A full adult person seated on a simple wooden chair, seen from the side at a slight three-quarter angle, head to feet fully visible, short hair, plain t-shirt and trousers, relaxed posture, holding a smartphone in one hand and looking down at it, the thumb on the blank screen as if scrolling, the screen completely blank and plain, natural proportions, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
 ```
 
 ### petri_dish.png
@@ -48,12 +50,14 @@ Aspect ratio: 4:3
 A single round glass petri dish without its lid, seen from a three-quarter angle above, a thin layer of liquid inside with small scattered clusters of elongated heart muscle cells, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
 ```
 
-### wrist_pulse.png
+### seated_pulse.png
 
-Aspect ratio: 16:9
+Aspect ratio: 3:4
+
+Replaces wrist_pulse.png (you asked for a full seated person).
 
 ```
-A human forearm lying horizontally with the palm facing up, seen from above, with the index and middle fingertips of the other hand resting on the inside of the wrist below the thumb to feel the pulse, natural adult proportions, smooth skin, both arms ending in a soft pencil fade, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
+A full adult person seated on a simple wooden chair, seen from the side at a slight three-quarter angle, head to feet fully visible, short hair, plain t-shirt and trousers, calm relaxed posture, one forearm resting palm up in front of the body while the index and middle fingertips of the other hand rest on the inside of that wrist below the thumb to feel the pulse, looking down at the wrist, natural proportions, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
 ```
 
 ### lungs.png
@@ -78,6 +82,28 @@ Aspect ratio: 1:1
 
 ```
 The bones of a human upper chest seen from the front: both collarbones across the top, the breastbone down the middle and the full ribcage, no spine visible in front, no arms, no skull, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
+```
+
+### body.png
+
+Aspect ratio: 2:3
+
+Used (attempt 3). Full-body diagram for explaining the brain, heart and lungs in place.
+
+```
+A full standing human figure seen from the front, head to feet, small in the frame, arms relaxed slightly away from the sides, the outer body drawn only as a faint smooth see-through outline like an artist's wooden mannequin, showing inside it in clear detail just three organs: the brain in the head, the two lungs in the chest, and the heart sitting in front between the lungs, slightly to the figure's left, with nothing drawn across the heart, anatomical textbook diagram, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
+```
+
+Attempt 1 (rejected: the spinal cord was drawn across the front of the heart, unclear shape at the groin, head close to the top edge):
+
+```
+A full standing human figure seen from the front, head to feet, arms relaxed slightly away from the sides, the body outline drawn as a pale see-through silhouette with no clothing details and no genitals, showing inside it in clear detail the brain in the head, the spinal cord running down the back, the two lungs in the chest and the heart between them, slightly left of centre, anatomical textbook diagram, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
+```
+
+Attempt 2 (blocked by OpenAI's safety filter because of body-part wording; nothing was made, but it appears to have been charged):
+
+```
+A full standing human figure seen from the front, head to feet, small in the frame, arms relaxed slightly away from the sides with palms facing forward, the body drawn as a smooth pale see-through mannequin-like silhouette with no clothing, no nipples and a completely smooth featureless groin, showing inside it in clear detail only three organs: the brain in the head, the two lungs in the chest, and the heart between the lungs, slightly to the figure's left, drawn in front of everything so nothing crosses over it, anatomical textbook diagram, lots of empty space around it, nothing touching the edges. Black and white scientific illustration, fine ink lines and soft graphite shading, like an old textbook, a single object isolated on a plain white background, no text, no labels, no color. plain white background, no text, no labels, no numbers, no arrows, no shadows, no frame
 ```
 
 ## Video 1: How the immune system works
