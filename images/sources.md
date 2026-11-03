@@ -17,3 +17,19 @@ Originals with white backgrounds, before cut-out. Downloaded and cut out into th
 | antibody.png | kPUkt9wDvgi0BoVLWZ0G | https://cdn.openart.ai/openart-ai/production/2026-10/create-image/m7IBnGqsLLcBx6brAnUy/gpt-image-2.5-sunburst-1_1793417814632_58779046.png |
 
 Credits used: 1,580 (10 pictures + 1 redo of the finger).
+
+## Video 2: Your heart runs itself
+
+| File | OpenArt history ID | Original |
+|------|--------------------|----------|
+| heart.png | 9FrtLPuivqIuQYOJEhGc | https://cdn.openart.ai/openart-ai/production/2026-11/create-image/m7IBnGqsLLcBx6brAnUy/gpt-image-2.5-sunburst-1_1793711321643_75078aeb.png |
+| heart_section.png | SuSDd73Vg03hqdTLbUZJ | https://cdn.openart.ai/openart-ai/production/2026-11/create-image/m7IBnGqsLLcBx6brAnUy/gpt-image-2.5-sunburst-1_1793711323656_078e8ff2.png |
+| brain.png | JwO2okhbG2bftDGz9KWe | https://cdn.openart.ai/openart-ai/production/2026-11/create-image/m7IBnGqsLLcBx6brAnUy/gpt-image-2.5-sunburst-1_1793711319187_7430277b.png |
+| phone_hand.png | KpIJcxHpOIjtFQwpAizf | https://cdn.openart.ai/openart-ai/production/2026-11/create-image/m7IBnGqsLLcBx6brAnUy/gpt-image-2.5-sunburst-1_1793711323690_a8a4964d.png |
+| petri_dish.png | 8Tz5aYsrkw9PNC52yavk | https://cdn.openart.ai/openart-ai/production/2026-11/create-image/m7IBnGqsLLcBx6brAnUy/gpt-image-2.5-sunburst-1_1793711324872_db97ec27.png |
+| wrist_pulse.png | Jj1krWJgccVQeW8uxDtz | https://cdn.openart.ai/openart-ai/production/2026-11/create-image/m7IBnGqsLLcBx6brAnUy/gpt-image-2.5-sunburst-1_1793711324237_4b32b900.png |
+| lungs.png | 5LVCBHD7vezvVEuHKrRR | https://cdn.openart.ai/openart-ai/production/2026-11/create-image/m7IBnGqsLLcBx6brAnUy/gpt-image-2.5-sunburst-1_1793711335079_7dec4491.png |
+| pacemaker.png | JTPKbmcNjH1TzyDTFRBL | https://cdn.openart.ai/openart-ai/production/2026-11/create-image/m7IBnGqsLLcBx6brAnUy/gpt-image-2.5-sunburst-1_1793711336853_71938c0e.png |
+| chest.png | c8BvITK49xghsEozXJsd | https://cdn.openart.ai/openart-ai/production/2026-11/create-image/m7IBnGqsLLcBx6brAnUy/gpt-image-2.5-sunburst-1_1793711375700_5a1c7066.png |
+
+Credits used: 1,270 (9 pictures, no redos).
