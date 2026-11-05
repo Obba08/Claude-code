@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // Renders a still every half second and at every sentence start, for checking.
 // Usage: [COMP=Explainer-square OUT=out/stills-square] node tools/render-stills.mjs [from-seconds] [to-seconds]
 import {bundle} from '@remotion/bundler';

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Builds subtitle files from the word timings: <video.json subtitles>.srt (plain, for upload) and .ass (styled).
 # The video itself already has captions burned in by the Remotion scene (same phrase splitting).
 # Each caption is a short phrase (max ~30 characters), split at commas where possible,

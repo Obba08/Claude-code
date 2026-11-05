@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Tiles the check stills into sheets (with safe-area guides) so they are quick to review.
 import glob, json, os, sys
 from PIL import Image, ImageDraw
