@@ -5,6 +5,7 @@ A reusable template for calm, vertical (1080×1920, 60 fps) explainer videos fil
 Videos made with it:
 - *How the immune system works* (`script.md`, `src/settings/immune-system.ts`)
 - *Your heart runs itself* (`heart-script.md`, `src/settings/heart.ts`) ← current
+- *Food vs water: how long can you last?* (`food-water-script.md`) — script only, not built yet
 
 ## How it fits together
 
