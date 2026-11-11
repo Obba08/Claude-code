@@ -72,3 +72,4 @@ Character sheets on a pure white background.
 ## Other approved sheets (not locked)
 
 - `../cartoon_man_expressions.png`: 12-expression sheet (can still be edited)
+- `../cartoon_man_hands.png`: 12 hand poses sheet (can still be edited)
