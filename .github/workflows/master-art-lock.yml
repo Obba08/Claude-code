@@ -1,0 +1,15 @@
+name: Master art lock
+
+on:
+  push:
+    paths: ["art/master/**"]
+  pull_request:
+    paths: ["art/master/**"]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check locked character files are unchanged
+        run: cd art/master && sha256sum -c LOCKED.sha256
